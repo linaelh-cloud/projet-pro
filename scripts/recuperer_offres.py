@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
-"""Récupère les nouvelles offres Community Manager (stage + alternance) via l'API France Travail.
+"""Récupère les nouvelles offres Community Manager (stage + alternance).
+
+Sources :
+  - Adzuna (regroupe les offres de nombreux sites d'emploi) : ADZUNA_APP_ID, ADZUNA_APP_KEY
+  - France Travail (facultatif, si l'accès est accordé)     : FT_CLIENT_ID, FT_CLIENT_SECRET
+Les clés viennent des Secrets GitHub (variables d'environnement), jamais de ce fichier.
+Une source sans clé ou refusée est sautée ; le robot échoue seulement si aucune source ne marche.
 
 Usage : python3 scripts/recuperer_offres.py [nombre_de_jours]   (par défaut : 3 derniers jours)
-Ajoute les nouvelles offres à offres.json (à la racine du site), sans doublons,
-et retire les offres de plus de 30 jours.
-Les clés API viennent des variables d'environnement FT_CLIENT_ID et FT_CLIENT_SECRET
-(Secrets GitHub), jamais de ce fichier.
+Ajoute les nouvelles offres à offres.json, sans doublons, et retire celles de plus de 30 jours.
 """
 import json, os, sys, re, urllib.parse, urllib.request, urllib.error
 from datetime import datetime, timedelta, timezone
@@ -13,6 +16,8 @@ from datetime import datetime, timedelta, timezone
 DOSSIER = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOKEN_URL = "https://entreprise.francetravail.fr/connexion/oauth2/access_token?realm=%2Fpartenaire"
 SEARCH_URL = "https://api.francetravail.io/partenaire/offresdemploi/v2/offres/search"
+ADZUNA_URL = "https://api.adzuna.com/v1/api/jobs/fr/search/1"
+ADZUNA_RECHERCHES = [("community manager alternance", "alternance"), ("community manager apprentissage", "alternance"), ("community manager stage", "stage"), ("social media manager alternance", "alternance"), ("social media manager stage", "stage")]
 RECHERCHES = ["community manager", "social media manager", "chargé de communication digitale"]
 
 SECTEURS = [  # (mot-clé dans le secteur / l'entreprise / le texte, secteur du site)
@@ -29,13 +34,6 @@ SECTEURS = [  # (mot-clé dans le secteur / l'entreprise / le texte, secteur du 
     ("association", "Associatif & public"), ("administration", "Associatif & public"), ("enseignement", "Associatif & public"),
     ("banque", "Banque & assurance"), ("assurance", "Banque & assurance"), ("financ", "Banque & assurance"),
 ]
-
-
-def lire_config():
-    cfg = {k: os.environ.get(k, "").strip() for k in ("FT_CLIENT_ID", "FT_CLIENT_SECRET", "DEPARTEMENT")}
-    if not cfg["FT_CLIENT_ID"] or not cfg["FT_CLIENT_SECRET"]:
-        sys.exit("ERREUR : ajoute FT_CLIENT_ID et FT_CLIENT_SECRET dans les Secrets du dépôt GitHub")
-    return cfg
 
 
 def jeton(cfg):
@@ -68,7 +66,7 @@ def jeton(cfg):
             except ValueError:
                 motif = str(e.code)
             print(f"Essai avec le scope « {scope} » refusé ({motif})", file=sys.stderr)
-    sys.exit(f"ERREUR connexion France Travail ({motif}). invalid_client = clés incorrectes ; invalid_scope = l'API « Offres d'emploi v2 » n'est pas ajoutée à ton application.")
+    raise RuntimeError(f"connexion France Travail ({motif})). L'accès à l'API Offres d'emploi n'est peut-être pas encore accordé.")
 
 
 def chercher(tok, mots, debut, fin, departement):
@@ -87,14 +85,19 @@ def chercher(tok, mots, debut, fin, departement):
         return []
 
 
-def type_contrat(o):
-    nature = (o.get("natureContrat") or "").lower()
-    texte = " ".join([o.get("intitule") or "", o.get("description") or "", o.get("typeContratLibelle") or ""]).lower()
+def type_contrat(texte, nature="", indice=None):
+    texte, nature = texte.lower(), nature.lower()
     if "apprentissage" in nature or "professionnalisation" in nature or re.search(r"alternan|apprenti|contrat pro", texte):
         return "alternance"
-    if re.search(r"\bstage\b|stagiaire|\binternship\b", texte):
+    if re.search(r"\bstage\b|stagiaire|\binternship\b|\bintern\b", texte):
         return "stage"
+    if indice and not re.search(r"\bcdi\b|\bcdd\b|freelance|indépendant", texte):
+        return indice
     return None  # CDI/CDD classiques : ignorés
+
+
+def nettoyer(t):
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t or "")).strip()
 
 
 def secteur(o):
@@ -105,23 +108,23 @@ def secteur(o):
     return "Autre"
 
 
-def main():
-    jours = int(sys.argv[1]) if len(sys.argv) > 1 else 3
-    cfg = lire_config()
-    tok = jeton(cfg)
-    fin = datetime.now(timezone.utc).replace(microsecond=0)
-    debut = fin - timedelta(days=jours)
+def source_france_travail(jours, fin):
+    cid, sec = os.environ.get("FT_CLIENT_ID", "").strip(), os.environ.get("FT_CLIENT_SECRET", "").strip()
+    if not cid or not sec:
+        print("France Travail : pas de clés, source sautée.")
+        return None
+    tok = jeton({"FT_CLIENT_ID": cid, "FT_CLIENT_SECRET": sec})
     iso = lambda d: d.strftime("%Y-%m-%dT%H:%M:%SZ")
+    debut = fin - timedelta(days=jours)
     vues, offres = set(), []
     for mots in RECHERCHES:
-        for o in chercher(tok, mots, iso(debut), iso(fin), cfg.get("DEPARTEMENT", "")):
+        for o in chercher(tok, mots, iso(debut), iso(fin), os.environ.get("DEPARTEMENT", "").strip()):
             if o.get("id") in vues:
                 continue
             vues.add(o.get("id"))
-            t = type_contrat(o)
+            t = type_contrat(" ".join([o.get("intitule") or "", o.get("description") or "", o.get("typeContratLibelle") or ""]), o.get("natureContrat") or "")
             if not t:
                 continue
-            desc = re.sub(r"\s+", " ", o.get("description") or "").strip()
             offres.append({
                 "id": "ft-" + o["id"],
                 "titre": o.get("intitule") or "Community Manager",
@@ -129,11 +132,74 @@ def main():
                 "lieu": (o.get("lieuTravail") or {}).get("libelle") or "",
                 "type": t,
                 "secteur": secteur(o),
-                "description": desc[:600],
+                "description": nettoyer(o.get("description"))[:600],
                 "url": (o.get("origineOffre") or {}).get("urlOrigine") or f"https://candidat.francetravail.fr/offres/recherche/detail/{o['id']}",
                 "source": "France Travail",
                 "date": (o.get("dateCreation") or iso(fin))[:10],
             })
+    print(f"France Travail : {len(offres)} offres stage/alternance.")
+    return offres
+
+
+def source_adzuna(jours, fin):
+    app_id, app_key = os.environ.get("ADZUNA_APP_ID", "").strip(), os.environ.get("ADZUNA_APP_KEY", "").strip()
+    if not app_id or not app_key:
+        print("Adzuna : pas de clés, source sautée.")
+        return None
+    vues, offres, erreurs = set(), [], 0
+    for mots, indice in ADZUNA_RECHERCHES:
+        params = {"app_id": app_id, "app_key": app_key, "what": mots, "results_per_page": 50,
+                  "max_days_old": max(jours, 1), "sort_by": "date", "content-type": "application/json"}
+        req = urllib.request.Request(ADZUNA_URL + "?" + urllib.parse.urlencode(params), headers={"Accept": "application/json", "User-Agent": "projet-pro/1.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                resultats = json.load(r).get("results", [])
+        except urllib.error.HTTPError as e:
+            erreurs += 1
+            print(f"Adzuna : recherche « {mots} » refusée ({e.code}). Vérifie ADZUNA_APP_ID et ADZUNA_APP_KEY.", file=sys.stderr)
+            continue
+        for o in resultats:
+            oid = str(o.get("id"))
+            if oid in vues:
+                continue
+            vues.add(oid)
+            titre, desc = nettoyer(o.get("title")), nettoyer(o.get("description"))
+            t = type_contrat(titre + " " + desc, "", indice)
+            if not t:
+                continue
+            entreprise = nettoyer((o.get("company") or {}).get("display_name"))
+            offres.append({
+                "id": "az-" + oid,
+                "titre": titre or "Community Manager",
+                "entreprise": entreprise,
+                "lieu": nettoyer((o.get("location") or {}).get("display_name")),
+                "type": t,
+                "secteur": secteur({"secteurActiviteLibelle": (o.get("category") or {}).get("label") or "", "entreprise": {"nom": entreprise}}),
+                "description": desc[:600],
+                "url": o.get("redirect_url") or "",
+                "source": "Adzuna",
+                "date": (o.get("created") or fin.strftime("%Y-%m-%d"))[:10],
+            })
+    if erreurs == len(ADZUNA_RECHERCHES):
+        raise RuntimeError("Adzuna refuse toutes les recherches : clés incorrectes ?")
+    print(f"Adzuna : {len(offres)} offres stage/alternance.")
+    return offres
+
+
+def main():
+    jours = int(sys.argv[1]) if len(sys.argv) > 1 else 3
+    fin = datetime.now(timezone.utc).replace(microsecond=0)
+    offres, reussies, echecs = [], 0, []
+    for nom, source in (("Adzuna", source_adzuna), ("France Travail", source_france_travail)):
+        try:
+            res = source(jours, fin)
+        except Exception as e:  # une source en panne ne bloque pas les autres
+            echecs.append(nom)
+            print(f"{nom} : échec ({e})", file=sys.stderr)
+            continue
+        if res is not None:
+            reussies += 1
+            offres.extend(res)
     chemin = os.path.join(DOSSIER, "offres.json")
     try:
         existantes = json.load(open(chemin, encoding="utf-8"))
@@ -154,6 +220,8 @@ def main():
     with open(chemin, "w", encoding="utf-8") as f:
         json.dump(toutes, f, ensure_ascii=False, indent=2)
     print(f"{len(ajout)} nouvelles offres ajoutées, {len(existantes) - len(gardees)} anciennes retirées, {len(toutes)} au total.")
+    if reussies == 0:
+        sys.exit("ERREUR : aucune source d'offres n'a fonctionné. Ajoute ADZUNA_APP_ID et ADZUNA_APP_KEY dans les Secrets GitHub.")
 
 
 if __name__ == "__main__":
