@@ -1,0 +1,332 @@
+{
+ "date": "2026-11-18",
+ "heure_utc": "22:07",
+ "canal": "Adzuna (API officielle, agrégateur d'offres)",
+ "requete": "what_phrase=\"community manager\", pays = France, tri par date, 6 pages de 50 au plus",
+ "total_annonce": 45806,
+ "nb_analysees": 300,
+ "variantes": [
+  [
+   "community manager",
+   45806
+  ],
+  [
+   "chargé de communication",
+   843
+  ],
+  [
+   "content manager",
+   189
+  ],
+  [
+   "social media manager",
+   130
+  ],
+  [
+   "chargé de communication digitale",
+   70
+  ],
+  [
+   "influence manager",
+   24
+  ],
+  [
+   "brand content manager",
+   10
+  ],
+  [
+   "responsable communication digitale",
+   9
+  ]
+ ],
+ "regions": [
+  [
+   "Non précisé",
+   107
+  ],
+  [
+   "Ile-de-France",
+   61
+  ],
+  [
+   "Auvergne-Rhône-Alpes",
+   20
+  ],
+  [
+   "Occitanie",
+   20
+  ],
+  [
+   "Bretagne",
+   14
+  ],
+  [
+   "Normandie",
+   13
+  ],
+  [
+   "Nouvelle-Aquitaine",
+   12
+  ],
+  [
+   "Centre",
+   12
+  ],
+  [
+   "Provence-Alpes-Côte d'Azur",
+   10
+  ],
+  [
+   "Grand-Est",
+   9
+  ],
+  [
+   "Pays de la Loire",
+   7
+  ],
+  [
+   "Hauts-De-France",
+   6
+  ],
+  [
+   "Bourgogne-Franche-Comté",
+   5
+  ]
+ ],
+ "departements": [
+  [
+   "Paris",
+   27
+  ],
+  [
+   "Ille-et-Vilaine",
+   9
+  ],
+  [
+   "Seine-Maritime",
+   8
+  ],
+  [
+   "Hauts-de-Seine",
+   7
+  ],
+  [
+   "Haute-Garonne",
+   7
+  ],
+  [
+   "Seine-et-Marne",
+   7
+  ],
+  [
+   "Indre-et-Loire",
+   6
+  ],
+  [
+   "Isère",
+   5
+  ],
+  [
+   "Bouches-du-Rhône",
+   5
+  ],
+  [
+   "Val-de-Marne",
+   5
+  ]
+ ],
+ "auvergne": 20,
+ "puy_de_dome": 1,
+ "teletravail": 1,
+ "contrats": [
+  [
+   "Non précisé",
+   139
+  ],
+  [
+   "CDD / mission",
+   130
+  ],
+  [
+   "Freelance",
+   13
+  ],
+  [
+   "Stage",
+   10
+  ],
+  [
+   "Alternance",
+   7
+  ],
+  [
+   "CDI",
+   1
+  ]
+ ],
+ "salaires": {
+  "Stage": {
+   "nb": 1,
+   "min": 946,
+   "mediane": 946,
+   "max": 946
+  },
+  "Non précisé": {
+   "nb": 53,
+   "min": 1,
+   "mediane": 12,
+   "max": 77540
+  },
+  "CDD / mission": {
+   "nb": 31,
+   "min": 13,
+   "mediane": 1819,
+   "max": 500000
+  },
+  "Freelance": {
+   "nb": 2,
+   "min": 10,
+   "mediane": 45000,
+   "max": 45000
+  }
+ },
+ "nb_salaires_affiches": 87,
+ "competences": {
+  "Réseaux": [
+   [
+    "YouTube",
+    2
+   ]
+  ],
+  "Outils": [
+   [
+    "Excel",
+    21
+   ],
+   [
+    "ChatGPT / IA générative",
+    5
+   ],
+   [
+    "Meta Business Suite",
+    1
+   ]
+  ],
+  "Compétences": [
+   [
+    "Stratégie social media",
+    12
+   ],
+   [
+    "Modération / animation",
+    11
+   ],
+   [
+    "Veille",
+    8
+   ],
+   [
+    "Création de contenu",
+    4
+   ],
+   [
+    "Anglais",
+    4
+   ],
+   [
+    "Vidéo / Reels",
+    3
+   ],
+   [
+    "SEO",
+    3
+   ],
+   [
+    "Reporting / KPI",
+    3
+   ],
+   [
+    "Événementiel",
+    2
+   ],
+   [
+    "Rédaction",
+    1
+   ],
+   [
+    "Publicité (Ads)",
+    1
+   ],
+   [
+    "Influence",
+    1
+   ],
+   [
+    "Newsletter / emailing",
+    1
+   ]
+  ]
+ },
+ "entreprises": [
+  [
+   "Choisir le Service Public",
+   74
+  ],
+  [
+   "Fonction publique Territoriale",
+   50
+  ],
+  [
+   "SPIE",
+   19
+  ],
+  [
+   "Magnitude",
+   16
+  ],
+  [
+   "Thales",
+   14
+  ],
+  [
+   "Sanofi",
+   5
+  ],
+  [
+   "PAE Châteaugiron",
+   5
+  ],
+  [
+   "Dekra",
+   5
+  ],
+  [
+   "Nike",
+   4
+  ],
+  [
+   "Open",
+   4
+  ],
+  [
+   "CGI",
+   4
+  ],
+  [
+   "Otis",
+   4
+  ],
+  [
+   "Incomm, agence web",
+   3
+  ],
+  [
+   "Air Liquide",
+   2
+  ],
+  [
+   "AC Environnement",
+   2
+  ]
+ ]
+}
