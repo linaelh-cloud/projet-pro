@@ -2,7 +2,7 @@ name: Offres du jour
 
 on:
   schedule:
-    - cron: "0 6 * * *"   # tous les jours vers 7h (heure de Paris)
+    - cron: "0 */3 * * *"   # toutes les 3 heures (7h, 10h, 13h... heure de Paris)
   workflow_dispatch:       # bouton « Run workflow » pour lancer à la main
 
 permissions:
