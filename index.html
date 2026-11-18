@@ -363,9 +363,9 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
       <label class="f">Entreprise<input class="i" id="c-entreprise" required placeholder="Ex. : Sephora"></label>
       <label class="f">Poste<input class="i" id="c-poste" required placeholder="Ex. : Community Manager"></label>
       <label class="f">Lieu<input class="i" id="c-lieu" placeholder="Ex. : Paris"></label>
-      <label class="f">Secteur<select class="i" id="c-secteur"></select></label>
-      <label class="f">Contrat<select class="i" id="c-type"><option value="alternance">Alternance</option><option value="stage">Stage</option></select></label>
-      <label class="f">Date d'envoi<input class="i" type="date" id="c-date"></label>
+      <label class="f">Secteur<select class="i" id="c-secteur" required></select></label>
+      <label class="f">Contrat<select class="i" id="c-type" required><option value="" selected disabled>Choisir…</option><option value="alternance">Alternance</option><option value="stage">Stage</option></select></label>
+      <label class="f">Date d'envoi (vide = aujourd'hui)<input class="i" type="date" id="c-date"></label>
       <label class="f full">Lien de l'annonce (facultatif)<input class="i" id="c-lien" type="url" placeholder="https://…"></label>
     </div>
     <div style="margin-top:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
@@ -495,8 +495,7 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
   }).catch(() => renderOffres());
 
   /* ---------- Candidatures ---------- */
-  $("#c-secteur").innerHTML = SECTEURS.map(s => `<option>${esc(s)}</option>`).join("");
-  $("#c-date").value = today();
+  $("#c-secteur").innerHTML = `<option value="" selected disabled>Choisir…</option>` + SECTEURS.map(s => `<option>${esc(s)}</option>`).join("");
   let pendingDelete = null;
 
   function renderCands(){
@@ -540,12 +539,11 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
   }
   $("#c-form").addEventListener("submit", (e) => {
     e.preventDefault();
-    const c = { entreprise:$("#c-entreprise").value.trim(), poste:$("#c-poste").value.trim(), lieu:$("#c-lieu").value.trim(), secteur:$("#c-secteur").value, type:$("#c-type").value, date:$("#c-date").value, lien:$("#c-lien").value.trim(), statut:"attente" };
-    if (!c.entreprise || !c.poste) return;
+    const c = { entreprise:$("#c-entreprise").value.trim(), poste:$("#c-poste").value.trim(), lieu:$("#c-lieu").value.trim(), secteur:$("#c-secteur").value, type:$("#c-type").value, date:$("#c-date").value || today(), lien:$("#c-lien").value.trim(), statut:"attente" };
+    if (!c.entreprise || !c.poste || !c.secteur || !c.type) return;
     addCand(c);
     $("#c-form").reset();
     $("#c-poste").value = "";
-    $("#c-date").value = today();
     $("#c-entreprise").focus();
     $("#c-msg").textContent = `${c.entreprise} ajoutée dans « ${c.secteur} ».`;
   });
