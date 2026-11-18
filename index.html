@@ -361,7 +361,7 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
     <h3>Ajouter une candidature</h3>
     <div class="form">
       <label class="f">Entreprise<input class="i" id="c-entreprise" required placeholder="Ex. : Sephora"></label>
-      <label class="f">Poste<input class="i" id="c-poste" required value="Community Manager"></label>
+      <label class="f">Poste<input class="i" id="c-poste" required placeholder="Ex. : Community Manager"></label>
       <label class="f">Lieu<input class="i" id="c-lieu" placeholder="Ex. : Paris"></label>
       <label class="f">Secteur<select class="i" id="c-secteur"></select></label>
       <label class="f">Contrat<select class="i" id="c-type"><option value="alternance">Alternance</option><option value="stage">Stage</option></select></label>
@@ -543,7 +543,10 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
     const c = { entreprise:$("#c-entreprise").value.trim(), poste:$("#c-poste").value.trim(), lieu:$("#c-lieu").value.trim(), secteur:$("#c-secteur").value, type:$("#c-type").value, date:$("#c-date").value, lien:$("#c-lien").value.trim(), statut:"attente" };
     if (!c.entreprise || !c.poste) return;
     addCand(c);
-    $("#c-entreprise").value = ""; $("#c-lieu").value = ""; $("#c-lien").value = "";
+    $("#c-form").reset();
+    $("#c-poste").value = "";
+    $("#c-date").value = today();
+    $("#c-entreprise").focus();
     $("#c-msg").textContent = `${c.entreprise} ajoutée dans « ${c.secteur} ».`;
   });
   $("#c-list").addEventListener("change", (e) => {
