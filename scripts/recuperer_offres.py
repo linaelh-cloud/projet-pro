@@ -39,18 +39,26 @@ def lire_config():
 
 
 def jeton(cfg):
-    data = urllib.parse.urlencode({
-        "grant_type": "client_credentials",
-        "client_id": cfg["FT_CLIENT_ID"],
-        "client_secret": cfg["FT_CLIENT_SECRET"],
-        "scope": "api_offresdemploiv2 o2dsoffre",
-    }).encode()
-    req = urllib.request.Request(TOKEN_URL, data=data, headers={"Content-Type": "application/x-www-form-urlencoded"})
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return json.load(r)["access_token"]
-    except urllib.error.HTTPError as e:
-        sys.exit(f"ERREUR connexion France Travail ({e.code}) : vérifie tes clés dans config.env et que l'API « Offres d'emploi v2 » est bien ajoutée à ton application.")
+    motif = ""
+    for scope in ("api_offresdemploiv2 o2dsoffre", "api_offresdemploiv2"):
+        data = urllib.parse.urlencode({
+            "grant_type": "client_credentials",
+            "client_id": cfg["FT_CLIENT_ID"].strip(),
+            "client_secret": cfg["FT_CLIENT_SECRET"].strip(),
+            "scope": scope,
+        }).encode()
+        req = urllib.request.Request(TOKEN_URL, data=data, headers={"Content-Type": "application/x-www-form-urlencoded"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.load(r)["access_token"]
+        except urllib.error.HTTPError as e:
+            try:
+                corps = json.loads(e.read().decode("utf-8", "replace"))
+                motif = f"{e.code} {corps.get('error', '')} : {corps.get('error_description', '')}"
+            except ValueError:
+                motif = str(e.code)
+            print(f"Essai avec le scope « {scope} » refusé ({motif})", file=sys.stderr)
+    sys.exit(f"ERREUR connexion France Travail ({motif}). invalid_client = clés incorrectes ; invalid_scope = l'API « Offres d'emploi v2 » n'est pas ajoutée à ton application.")
 
 
 def chercher(tok, mots, debut, fin, departement):
