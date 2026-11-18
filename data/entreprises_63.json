@@ -1,0 +1,423 @@
+{
+ "date": "2026-11-18",
+ "canal": "API Recherche d'entreprises (recherche-entreprises.api.gouv.fr)",
+ "requete": "siège dans le 63, entreprises actives, NAF 73.11Z, 70.21Z, 73.12Z, 74.10Z, 59.11B",
+ "total": 330,
+ "avec_salaries": 108,
+ "par_activite": [
+  [
+   "Agences de publicité",
+   105
+  ],
+  [
+   "Conseil en relations publiques et communication",
+   90
+  ],
+  [
+   "Activités spécialisées de design",
+   65
+  ],
+  [
+   "Production de films institutionnels et publicitaires",
+   58
+  ],
+  [
+   "Régie publicitaire de médias",
+   12
+  ]
+ ],
+ "communes": [
+  [
+   "CLERMONT-FERRAND",
+   125
+  ],
+  [
+   "CHAMALIERES",
+   19
+  ],
+  [
+   "RIOM",
+   11
+  ],
+  [
+   "ISSOIRE",
+   10
+  ],
+  [
+   "AUBIERE",
+   8
+  ],
+  [
+   "PONT-DU-CHATEAU",
+   7
+  ],
+  [
+   "COURNON-D'AUVERGNE",
+   7
+  ],
+  [
+   "CHATEL-GUYON",
+   6
+  ],
+  [
+   "CEBAZAT",
+   6
+  ],
+  [
+   "ROMAGNAT",
+   4
+  ]
+ ],
+ "exemples": [
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "CENTRE FRANCE PUBLICITE (CFP)",
+   "siren": "329337984",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63100",
+   "effectif": "100-199",
+   "date_creation": "1984-01-01",
+   "categorie": "ETI",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/329337984"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "2G PUBLICITE (2 G PUBLICITE - LE REVE DU DOGON)",
+   "siren": "421840877",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "MALAUZAT",
+   "code_postal": "63200",
+   "effectif": "20-49",
+   "date_creation": "1999-03-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421840877"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "QUI PLUS EST",
+   "siren": "451572176",
+   "naf": "70.21Z",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CHAMALIERES",
+   "code_postal": "63400",
+   "effectif": "20-49",
+   "date_creation": "2004-01-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/451572176"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "LES COULEURS DU TEMPS",
+   "siren": "487652000",
+   "naf": "74.10Z",
+   "activite": "Activités spécialisées de design",
+   "commune": "RIOM",
+   "code_postal": "63200",
+   "effectif": "10-19",
+   "date_creation": "2006-01-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/487652000"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "RIOT HOUSE PRODUCTION (RIOT HOUSE / KLEEK / LA PACKSHOTERIE)",
+   "siren": "538949272",
+   "naf": "59.11B",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHATEAUGAY",
+   "code_postal": "63119",
+   "effectif": "10-19",
+   "date_creation": "2012-01-02",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/538949272"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "THE BOSON PROJECT",
+   "siren": "789508843",
+   "naf": "70.21Z",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "MOZAC",
+   "code_postal": "63200",
+   "effectif": "10-19",
+   "date_creation": "2012-11-19",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/789508843"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "CLAP AGENCY (CLAP AGENCY)",
+   "siren": "919753194",
+   "naf": "70.21Z",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63100",
+   "effectif": "6-9",
+   "date_creation": "2022-09-28",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/919753194"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "CONJONCTURE SA MARKETTING DEVELOPPEMENT (LAMARCK)",
+   "siren": "318100773",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63000",
+   "effectif": "6-9",
+   "date_creation": "1980-01-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/318100773"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "DANSNOSCOEURS (DANSNOSCOEURS)",
+   "siren": "517833448",
+   "naf": "73.12Z",
+   "activite": "Régie publicitaire de médias",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63100",
+   "effectif": "6-9",
+   "date_creation": "2009-10-22",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/517833448"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "DANYLAK ET PY PUBLICITE PEINTE",
+   "siren": "338617244",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63100",
+   "effectif": "6-9",
+   "date_creation": "1986-04-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/338617244"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "DE VISU",
+   "siren": "379785637",
+   "naf": "73.12Z",
+   "activite": "Régie publicitaire de médias",
+   "commune": "LEMPDES",
+   "code_postal": "63370",
+   "effectif": "6-9",
+   "date_creation": "1990-10-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/379785637"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "MOTO AXE",
+   "siren": "394426795",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63100",
+   "effectif": "6-9",
+   "date_creation": "1994-01-25",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/394426795"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "NECA-MONTAGE ET AFFICHAGE EN PUBLICITE",
+   "siren": "317962207",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "AUBIERE",
+   "code_postal": "63170",
+   "effectif": "6-9",
+   "date_creation": "1980-01-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/317962207"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "OCTOPUS COMMUNICATION",
+   "siren": "539356154",
+   "naf": "70.21Z",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63000",
+   "effectif": "6-9",
+   "date_creation": "2012-01-10",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/539356154"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "OPPIDUM COMMUNICATION",
+   "siren": "502181969",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "ISSOIRE",
+   "code_postal": "63500",
+   "effectif": "6-9",
+   "date_creation": "2008-01-11",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/502181969"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "SESIOM (SES)",
+   "siren": "914528005",
+   "naf": "70.21Z",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63000",
+   "effectif": "6-9",
+   "date_creation": "2022-06-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914528005"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "SOCIETE DE PUBLICITE CASTELPONTINE ET ENSEIGNES (SPC ENSEIGNES)",
+   "siren": "889213088",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "PONT-DU-CHATEAU",
+   "code_postal": "63430",
+   "effectif": "6-9",
+   "date_creation": "2020-09-18",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889213088"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "TEKATE PRODUCTION (EN VRAI)",
+   "siren": "913079216",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "COURNON-D'AUVERGNE",
+   "code_postal": "63800",
+   "effectif": "6-9",
+   "date_creation": "2022-06-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913079216"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "VICE VERSA (VICE VERSA)",
+   "siren": "887981140",
+   "naf": "70.21Z",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ROMAGNAT",
+   "code_postal": "63540",
+   "effectif": "6-9",
+   "date_creation": "2020-08-10",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/887981140"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "VINGT DEUX",
+   "siren": "853249621",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "AUBIERE",
+   "code_postal": "63170",
+   "effectif": "6-9",
+   "date_creation": "2019-08-01",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/853249621"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "2 D (COMM 360)",
+   "siren": "832175012",
+   "naf": "70.21Z",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ISSOIRE",
+   "code_postal": "63500",
+   "effectif": "3-5",
+   "date_creation": "2017-09-20",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832175012"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "AGENCE CHARLIE (AGENCE CHARLIE)",
+   "siren": "953195005",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "CHAMALIERES",
+   "code_postal": "63400",
+   "effectif": "3-5",
+   "date_creation": "2023-05-26",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953195005"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "AGM COMMUNICATION",
+   "siren": "421699935",
+   "naf": "73.11Z",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63100",
+   "effectif": "3-5",
+   "date_creation": "1999-02-01",
+   "categorie": "ETI",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421699935"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "ATALANTE PRODUCTIONS",
+   "siren": "384922837",
+   "naf": "59.11B",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63000",
+   "effectif": "3-5",
+   "date_creation": "1992-04-02",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/384922837"
+  },
+  {
+   "date_extraction": "2026-11-18",
+   "canal": "API Recherche d'entreprises (data.gouv)",
+   "nom": "BISCUIT PRODUCTION (BISCUIT PRODUCTION)",
+   "siren": "802483461",
+   "naf": "59.11B",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "code_postal": "63000",
+   "effectif": "3-5",
+   "date_creation": "2014-05-19",
+   "categorie": "PME",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802483461"
+  }
+ ]
+}

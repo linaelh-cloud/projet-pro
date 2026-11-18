@@ -24,10 +24,17 @@ jobs:
           FT_CLIENT_SECRET: ${{ secrets.FT_CLIENT_SECRET }}
           DEPARTEMENT: ${{ vars.DEPARTEMENT }}
         run: python scripts/recuperer_offres.py 3
-      - name: Enregistrer les offres sur le site
+      - name: Compter le marché du métier (une fois par jour)
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: python scripts/marche.py
+      - name: Mettre à jour les entreprises du 63 (une fois par semaine)
+        run: python scripts/entreprises.py
+      - name: Enregistrer les offres et les données sur le site
         run: |
           git config user.name "robot-offres"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add offres.json
+          git add offres.json data/
           git diff --cached --quiet || git commit -m "Offres du jour $(date +%F)"
           git push
