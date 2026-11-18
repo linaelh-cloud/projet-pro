@@ -143,6 +143,42 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
 /* Letter */
 .letter-out{white-space:pre-wrap;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;font-size:15px;line-height:1.65;min-height:160px}
 .status-line{font-size:14px;color:var(--muted);min-height:20px}
+.toc{display:flex;flex-wrap:wrap;gap:8px}
+.toc a{font-size:13px;font-weight:600;text-decoration:none;padding:6px 12px;border-radius:999px;background:var(--accent-soft);color:var(--ink)}
+.card h4{font-family:var(--display);font-size:15px;margin:0 0 8px}
+.bars{display:flex;flex-direction:column;gap:6px}
+.bar-row{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) auto;gap:10px;align-items:center;font-size:13.5px}
+.bar-k{min-width:0;overflow-wrap:anywhere}
+.bar-t{height:9px;background:var(--accent-soft);border-radius:999px;overflow:hidden}
+.bar-f{display:block;height:100%;background:var(--accent);border-radius:999px}
+.bar-v{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.bar-v small{color:var(--muted);font-weight:500}
+.source{margin-top:14px;font-size:12.5px;color:var(--muted);background:var(--bg);border:1px dashed var(--line);border-radius:10px;padding:10px 12px;line-height:1.5}
+.source b{color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi{background:var(--accent-soft);border-radius:12px;padding:12px 14px;display:flex;flex-direction:column;gap:2px}
+.kpi b{font-family:var(--display);font-size:24px;font-variant-numeric:tabular-nums;color:var(--accent)}
+.kpi span{font-size:12.5px;color:var(--muted);line-height:1.35}
+table.mini{width:100%;border-collapse:collapse;font-size:13.5px}
+table.mini th{text-align:left;color:var(--muted);font-weight:600;padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top;font-variant-numeric:tabular-nums}
+.pill-s{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:999px;margin-right:6px}
+.pill-s.ok{background:var(--ok-soft);color:var(--ok)}.pill-s.no{background:var(--bad-soft);color:var(--bad)}.pill-s.mid{background:var(--warn-soft);color:var(--warn)}
+.gap{margin-top:18px;padding-top:14px;border-top:1px solid var(--line)}
+.questions{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+.quote{margin-top:14px;background:var(--accent-soft);border-radius:12px;padding:14px 16px;font-size:14px;line-height:1.55}
+.concl{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:8px;font-size:14.5px}
+.actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:760px){.actions{grid-template-columns:minmax(0,1fr)}}
+.action{border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px;font-size:13.5px}
+.action .date{font-weight:700;color:var(--accent);font-size:12.5px;text-transform:uppercase;letter-spacing:.04em}
+.action b{font-family:var(--display);font-size:16px}
+.action .preuve{margin-top:4px;font-weight:600;color:var(--ok)}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:stretch}
+.chain .link{flex:1;min-width:150px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+.chain .link b{color:var(--ink);font-size:14px}
+.chain .arrow{align-self:center;color:var(--accent);font-weight:800;font-size:20px}
+@media (max-width:760px){.chain .arrow{display:none}}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;z-index:20}
 @media (prefers-reduced-motion:no-preference){.btn,.site,nav.tabs a{transition:background .15s,border-color .15s}}
 </style>
@@ -153,10 +189,11 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
   <div class="wrap">
     <div class="brand"><i></i>Projet Pro</div>
     <nav class="tabs" aria-label="Onglets">
-      <a href="#accueil" data-tab="accueil">Mon métier</a>
+      <a href="#accueil" data-tab="accueil">Mon métier compté</a>
       <a href="#offres" data-tab="offres">Offres du jour</a>
       <a href="#lettre" data-tab="lettre">Lettre de motivation</a>
       <a href="#candidatures" data-tab="candidatures">Mes candidatures</a>
+      <a href="#methode" data-tab="methode">Comment c'est fait</a>
     </nav>
   </div>
 </header>
@@ -167,120 +204,207 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
 <section class="view" id="v-accueil">
   <div class="hero">
     <div class="hero-text">
-      <div class="eyebrow">Métier visé · Stage &amp; alternance</div>
-      <h1>Community <span>Manager</span></h1>
-      <p class="lead">Le community manager fait vivre une marque sur les réseaux sociaux. Il crée les publications, répond à la communauté, analyse les résultats et fait grandir l'audience.</p>
-      <div class="chips">
-        <span class="chip">Social media manager</span><span class="chip">Animateur·rice de communauté</span><span class="chip">Chargé·e de communication digitale</span><span class="chip">Content manager</span>
-      </div>
+      <div class="eyebrow">Séminaires métiers · M2 MOD · IAE Clermont Auvergne</div>
+      <h1>Community <span>Manager</span>, le métier compté</h1>
+      <p class="lead">Ce site rend compte du métier que je vise à partir de ce que disent les offres d'emploi, pas d'une fiche d'orientation. Chaque chiffre indique sa requête, sa date, son canal et ses limites. Les données se mettent à jour toutes seules.</p>
+      <p class="note" id="maj-marche">Chargement des dernières données…</p>
     </div>
     <div class="rome">
-      <div class="eyebrow" style="color:inherit;opacity:.8">Code métier ROME</div>
+      <div class="eyebrow" style="color:inherit;opacity:.8">Code ROME</div>
       <div class="code">E1101</div>
       <dl>
         <dt>Fiche</dt><dd>Animation de site multimédia</dd>
-        <dt>Domaine</dt><dd>Communication, média et multimédia</dd>
-        <dt>Source</dt><dd>Répertoire ROME, France Travail</dd>
+        <dt>Source</dt><dd>Répertoire ROME de France Travail (Métierscope)</dd>
+        <dt>Mon statut</dt><dd>Sans alternance encore : site en ligne, veille automatique</dd>
       </dl>
     </div>
   </div>
 
+  <nav class="toc" aria-label="Sommaire">
+    <a href="#accueil" data-goto="s-nom">1. Le métier tel que le marché le nomme</a>
+    <a href="#accueil" data-goto="s-offres">2. Ce que disent les offres</a>
+    <a href="#accueil" data-goto="s-comp">3. Compétences et outils</a>
+    <a href="#accueil" data-goto="s-bouge">4. Comment le métier bouge</a>
+    <a href="#accueil" data-goto="s-acteurs">5. Les acteurs</a>
+    <a href="#accueil" data-goto="s-position">6. Ma position et mes actions</a>
+  </nav>
+
+  <!-- 1 -->
+  <div class="card" id="s-nom">
+    <div class="eyebrow">1 · Le métier tel que le marché le nomme</div>
+    <h3 style="margin-top:4px">Un intitulé, des variantes, un code</h3>
+    <p class="note" style="margin:0 0 12px">Nombre d'offres en France dont le titre contient ces mots, le jour de la dernière extraction. « Chargé de communication » recrute presque autant que « community manager » : c'est un intitulé voisin à surveiller.</p>
+    <div class="bars" id="b-variantes"></div>
+    <div class="source" id="src-variantes"></div>
+    <h3 style="margin-top:18px;font-size:17px">Les questions que je pose à ce marché</h3>
+    <ol class="questions">
+      <li>Combien d'offres, où, et quelle part en Auvergne et dans le Puy-de-Dôme ?</li>
+      <li>Ce métier recrute-t-il surtout en alternance et en stage, ou en CDI ?</li>
+      <li>Quels salaires sont affichés, et combien d'offres n'en affichent pas ?</li>
+      <li>Quels réseaux, outils et compétences reviennent, et lesquels ma formation ne me donne pas ?</li>
+      <li>Qui recrute : les offres publiées, et les entreprises du 63 qui ne publient pas ?</li>
+    </ol>
+  </div>
+
+  <!-- 2 -->
+  <div class="card" id="s-offres">
+    <div class="eyebrow">2 · Ce que disent les offres</div>
+    <h3 style="margin-top:4px">Volume, géographie, contrats, salaires affichés</h3>
+    <div class="kpis" id="kpis"></div>
+    <div class="grid2" style="margin-top:16px">
+      <div><h4>Par région</h4><div class="bars" id="b-regions"></div></div>
+      <div><h4>Par type de contrat</h4><div class="bars" id="b-contrats"></div>
+        <h4 style="margin-top:16px">Salaires affichés (brut annuel)</h4>
+        <table class="mini" id="t-salaires"></table>
+        <p class="note" id="n-salaires"></p>
+      </div>
+    </div>
+    <div class="source" id="src-offres"></div>
+  </div>
+
+  <!-- 3 -->
+  <div class="card" id="s-comp">
+    <div class="eyebrow">3 · Compétences et outils demandés</div>
+    <h3 style="margin-top:4px">Ce que les annonces citent, compté</h3>
+    <div class="grid3">
+      <div><h4>Réseaux sociaux</h4><div class="bars" id="b-reseaux"></div></div>
+      <div><h4>Compétences</h4><div class="bars" id="b-comp"></div></div>
+      <div><h4>Outils</h4><div class="bars" id="b-outils"></div></div>
+    </div>
+    <div class="gap">
+      <h4>Ce que ma formation ne me donnera pas</h4>
+      <p class="note" style="margin:0 0 8px">Comparaison entre les compétences les plus citées et les unités d'enseignement du M2 MOD (fiche publique de la formation : stratégie marketing digitale, animation des communautés, relation client, search et performance digitale).</p>
+      <table class="mini">
+        <tr><th>Demandé dans les offres</th><th>Dans ma formation ?</th></tr>
+        <tr><td>Modération, animation de communauté</td><td><span class="pill-s ok">Oui</span> UE Animation des communautés</td></tr>
+        <tr><td>Stratégie social media, reporting / KPI</td><td><span class="pill-s ok">Oui</span> UE Stratégie marketing digitale, Search et performance</td></tr>
+        <tr><td>Création de contenu vidéo (Reels, TikTok), montage</td><td><span class="pill-s no">À aller chercher</span> CapCut, Premiere Pro</td></tr>
+        <tr><td>TikTok comme canal principal</td><td><span class="pill-s no">À aller chercher</span> pratique sur un compte réel</td></tr>
+        <tr><td>Influence et partenariats créateurs</td><td><span class="pill-s mid">En partie</span> à approfondir</td></tr>
+        <tr><td>IA générative pour produire du contenu</td><td><span class="pill-s mid">En partie</span> usage à prouver</td></tr>
+      </table>
+    </div>
+    <div class="source" id="src-comp"></div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card" id="s-bouge">
+    <div class="eyebrow">4 · Comment le métier bouge</div>
+    <h3 style="margin-top:4px">Une extraction par jour, pour voir le marché bouger</h3>
+    <p class="note" style="margin:0 0 10px">Le robot ajoute une ligne chaque jour. Avec plusieurs semaines de données, on lit une tendance, pas une opinion.</p>
+    <div style="overflow-x:auto"><table class="mini" id="t-histo"></table></div>
+    <div class="quote">
+      <b>Source emploi : Apec, « L'IA dans les métiers du commercial et du marketing » (mars 2026).</b>
+      En 2025, les métiers commercial-marketing représentent 13 % des offres cadre de l'Apec qui mentionnent l'IA, contre 9 % en 2022. Les employeurs attendent surtout des usages concrets et du savoir-être, plus que des formations techniques.
+      <a href="https://www.apec.fr/tendances-emploi-cadre/evolution-des-metiers-et-competences/quel-impact-de-l-ia-sur-les-competences-des-metiers-du-commercial-et-du-marketing-.html" target="_blank" rel="noopener">Lire l'étude ↗</a>
+    </div>
+    <p class="note" id="n-ia" style="margin-top:10px"></p>
+  </div>
+
+  <!-- 5 -->
+  <div class="card" id="s-acteurs">
+    <div class="eyebrow">5 · Les acteurs</div>
+    <h3 style="margin-top:4px">Qui recrute, et qui pourrait recruter sans le dire</h3>
+    <div class="grid2">
+      <div>
+        <h4>Entreprises qui publient le plus</h4>
+        <div class="bars" id="b-entreprises"></div>
+        <p class="note">Constat : une grande partie des offres d'alternance vient d'écoles et d'organismes de formation qui recrutent des alternants pour leurs entreprises partenaires. Une offre ne veut donc pas toujours dire un employeur direct.</p>
+      </div>
+      <div>
+        <h4>Le marché caché : entreprises du Puy-de-Dôme</h4>
+        <div class="kpis" id="kpis-63"></div>
+        <div class="bars" id="b-63"></div>
+      </div>
+    </div>
+    <h4 style="margin-top:14px">Exemples d'entreprises du 63 avec des salariés</h4>
+    <div style="overflow-x:auto"><table class="mini" id="t-63"></table></div>
+    <div class="source" id="src-63"></div>
+  </div>
+
+  <!-- 6 -->
+  <div class="card" id="s-position">
+    <div class="eyebrow">6 · Ma position</div>
+    <h3 style="margin-top:4px">Ce que je conclus, et ce que je vais chercher cette année</h3>
+    <ul class="concl">
+      <li><b>Le métier recrute surtout en alternance et en stage</b>, et surtout en Île-de-France. En Auvergne, les offres publiées sont rares : je ne peux pas compter seulement sur les annonces.</li>
+      <li><b>Le marché caché est plus grand que le marché visible</b> : plus de 300 entreprises de communication, publicité et design dans le Puy-de-Dôme, dont une centaine avec des salariés. Je vais les contacter directement.</li>
+      <li><b>La vidéo courte et TikTok sont devenus le cœur du métier</b> : c'est ce que je dois prouver, au-delà de ce que m'apporte la formation.</li>
+      <li><b>Peu d'offres affichent un salaire</b> : je préparerai ma négociation avec les grilles d'alternance et l'insertion de l'IAE, pas avec les annonces.</li>
+    </ul>
+    <h4 style="margin-top:14px">Mes 3 actions datées</h4>
+    <div class="actions">
+      <div class="action"><span class="date">Avant le 15/12/2026</span><b>Contacter 15 entreprises du 63</b><span>Choisies dans la base du marché caché, avec une candidature spontanée adaptée.</span><span class="preuve">Preuve : suivi dans l'onglet Mes candidatures</span></div>
+      <div class="action"><span class="date">Avant le 31/01/2027</span><b>Créer un portfolio de 10 vidéos courtes</b><span>Reels et TikTok montés sur CapCut, pour une marque ou une association locale.</span><span class="preuve">Preuve : lien vers le portfolio en ligne</span></div>
+      <div class="action"><span class="date">Avant le 28/02/2027</span><b>Obtenir une certification Google Analytics</b><span>Pour prouver la partie reporting et mesure de la performance.</span><span class="preuve">Preuve : certificat Google Skillshop</span></div>
+    </div>
+  </div>
+
   <div class="stats" id="home-stats">
-    <div class="stat"><b id="st-total">0</b><span>Candidatures envoyées</span></div>
+    <div class="stat"><b id="st-total">0</b><span>Mes candidatures</span></div>
     <div class="stat"><b id="st-attente">0</b><span>En attente</span></div>
     <div class="stat"><b id="st-entretien">0</b><span>Entretiens</span></div>
-    <div class="stat"><b id="st-offres">0</b><span>Offres disponibles</span></div>
+    <div class="stat"><b id="st-offres">0</b><span>Offres stage / alternance</span></div>
   </div>
+</section>
 
+<!-- ============ METHODE ============ -->
+<section class="view" id="v-methode" hidden>
+  <div>
+    <div class="eyebrow">Comment le site est fait</div>
+    <h2 style="font-size:32px;margin-top:4px">La chaîne complète</h2>
+    <p class="lead" style="margin-top:6px">Une veille construite une fois, qui tourne toute seule. Tout est en ligne et daté sur GitHub, dans le dépôt <a href="https://github.com/linaelh-cloud/projet-pro" target="_blank" rel="noopener">linaelh-cloud/projet-pro</a>.</p>
+  </div>
+  <div class="chain">
+    <div class="link"><b>1. Les API</b><span>Adzuna (offres), API Recherche d'entreprises (entreprises du 63)</span></div>
+    <div class="arrow">→</div>
+    <div class="link"><b>2. Les scripts Python</b><span>Ils interrogent les API, trient et comptent</span></div>
+    <div class="arrow">→</div>
+    <div class="link"><b>3. Les données datées</b><span>Fichiers CSV et JSON dans le dossier data</span></div>
+    <div class="arrow">→</div>
+    <div class="link"><b>4. GitHub Actions</b><span>Un robot qui relance tout, ordinateur éteint</span></div>
+    <div class="arrow">→</div>
+    <div class="link"><b>5. GitHub Pages</b><span>Ce site, qui affiche ce que la veille trouve</span></div>
+  </div>
   <div class="card">
-    <div class="eyebrow">Fiche du poste</div>
-    <h3 style="margin-top:4px">Community Manager en stage ou alternance</h3>
-    <table class="kv">
-      <tr><th>Intitulé</th><td>Community Manager (H/F)</td></tr>
-      <tr><th>Code ROME</th><td>E1101 · Animation de site multimédia</td></tr>
-      <tr><th>Type de contrat</th><td>Stage (2 à 6 mois) ou alternance (apprentissage / contrat pro, 1 à 3 ans)</td></tr>
-      <tr><th>Rattachement</th><td>Responsable communication, marketing ou social media</td></tr>
-      <tr><th>Où travailler</th><td>Agence de communication, marque (en interne), start-up, média, association, collectivité</td></tr>
-      <tr><th>Rythme</th><td>Bureau, souvent hybride. Veille et publications parfois le soir ou le week-end pendant les événements.</td></tr>
-      <tr><th>Niveau recherché</th><td>Bac+2 à Bac+5 en communication, marketing digital ou information-communication</td></tr>
+    <h3>Les canaux branchés</h3>
+    <table class="mini">
+      <tr><th>Canal</th><th>Ce qu'il apporte</th><th>État</th></tr>
+      <tr><td>API Adzuna (agrégateur, clé gratuite)</td><td>Offres du jour (stage, alternance) et comptage du marché</td><td><span class="pill-s ok">Actif</span></td></tr>
+      <tr><td>API Recherche d'entreprises (data.gouv, sans clé)</td><td>Entreprises du Puy-de-Dôme proches du métier</td><td><span class="pill-s ok">Actif</span></td></tr>
+      <tr><td>API France Travail « Offres d'emploi v2 »</td><td>Le canal commun du cours</td><td><span class="pill-s mid">Accès demandé le 18/11/2026</span> L'API n'est plus en libre-service : demande envoyée, le script la branchera dès l'accord</td></tr>
+      <tr><td>LinkedIn, Indeed, Apec</td><td>Recherche manuelle par liens filtrés</td><td><span class="pill-s no">Pas de robot</span> Leurs conditions interdisent le scraping</td></tr>
     </table>
   </div>
-
-  <div>
-    <div class="eyebrow" style="margin-bottom:10px">Fiche métier complète</div>
-    <div class="grid2">
-      <div class="card">
-        <h3>Ses missions</h3>
-        <ul>
-          <li><b>Créer du contenu</b> : posts, stories, reels, vidéos courtes, visuels et textes adaptés à chaque réseau.</li>
-          <li><b>Planifier</b> : tenir le calendrier éditorial et programmer les publications.</li>
-          <li><b>Animer la communauté</b> : répondre aux commentaires et messages, lancer des jeux-concours, modérer.</li>
-          <li><b>Analyser</b> : suivre les statistiques (portée, engagement, abonnés) et faire un bilan chaque mois.</li>
-          <li><b>Faire de la veille</b> : tendances, concurrents, nouveaux formats.</li>
-          <li><b>Travailler avec des créateurs</b> : contacter des influenceurs et suivre les partenariats.</li>
-          <li><b>Gérer une crise</b> : réagir vite et calmement à un bad buzz.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Une journée type</h3>
-        <div class="day">
-          <b>9h00</b><span>Veille : tendances, actus de la marque, commentaires de la nuit</span>
-          <b>10h00</b><span>Réponses aux messages et modération</span>
-          <b>11h00</b><span>Réunion avec l'équipe marketing sur la prochaine campagne</span>
-          <b>14h00</b><span>Tournage et montage d'un reel, création de visuels sur Canva</span>
-          <b>16h00</b><span>Programmation des posts de la semaine</span>
-          <b>17h00</b><span>Lecture des statistiques et préparation du reporting</span>
-        </div>
-      </div>
-      <div class="card">
-        <h3>Compétences techniques</h3>
-        <ul>
-          <li>Bien connaître Instagram, TikTok, LinkedIn, Facebook, X, YouTube et Pinterest</li>
-          <li>Écrire des textes courts et sans fautes, avec le bon ton</li>
-          <li>Créer des visuels et des vidéos : Canva, CapCut, Photoshop, Premiere Pro</li>
-          <li>Planifier : Meta Business Suite, Hootsuite, Later, Agorapulse</li>
-          <li>Lire les statistiques : taux d'engagement, portée, conversions, Google Analytics</li>
-          <li>Notions de publicité payante (Meta Ads, TikTok Ads) et de SEO</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Qualités recherchées</h3>
-        <div class="chips">
-          <span class="chip pink">Créativité</span><span class="chip pink">Curiosité</span><span class="chip pink">Réactivité</span><span class="chip pink">Sens de l'écoute</span><span class="chip pink">Diplomatie</span><span class="chip pink">Organisation</span><span class="chip pink">Esprit d'équipe</span><span class="chip pink">Sang-froid</span><span class="chip pink">Culture web</span>
-        </div>
-        <p class="note" style="margin:14px 0 0">Le plus important : comprendre l'image de la marque et savoir parler à sa communauté comme elle aime qu'on lui parle.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="grid2">
-    <div class="card">
-      <h3>Formations pour y arriver</h3>
-      <table class="kv">
-        <tr><th>Bac+2</th><td>BTS Communication, BTS NDRC</td></tr>
-        <tr><th>Bac+3</th><td>BUT Information-Communication, BUT MMI, licence pro Communication digitale, bachelor Communication / Marketing digital</td></tr>
-        <tr><th>Bac+5</th><td>Master Communication digitale, Master Marketing, écoles de commerce ou de communication</td></tr>
-      </table>
-      <p class="note" style="margin:10px 0 0">L'alternance est très répandue dans ce métier : c'est la meilleure façon d'avoir de l'expérience à la sortie.</p>
-    </div>
-    <div class="card">
-      <h3>Salaire</h3>
-      <div class="salary">
-        <div class="bar"><span>Stage</span><div class="track"><div class="fill" style="width:16%"></div></div><em>≈ 650 € / mois*</em></div>
-        <div class="bar"><span>Alternance</span><div class="track"><div class="fill" style="width:38%"></div></div><em>≈ 900 à 1 800 € / mois</em></div>
-        <div class="bar"><span>Débutant·e</span><div class="track"><div class="fill" style="width:58%"></div></div><em>≈ 2 000 à 2 400 € brut</em></div>
-        <div class="bar"><span>Confirmé·e (5 ans)</span><div class="track"><div class="fill" style="width:82%"></div></div><em>≈ 2 800 à 3 500 € brut</em></div>
-      </div>
-      <p class="note" style="margin:12px 0 0">*Gratification minimale légale pour un stage de plus de 2 mois. En alternance, le salaire dépend de ton âge et de ton année de contrat.</p>
-    </div>
-  </div>
-
   <div class="card">
-    <h3>Évolution de carrière</h3>
-    <div class="steps">
-      <span>Community Manager</span><i>→</i><span>Social Media Manager</span><i>→</i><span>Responsable communication digitale</span><i>→</i><span>Directeur·rice de la communication</span>
-    </div>
-    <p class="note" style="margin:12px 0 0">Autres chemins possibles : brand content manager, chargé·e d'influence, responsable de stratégie social media en agence, ou freelance.</p>
+    <h3>Les scripts et leur rythme</h3>
+    <table class="mini">
+      <tr><th>Script</th><th>Rôle</th><th>Fréquence</th></tr>
+      <tr><td><a href="https://github.com/linaelh-cloud/projet-pro/blob/main/scripts/recuperer_offres.py" target="_blank" rel="noopener">recuperer_offres.py</a></td><td>Nouvelles offres de stage et d'alternance pour l'onglet Offres du jour</td><td>Toutes les 3 heures</td></tr>
+      <tr><td><a href="https://github.com/linaelh-cloud/projet-pro/blob/main/scripts/marche.py" target="_blank" rel="noopener">marche.py</a></td><td>Extraction datée du marché : volume, régions, contrats, salaires, compétences</td><td>Une fois par jour</td></tr>
+      <tr><td><a href="https://github.com/linaelh-cloud/projet-pro/blob/main/scripts/entreprises.py" target="_blank" rel="noopener">entreprises.py</a></td><td>Base des entreprises du 63 (marché caché)</td><td>Une fois par semaine</td></tr>
+      <tr><td><a href="https://github.com/linaelh-cloud/projet-pro/blob/main/.github/workflows/offres.yml" target="_blank" rel="noopener">offres.yml</a></td><td>Le robot GitHub Actions qui lance les trois scripts et enregistre les données</td><td>Toutes les 3 heures</td></tr>
+    </table>
+    <p class="note">Les données brutes : <a href="https://github.com/linaelh-cloud/projet-pro/tree/main/data" target="_blank" rel="noopener">dossier data sur GitHub</a> (un CSV par jour d'extraction, l'historique, les entreprises du 63).</p>
+  </div>
+  <div class="card">
+    <h3>La règle RGPD</h3>
+    <ul class="concl">
+      <li>Je n'enregistre que des <b>données d'entreprise</b> : nom, SIREN, activité, commune, effectif. Les noms des dirigeants et les entrepreneurs individuels (dont le nom est celui d'une personne) sont exclus.</li>
+      <li>Les professionnels que je contacte sur LinkedIn le sont <b>à la main</b>, en lien avec leur fonction, pour une finalité claire : ma candidature. Aucun e-mail ni téléphone personnel n'est collecté.</li>
+      <li>Aucun fichier n'est constitué pour être revendu ou partagé.</li>
+      <li>Mes candidatures restent dans mon navigateur : elles ne sont pas publiées sur GitHub.</li>
+      <li>Les clés des API sont rangées dans les « Secrets » de GitHub, jamais dans le code.</li>
+    </ul>
+  </div>
+  <div class="card">
+    <h3>Les limites à garder en tête</h3>
+    <ul class="concl">
+      <li>Adzuna regroupe beaucoup de sites, mais pas tous. Son compteur d'offres repose sur des mots du titre et inclut des doublons.</li>
+      <li>Le comptage des compétences se fait sur le titre et l'extrait de description fourni par l'API (quelques lignes), pas sur l'annonce complète : les chiffres sont des minimums.</li>
+      <li>Les salaires sont des <b>salaires affichés</b> par une minorité d'offres, ramenés à un montant annuel brut. Ce ne sont pas les salaires réels du métier.</li>
+      <li>Le contrat est déduit du texte (« alternance », « stage ») ou de la donnée Adzuna quand elle existe.</li>
+    </ul>
   </div>
 </section>
 
@@ -405,7 +529,7 @@ textarea.i{resize:vertical;min-height:120px;line-height:1.5}
   const toast = (m) => { const t=$("#toast"); t.textContent=m; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,2400); };
 
   /* ---------- Onglets ---------- */
-  const TABS = ["accueil","offres","lettre","candidatures"];
+  const TABS = ["accueil","offres","lettre","candidatures","methode"];
   function show(){
     const h = location.hash.slice(1); const tab = TABS.includes(h) ? h : "accueil";
     TABS.forEach(t => { $("#v-"+t).hidden = t !== tab; });
@@ -619,6 +743,81 @@ ${profil || "(profil non renseigné : reste général sur la motivation, sans in
   $("#l-out").addEventListener("input", () => store.set("pp-lettre", $("#l-out").value));
 
   renderOffres(); renderCands();
+})();
+</script>
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const nf = (n) => Number(n || 0).toLocaleString("fr-FR");
+  const dfr = (d) => d ? new Date(d + "T12:00:00").toLocaleDateString("fr-FR", {day:"numeric", month:"long", year:"numeric"}) : "";
+  const pct = (a, b) => b ? Math.round(100 * a / b) + " %" : "–";
+
+  function bars(sel, rows, total, unit) {
+    const el = $(sel); if (!el) return;
+    if (!rows || !rows.length) { el.innerHTML = '<p class="note">Pas encore de données.</p>'; return; }
+    const max = Math.max(...rows.map(r => r[1]));
+    el.innerHTML = rows.map(([k, v]) => `<div class="bar-row"><span class="bar-k">${esc(k)}</span><span class="bar-t"><span class="bar-f" style="width:${Math.max(2, 100 * v / max)}%"></span></span><span class="bar-v">${nf(v)}${total ? ` <small>(${pct(v, total)})</small>` : ""}${unit || ""}</span></div>`).join("");
+  }
+  function source(sel, m, extra) {
+    const el = $(sel); if (!el) return;
+    el.innerHTML = `<b>Requête</b> ${esc(m.requete)} · <b>Date</b> ${dfr(m.date)} · <b>Canal</b> ${esc(m.canal)}${extra ? ` · <b>Limites</b> ${extra}` : ""}`;
+  }
+  // Aller à une section depuis le sommaire
+  document.querySelectorAll("[data-goto]").forEach(a => a.addEventListener("click", e => {
+    e.preventDefault(); document.getElementById(a.dataset.goto)?.scrollIntoView({behavior: "smooth", block: "start"});
+  }));
+
+  fetch("data/marche.json?v=" + Date.now()).then(r => r.ok ? r.json() : null).then(m => {
+    if (!m) { $("#maj-marche").textContent = "Les données du marché arrivent à la prochaine extraction."; return; }
+    const n = m.nb_analysees;
+    $("#maj-marche").textContent = `Dernière extraction : ${dfr(m.date)} à ${m.heure_utc} (UTC), canal ${m.canal}.`;
+    // 1. Variantes
+    bars("#b-variantes", m.variantes);
+    source("#src-variantes", {...m, requete: "title_only = chaque intitulé, pays = France"}, "le compteur d'Adzuna compte les annonces dont le titre contient tous ces mots, doublons compris");
+    // 2. Offres
+    const c = Object.fromEntries(m.contrats);
+    const altStage = (c["Alternance"] || 0) + (c["Stage"] || 0);
+    $("#kpis").innerHTML = [
+      [nf(m.total_annonce), "annonces en France avec ces mots dans le titre (compteur Adzuna)"],
+      [nf(n), "offres analysées une à une (les plus récentes, titre vérifié)"],
+      [pct(altStage, n), "sont des alternances ou des stages"],
+      [`${m.nb_salaires_affiches} / ${n}`, "affichent un salaire"],
+      [nf(m.auvergne), `en Auvergne-Rhône-Alpes, dont ${m.puy_de_dome} dans le Puy-de-Dôme`],
+    ].map(([v, l]) => `<div class="kpi"><b>${v}</b><span>${esc(l)}</span></div>`).join("");
+    bars("#b-regions", m.regions, n);
+    bars("#b-contrats", m.contrats, n);
+    const sal = Object.entries(m.salaires || {});
+    $("#t-salaires").innerHTML = `<tr><th>Contrat</th><th>Offres</th><th>Médiane</th><th>Fourchette</th></tr>` + (sal.length ? sal.map(([k, s]) => `<tr><td>${esc(k)}</td><td>${s.nb}</td><td>${nf(s.mediane)} €</td><td>${nf(s.min)} à ${nf(s.max)} €</td></tr>`).join("") : `<tr><td colspan="4">Aucun salaire affiché</td></tr>`);
+    $("#n-salaires").textContent = `Seulement ${m.nb_salaires_affiches} offres sur ${n} affichent un salaire : ces chiffres sont des salaires affichés, trop peu nombreux pour décrire le métier. Repère : l'insertion à un an des diplômés de l'IAE est de 2 433 € brut mensuel médian (chiffre du cours).`;
+    source("#src-offres", m, "Adzuna ne regroupe pas tous les sites ; le contrat est déduit du texte ; les salaires horaires et mensuels sont ramenés à l'année (× 1 607 h ou × 12)");
+    // 3. Compétences
+    bars("#b-reseaux", m.competences["Réseaux"], n);
+    bars("#b-comp", m.competences["Compétences"], n);
+    bars("#b-outils", m.competences["Outils"], n);
+    source("#src-comp", m, "mots cherchés dans le titre et l'extrait de description fourni par l'API, pas dans l'annonce complète : ce sont des minimums");
+    // 5. Entreprises qui publient
+    bars("#b-entreprises", (m.entreprises || []).slice(0, 10));
+    const ia = (m.competences["Outils"] || []).find(r => r[0].startsWith("ChatGPT"));
+    $("#n-ia").textContent = `Dans mes offres du ${dfr(m.date)}, l'IA générative est citée dans ${ia ? ia[1] : 0} offres sur ${n} (extraits de description). À suivre dans l'historique ci-dessus.`;
+  }).catch(() => { $("#maj-marche").textContent = "Données du marché indisponibles pour le moment."; });
+
+  // 4. Historique (CSV)
+  fetch("data/historique.csv?v=" + Date.now()).then(r => r.ok ? r.text() : "").then(t => {
+    const lignes = t.trim().split("\n").map(l => l.split(","));
+    if (lignes.length < 2) { $("#t-histo").innerHTML = "<tr><td>Première extraction en cours.</td></tr>"; return; }
+    const tete = ["Date", "Canal", "Requête", "Annonces (compteur)", "Analysées", "Alternance", "Stage", "CDI", "CDD / mission", "Salaires affichés", "IA citée"];
+    $("#t-histo").innerHTML = `<tr>${tete.map(h => `<th>${h}</th>`).join("")}</tr>` + lignes.slice(1).reverse().slice(0, 30).map(l => `<tr>${l.map((v, i) => `<td>${i === 0 ? dfr(v) : esc(v)}</td>`).join("")}</tr>`).join("");
+  });
+
+  // 5. Marché caché du 63
+  fetch("data/entreprises_63.json?v=" + Date.now()).then(r => r.ok ? r.json() : null).then(e => {
+    if (!e) return;
+    $("#kpis-63").innerHTML = [[nf(e.total), "entreprises actives dans le 63"], [nf(e.avec_salaries), "ont au moins un salarié"]].map(([v, l]) => `<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join("");
+    bars("#b-63", e.par_activite, e.total);
+    $("#t-63").innerHTML = `<tr><th>Entreprise</th><th>Commune</th><th>Activité</th><th>Effectif</th><th>Créée</th></tr>` + e.exemples.slice(0, 15).map(x => `<tr><td><a href="${esc(x.fiche)}" target="_blank" rel="noopener">${esc(x.nom)}</a></td><td>${esc(x.commune)}</td><td>${esc(x.activite)}</td><td>${esc(x.effectif)}</td><td>${esc((x.date_creation || "").slice(0, 4))}</td></tr>`).join("");
+    source("#src-63", e, "le code d'activité (NAF) ne dit pas si l'entreprise a besoin d'un community manager : c'est une liste de cibles à vérifier une par une");
+  });
 })();
 </script>
 </body>
