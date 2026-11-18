@@ -1,0 +1,338 @@
+{
+ "date": "2026-11-18",
+ "heure_utc": "22:08",
+ "canal": "Adzuna (API officielle, agrégateur d'offres)",
+ "requete": "title_only=\"community manager\" (mots dans le titre), pays = France, tri par date, 6 pages de 50 au plus ; puis titre vérifié (« community manag… » ou « CM »)",
+ "total_annonce": 1176,
+ "nb_analysees": 79,
+ "variantes": [
+  [
+   "community manager",
+   1176
+  ],
+  [
+   "chargé de communication",
+   1160
+  ],
+  [
+   "chargé de communication digitale",
+   141
+  ],
+  [
+   "content manager",
+   70
+  ],
+  [
+   "social media manager",
+   68
+  ],
+  [
+   "influence manager",
+   21
+  ],
+  [
+   "brand content manager",
+   7
+  ],
+  [
+   "responsable communication digitale",
+   7
+  ]
+ ],
+ "regions": [
+  [
+   "Ile-de-France",
+   34
+  ],
+  [
+   "Non précisé",
+   11
+  ],
+  [
+   "Occitanie",
+   10
+  ],
+  [
+   "DOM-TOM",
+   6
+  ],
+  [
+   "Auvergne-Rhône-Alpes",
+   5
+  ],
+  [
+   "Provence-Alpes-Côte d'Azur",
+   4
+  ],
+  [
+   "Hauts-De-France",
+   3
+  ],
+  [
+   "Bretagne",
+   3
+  ],
+  [
+   "Centre",
+   2
+  ],
+  [
+   "Nouvelle-Aquitaine",
+   1
+  ]
+ ],
+ "departements": [
+  [
+   "Paris",
+   15
+  ],
+  [
+   "Hauts-de-Seine",
+   7
+  ],
+  [
+   "Hérault",
+   6
+  ],
+  [
+   "La Réunion",
+   6
+  ],
+  [
+   "Seine-Saint-Denis",
+   4
+  ],
+  [
+   "Rhône",
+   4
+  ],
+  [
+   "Yvelines",
+   4
+  ],
+  [
+   "Alpes-Maritimes",
+   3
+  ],
+  [
+   "Val-de-Marne",
+   2
+  ],
+  [
+   "Nord",
+   2
+  ]
+ ],
+ "auvergne": 5,
+ "puy_de_dome": 1,
+ "teletravail": 0,
+ "contrats": [
+  [
+   "Alternance",
+   26
+  ],
+  [
+   "Stage",
+   23
+  ],
+  [
+   "Non précisé",
+   14
+  ],
+  [
+   "CDD / mission",
+   10
+  ],
+  [
+   "CDI",
+   5
+  ],
+  [
+   "Freelance",
+   1
+  ]
+ ],
+ "salaires": {
+  "CDD / mission": {
+   "nb": 1,
+   "min": 71500,
+   "mediane": 71500,
+   "max": 71500
+  },
+  "Stage": {
+   "nb": 1,
+   "min": 16200,
+   "mediane": 16200,
+   "max": 16200
+  },
+  "Non précisé": {
+   "nb": 5,
+   "min": 20891,
+   "mediane": 30000,
+   "max": 41782
+  },
+  "Freelance": {
+   "nb": 1,
+   "min": 26000,
+   "mediane": 26000,
+   "max": 26000
+  },
+  "CDI": {
+   "nb": 2,
+   "min": 26000,
+   "mediane": 110000,
+   "max": 110000
+  }
+ },
+ "nb_salaires_affiches": 10,
+ "competences": {
+  "Réseaux": [
+   [
+    "TikTok",
+    12
+   ],
+   [
+    "Instagram",
+    9
+   ],
+   [
+    "LinkedIn",
+    8
+   ],
+   [
+    "Facebook",
+    5
+   ],
+   [
+    "YouTube",
+    1
+   ]
+  ],
+  "Outils": [
+   [
+    "ChatGPT / IA générative",
+    2
+   ],
+   [
+    "Excel",
+    1
+   ]
+  ],
+  "Compétences": [
+   [
+    "Modération / animation",
+    28
+   ],
+   [
+    "Création de contenu",
+    25
+   ],
+   [
+    "Stratégie social media",
+    13
+   ],
+   [
+    "Vidéo / Reels",
+    8
+   ],
+   [
+    "Reporting / KPI",
+    8
+   ],
+   [
+    "Influence",
+    4
+   ],
+   [
+    "Veille",
+    3
+   ],
+   [
+    "Publicité (Ads)",
+    2
+   ],
+   [
+    "Événementiel",
+    2
+   ],
+   [
+    "Anglais",
+    2
+   ],
+   [
+    "Rédaction",
+    1
+   ],
+   [
+    "Photo",
+    1
+   ],
+   [
+    "Newsletter / emailing",
+    1
+   ]
+  ]
+ },
+ "entreprises": [
+  [
+   "ISCOD",
+   8
+  ],
+  [
+   "ECG",
+   8
+  ],
+  [
+   "Tetranergy Business School Réunion",
+   6
+  ],
+  [
+   "Iscod Alternance",
+   5
+  ],
+  [
+   "Fonction publique Territoriale",
+   4
+  ],
+  [
+   "Groupe OpenSourcing",
+   4
+  ],
+  [
+   "Magnet Open Sourcing",
+   4
+  ],
+  [
+   "Groupe Partouche",
+   2
+  ],
+  [
+   "Maison Ruello",
+   2
+  ],
+  [
+   "E.Leclerc",
+   2
+  ],
+  [
+   "Tetranergy Business School Rodez",
+   2
+  ],
+  [
+   "iSCOD",
+   2
+  ],
+  [
+   "EVS INTERIM",
+   2
+  ],
+  [
+   "nxlvl",
+   2
+  ],
+  [
+   "Reddit",
+   1
+  ]
+ ]
+}
