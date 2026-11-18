@@ -39,15 +39,25 @@ def lire_config():
 
 
 def jeton(cfg):
+    import base64
     motif = ""
-    for scope in ("api_offresdemploiv2 o2dsoffre", "api_offresdemploiv2"):
-        data = urllib.parse.urlencode({
-            "grant_type": "client_credentials",
-            "client_id": cfg["FT_CLIENT_ID"].strip(),
-            "client_secret": cfg["FT_CLIENT_SECRET"].strip(),
-            "scope": scope,
-        }).encode()
-        req = urllib.request.Request(TOKEN_URL, data=data, headers={"Content-Type": "application/x-www-form-urlencoded"})
+    cid, sec = cfg["FT_CLIENT_ID"].strip(), cfg["FT_CLIENT_SECRET"].strip()
+    print(f"Clés lues : identifiant de {len(cid)} caractères (commence par PAR_ : {cid.startswith('PAR_')}), clé secrète de {len(sec)} caractères.", file=sys.stderr)
+    essais = [
+        ("api_offresdemploiv2 o2dsoffre", "corps"),
+        (f"api_offresdemploiv2 o2dsoffre application_{cid}", "corps"),
+        ("api_offresdemploiv2 o2dsoffre", "basic"),
+    ]
+    for scope, mode in essais:
+        champs = {"grant_type": "client_credentials", "scope": scope}
+        entetes = {"Content-Type": "application/x-www-form-urlencoded"}
+        if mode == "corps":
+            champs.update({"client_id": cid, "client_secret": sec})
+        else:
+            entetes["Authorization"] = "Basic " + base64.b64encode(f"{cid}:{sec}".encode()).decode()
+        data = urllib.parse.urlencode(champs).encode()
+        scope = f"{scope.split(' application_')[0]}{' + application' if 'application_' in scope else ''} / {mode}"
+        req = urllib.request.Request(TOKEN_URL, data=data, headers=entetes)
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
                 return json.load(r)["access_token"]
