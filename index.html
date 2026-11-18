@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Projet Pro Community Manager</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap">
+<style>
+body{margin:0}[hidden]{display:none!important}img{max-width:100%}
+/* Layout: sticky tab bar, one centered column (max 1040px), each tab is a view. */
+/* Single light theme by request: fuchsia + white. */
+:root{
+  --bg:#ffffff; --surface:#ffffff; --ink:#2a0f1f; --muted:#7a5068; --line:#f6cfe3;
+  --accent:#d1157a; --accent-soft:#ffe6f2; --accent-ink:#ffffff;
+  --pink:#b0105f; --pink-soft:#ffd9ec;
+  --ok:#14804a; --ok-soft:#ddf4e7; --warn:#a35c00; --warn-soft:#fdf0d8; --bad:#c62f3a; --bad-soft:#fde3e5; --info:#2753c7; --info-soft:#e2eaff;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Inter",ui-sans-serif,system-ui,-apple-system,sans-serif;
+  --r:14px;
+  color-scheme:light;
+}
+input.i,select.i,textarea.i{background:#fff8fc !important}
+.card,.stat,.offer,.app,.site{box-shadow:0 1px 0 var(--line)}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.55}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+a{color:var(--accent)}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:16px;padding-block:10px;flex-wrap:wrap}
+.brand{font-family:var(--display);font-weight:800;font-size:18px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.brand i{width:10px;height:10px;border-radius:50%;background:var(--pink);display:inline-block}
+nav.tabs{display:flex;gap:4px;overflow-x:auto;flex:1;min-width:0;scrollbar-width:none}
+nav.tabs a{text-decoration:none;color:var(--muted);font-weight:600;padding:8px 12px;border-radius:999px;white-space:nowrap;font-size:14px}
+nav.tabs a[aria-current="page"]{background:var(--accent);color:var(--accent-ink)}
+nav.tabs a:hover:not([aria-current="page"]){background:var(--accent-soft);color:var(--ink)}
+
+main{padding-block:28px 64px}
+section.view{display:flex;flex-direction:column;gap:22px}
+.eyebrow{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lead{color:var(--muted);max-width:62ch;margin:0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.grid2,.grid3{grid-template-columns:minmax(0,1fr)}}
+.card h3{font-size:18px;margin-bottom:10px}
+.card ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px;align-items:stretch}
+@media (max-width:760px){.hero{grid-template-columns:minmax(0,1fr)}}
+.hero h1{font-size:clamp(34px,6vw,56px);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{color:var(--accent)}
+.hero-text{display:flex;flex-direction:column;gap:14px;justify-content:center}
+.rome{display:flex;flex-direction:column;gap:12px;background:var(--accent);color:var(--accent-ink);border-radius:var(--r);padding:22px}
+.rome .code{font-family:var(--display);font-size:52px;font-weight:800;letter-spacing:.02em;line-height:1}
+.rome dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin:0;font-size:14px}
+.rome dt{opacity:.75}.rome dd{margin:0;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13px;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--ink);font-weight:500}
+.chip.pink{background:var(--pink-soft)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+@media (max-width:600px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px}
+.stat b{display:block;font-family:var(--display);font-size:28px;font-variant-numeric:tabular-nums}
+.stat span{color:var(--muted);font-size:13px}
+table.kv{width:100%;border-collapse:collapse;font-size:14px}
+table.kv th{text-align:left;font-weight:600;color:var(--muted);padding:9px 12px 9px 0;vertical-align:top;width:34%;border-top:1px solid var(--line)}
+table.kv td{padding:9px 0;border-top:1px solid var(--line)}
+table.kv tr:first-child th,table.kv tr:first-child td{border-top:0}
+.day{display:grid;grid-template-columns:64px 1fr;gap:4px 12px;font-size:14px}
+.day b{font-variant-numeric:tabular-nums;color:var(--accent)}
+.salary{display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:130px 1fr auto;gap:10px;align-items:center;font-size:14px}
+.bar .track{height:10px;background:var(--accent-soft);border-radius:999px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:999px}
+.bar em{font-style:normal;font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+@media (max-width:500px){.bar{grid-template-columns:1fr auto}.bar .track{grid-column:1/-1;grid-row:2}}
+.steps{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px}
+.steps span{background:var(--surface);border:1px solid var(--line);padding:6px 12px;border-radius:999px}
+.steps i{color:var(--muted);font-style:normal}
+
+/* Controls */
+.btn{border:0;border-radius:10px;padding:10px 16px;font-weight:600;cursor:pointer;background:var(--accent);color:var(--accent-ink);text-decoration:none;display:inline-flex;align-items:center;gap:6px;justify-content:center}
+.btn:disabled{opacity:.5;cursor:default}
+.btn.ghost{background:var(--accent-soft);color:var(--ink)}
+.btn.line{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.btn.sm{padding:6px 10px;font-size:13px;border-radius:8px}
+.btn.danger{background:var(--bad-soft);color:var(--bad)}
+label.f{display:flex;flex-direction:column;gap:5px;font-size:13px;font-weight:600;color:var(--muted);min-width:0}
+input.i,select.i,textarea.i{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:9px 11px;font-size:15px;font-weight:400;color:var(--ink);width:100%;min-width:0}
+textarea.i{resize:vertical;min-height:120px;line-height:1.5}
+.form{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.form .full{grid-column:1/-1}
+@media (max-width:700px){.form{grid-template-columns:minmax(0,1fr)}}
+.seg{display:inline-flex;background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;padding:6px 14px;border-radius:999px;font-weight:600;font-size:14px;cursor:pointer;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+.note{font-size:13px;color:var(--muted)}
+.empty{border:1.5px dashed var(--line);border-radius:var(--r);padding:28px;text-align:center;color:var(--muted);display:flex;flex-direction:column;gap:8px;align-items:center}
+.empty b{color:var(--ink);font-family:var(--display);font-size:18px}
+
+/* Offers */
+.sites{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:10px}
+.site{display:flex;flex-direction:column;gap:2px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--surface);text-decoration:none;color:var(--ink)}
+.site:hover{border-color:var(--accent)}
+.site b{font-size:14px}.site span{font-size:12px;color:var(--muted)}
+.offers{display:flex;flex-direction:column;gap:10px}
+.offer{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 16px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.offer h3{font-size:17px}
+.offer .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.offer .acts{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.offer p{margin:6px 0 0;font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+@media (max-width:640px){.offer{grid-template-columns:minmax(0,1fr)}.offer .acts{justify-content:flex-start}}
+.pill{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;display:inline-block}
+.pill.stage{background:var(--info-soft);color:var(--info)}
+.pill.alternance{background:var(--pink-soft);color:var(--pink)}
+.pill.new{background:var(--ok-soft);color:var(--ok)}
+
+/* Candidatures */
+.sector{display:flex;flex-direction:column;gap:8px}
+.sector h3{font-size:18px;display:flex;gap:8px;align-items:baseline}
+.sector h3 small{font-family:var(--body);font-size:13px;color:var(--muted);font-weight:500}
+.app{display:grid;grid-template-columns:minmax(0,1fr) 170px auto;gap:10px 14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);border-radius:12px;padding:12px 14px}
+.app[data-s="attente"]{border-left-color:var(--warn)}
+.app[data-s="entretien"]{border-left-color:var(--info)}
+.app[data-s="refus"]{border-left-color:var(--bad)}
+.app[data-s="acceptee"]{border-left-color:var(--ok)}
+.app b{font-size:15px}
+.app .meta{font-size:13px;color:var(--muted)}
+.app select{font-weight:600}
+.app .row-acts{display:flex;gap:6px}
+@media (max-width:640px){.app{grid-template-columns:minmax(0,1fr)}}
+.confirm{display:flex;gap:6px;align-items:center;font-size:13px}
+
+/* Letter */
+.letter-out{white-space:pre-wrap;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:22px;font-size:15px;line-height:1.65;min-height:160px}
+.status-line{font-size:14px;color:var(--muted);min-height:20px}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;z-index:20}
+@media (prefers-reduced-motion:no-preference){.btn,.site,nav.tabs a{transition:background .15s,border-color .15s}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><i></i>Projet Pro</div>
+    <nav class="tabs" aria-label="Onglets">
+      <a href="#accueil" data-tab="accueil">Mon métier</a>
+      <a href="#offres" data-tab="offres">Offres du jour</a>
+      <a href="#lettre" data-tab="lettre">Lettre de motivation</a>
+      <a href="#candidatures" data-tab="candidatures">Mes candidatures</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ ACCUEIL ============ -->
+<section class="view" id="v-accueil">
+  <div class="hero">
+    <div class="hero-text">
+      <div class="eyebrow">Métier visé · Stage &amp; alternance</div>
+      <h1>Community <span>Manager</span></h1>
+      <p class="lead">Le community manager fait vivre une marque sur les réseaux sociaux. Il crée les publications, répond à la communauté, analyse les résultats et fait grandir l'audience.</p>
+      <div class="chips">
+        <span class="chip">Social media manager</span><span class="chip">Animateur·rice de communauté</span><span class="chip">Chargé·e de communication digitale</span><span class="chip">Content manager</span>
+      </div>
+    </div>
+    <div class="rome">
+      <div class="eyebrow" style="color:inherit;opacity:.8">Code métier ROME</div>
+      <div class="code">E1101</div>
+      <dl>
+        <dt>Fiche</dt><dd>Animation de site multimédia</dd>
+        <dt>Domaine</dt><dd>Communication, média et multimédia</dd>
+        <dt>Source</dt><dd>Répertoire ROME, France Travail</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="stats" id="home-stats">
+    <div class="stat"><b id="st-total">0</b><span>Candidatures envoyées</span></div>
+    <div class="stat"><b id="st-attente">0</b><span>En attente</span></div>
+    <div class="stat"><b id="st-entretien">0</b><span>Entretiens</span></div>
+    <div class="stat"><b id="st-offres">0</b><span>Offres disponibles</span></div>
+  </div>
+
+  <div class="card">
+    <div class="eyebrow">Fiche du poste</div>
+    <h3 style="margin-top:4px">Community Manager en stage ou alternance</h3>
+    <table class="kv">
+      <tr><th>Intitulé</th><td>Community Manager (H/F)</td></tr>
+      <tr><th>Code ROME</th><td>E1101 · Animation de site multimédia</td></tr>
+      <tr><th>Type de contrat</th><td>Stage (2 à 6 mois) ou alternance (apprentissage / contrat pro, 1 à 3 ans)</td></tr>
+      <tr><th>Rattachement</th><td>Responsable communication, marketing ou social media</td></tr>
+      <tr><th>Où travailler</th><td>Agence de communication, marque (en interne), start-up, média, association, collectivité</td></tr>
+      <tr><th>Rythme</th><td>Bureau, souvent hybride. Veille et publications parfois le soir ou le week-end pendant les événements.</td></tr>
+      <tr><th>Niveau recherché</th><td>Bac+2 à Bac+5 en communication, marketing digital ou information-communication</td></tr>
+    </table>
+  </div>
+
+  <div>
+    <div class="eyebrow" style="margin-bottom:10px">Fiche métier complète</div>
+    <div class="grid2">
+      <div class="card">
+        <h3>Ses missions</h3>
+        <ul>
+          <li><b>Créer du contenu</b> : posts, stories, reels, vidéos courtes, visuels et textes adaptés à chaque réseau.</li>
+          <li><b>Planifier</b> : tenir le calendrier éditorial et programmer les publications.</li>
+          <li><b>Animer la communauté</b> : répondre aux commentaires et messages, lancer des jeux-concours, modérer.</li>
+          <li><b>Analyser</b> : suivre les statistiques (portée, engagement, abonnés) et faire un bilan chaque mois.</li>
+          <li><b>Faire de la veille</b> : tendances, concurrents, nouveaux formats.</li>
+          <li><b>Travailler avec des créateurs</b> : contacter des influenceurs et suivre les partenariats.</li>
+          <li><b>Gérer une crise</b> : réagir vite et calmement à un bad buzz.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Une journée type</h3>
+        <div class="day">
+          <b>9h00</b><span>Veille : tendances, actus de la marque, commentaires de la nuit</span>
+          <b>10h00</b><span>Réponses aux messages et modération</span>
+          <b>11h00</b><span>Réunion avec l'équipe marketing sur la prochaine campagne</span>
+          <b>14h00</b><span>Tournage et montage d'un reel, création de visuels sur Canva</span>
+          <b>16h00</b><span>Programmation des posts de la semaine</span>
+          <b>17h00</b><span>Lecture des statistiques et préparation du reporting</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Compétences techniques</h3>
+        <ul>
+          <li>Bien connaître Instagram, TikTok, LinkedIn, Facebook, X, YouTube et Pinterest</li>
+          <li>Écrire des textes courts et sans fautes, avec le bon ton</li>
+          <li>Créer des visuels et des vidéos : Canva, CapCut, Photoshop, Premiere Pro</li>
+          <li>Planifier : Meta Business Suite, Hootsuite, Later, Agorapulse</li>
+          <li>Lire les statistiques : taux d'engagement, portée, conversions, Google Analytics</li>
+          <li>Notions de publicité payante (Meta Ads, TikTok Ads) et de SEO</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Qualités recherchées</h3>
+        <div class="chips">
+          <span class="chip pink">Créativité</span><span class="chip pink">Curiosité</span><span class="chip pink">Réactivité</span><span class="chip pink">Sens de l'écoute</span><span class="chip pink">Diplomatie</span><span class="chip pink">Organisation</span><span class="chip pink">Esprit d'équipe</span><span class="chip pink">Sang-froid</span><span class="chip pink">Culture web</span>
+        </div>
+        <p class="note" style="margin:14px 0 0">Le plus important : comprendre l'image de la marque et savoir parler à sa communauté comme elle aime qu'on lui parle.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <h3>Formations pour y arriver</h3>
+      <table class="kv">
+        <tr><th>Bac+2</th><td>BTS Communication, BTS NDRC</td></tr>
+        <tr><th>Bac+3</th><td>BUT Information-Communication, BUT MMI, licence pro Communication digitale, bachelor Communication / Marketing digital</td></tr>
+        <tr><th>Bac+5</th><td>Master Communication digitale, Master Marketing, écoles de commerce ou de communication</td></tr>
+      </table>
+      <p class="note" style="margin:10px 0 0">L'alternance est très répandue dans ce métier : c'est la meilleure façon d'avoir de l'expérience à la sortie.</p>
+    </div>
+    <div class="card">
+      <h3>Salaire</h3>
+      <div class="salary">
+        <div class="bar"><span>Stage</span><div class="track"><div class="fill" style="width:16%"></div></div><em>≈ 650 € / mois*</em></div>
+        <div class="bar"><span>Alternance</span><div class="track"><div class="fill" style="width:38%"></div></div><em>≈ 900 à 1 800 € / mois</em></div>
+        <div class="bar"><span>Débutant·e</span><div class="track"><div class="fill" style="width:58%"></div></div><em>≈ 2 000 à 2 400 € brut</em></div>
+        <div class="bar"><span>Confirmé·e (5 ans)</span><div class="track"><div class="fill" style="width:82%"></div></div><em>≈ 2 800 à 3 500 € brut</em></div>
+      </div>
+      <p class="note" style="margin:12px 0 0">*Gratification minimale légale pour un stage de plus de 2 mois. En alternance, le salaire dépend de ton âge et de ton année de contrat.</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Évolution de carrière</h3>
+    <div class="steps">
+      <span>Community Manager</span><i>→</i><span>Social Media Manager</span><i>→</i><span>Responsable communication digitale</span><i>→</i><span>Directeur·rice de la communication</span>
+    </div>
+    <p class="note" style="margin:12px 0 0">Autres chemins possibles : brand content manager, chargé·e d'influence, responsable de stratégie social media en agence, ou freelance.</p>
+  </div>
+</section>
+
+<!-- ============ OFFRES ============ -->
+<section class="view" id="v-offres" hidden>
+  <div>
+    <div class="eyebrow">Mises à jour chaque matin</div>
+    <h2 style="font-size:32px;margin-top:4px">Offres du jour</h2>
+    <p class="lead" style="margin-top:6px">Les nouvelles annonces de Community Manager arrivent ici automatiquement. Cliquer sur <b>Postuler</b> ouvre l'annonce et l'ajoute à tes candidatures.</p>
+  </div>
+  <div class="toolbar">
+    <div class="seg" role="group" aria-label="Type de contrat">
+      <button type="button" data-type="tous" aria-pressed="true">Tous</button>
+      <button type="button" data-type="stage" aria-pressed="false">Stage</button>
+      <button type="button" data-type="alternance" aria-pressed="false">Alternance</button>
+    </div>
+    <label class="f" style="flex-direction:row;align-items:center;gap:8px">Ville
+      <input class="i" id="ville" placeholder="Toute la France" style="width:180px">
+    </label>
+  </div>
+  <div class="offers" id="offers-list"></div>
+  <p class="note" id="offers-updated"></p>
+
+  <div class="card">
+    <h3>Chercher directement sur les sites</h3>
+    <p class="note" style="margin:0 0 12px">Chaque lien ouvre la recherche déjà faite, avec le type de contrat et la ville choisis.</p>
+    <div class="sites" id="sites"></div>
+  </div>
+</section>
+
+<!-- ============ LETTRE ============ -->
+<section class="view" id="v-lettre" hidden>
+  <div>
+    <div class="eyebrow">Générée pour chaque annonce</div>
+    <h2 style="font-size:32px;margin-top:4px">Lettre de motivation</h2>
+    <p class="lead" style="margin-top:6px">Colle l'annonce, vérifie ton profil, puis clique sur <b>Générer la lettre</b>. Claude s'ouvre avec la demande prête et écrit ta lettre adaptée à l'annonce.</p>
+  </div>
+  <div class="grid2">
+    <label class="f">L'annonce (texte complet)
+      <textarea class="i" id="l-annonce" style="min-height:220px" placeholder="Colle ici le texte de l'annonce : entreprise, missions, profil recherché…"></textarea>
+    </label>
+    <label class="f">Mon profil (formation, expériences, points forts)
+      <textarea class="i" id="l-profil" style="min-height:220px" placeholder="Ex. : Étudiante en BTS Communication à Lyon, je cherche une alternance de 2 ans. Stage de 2 mois chez… J'ai géré le compte Instagram de… Je maîtrise Canva et CapCut…"></textarea>
+    </label>
+  </div>
+  <div class="form">
+    <label class="f">Mon prénom et nom<input class="i" id="l-nom" placeholder="Prénom Nom"></label>
+    <label class="f">Type de contrat
+      <select class="i" id="l-type"><option value="alternance">Alternance</option><option value="stage">Stage</option></select>
+    </label>
+    <label class="f">Ton de la lettre
+      <select class="i" id="l-ton"><option>Professionnel et chaleureux</option><option>Dynamique et créatif</option><option>Sobre et formel</option></select>
+    </label>
+  </div>
+  <div class="toolbar">
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <a class="btn" id="l-gen" href="https://claude.ai/new" target="_blank" rel="noopener">Générer la lettre ↗</a>
+      <button class="btn ghost" id="l-copy-prompt" type="button">Copier la demande</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn ghost" id="l-save-profil" type="button">Enregistrer mon profil</button>
+    </div>
+  </div>
+  <div class="status-line" id="l-status">Si Claude s'ouvre sans la demande, clique sur « Copier la demande » et colle-la dans Claude.</div>
+  <label class="f">Ma lettre finale (colle-la ici pour la garder avec l'annonce)
+    <textarea class="i letter-out" id="l-out" placeholder="Colle ici la lettre écrite par Claude, puis modifie-la si besoin." style="min-height:300px"></textarea>
+  </label>
+</section>
+
+<!-- ============ CANDIDATURES ============ -->
+<section class="view" id="v-candidatures" hidden>
+  <div>
+    <div class="eyebrow">Suivi</div>
+    <h2 style="font-size:32px;margin-top:4px">Mes candidatures</h2>
+    <p class="lead" style="margin-top:6px">Toutes tes candidatures, regroupées par secteur. Change le statut quand tu reçois une réponse.</p>
+  </div>
+  <form class="card" id="c-form">
+    <h3>Ajouter une candidature</h3>
+    <div class="form">
+      <label class="f">Entreprise<input class="i" id="c-entreprise" required placeholder="Ex. : Sephora"></label>
+      <label class="f">Poste<input class="i" id="c-poste" required value="Community Manager"></label>
+      <label class="f">Lieu<input class="i" id="c-lieu" placeholder="Ex. : Paris"></label>
+      <label class="f">Secteur<select class="i" id="c-secteur"></select></label>
+      <label class="f">Contrat<select class="i" id="c-type"><option value="alternance">Alternance</option><option value="stage">Stage</option></select></label>
+      <label class="f">Date d'envoi<input class="i" type="date" id="c-date"></label>
+      <label class="f full">Lien de l'annonce (facultatif)<input class="i" id="c-lien" type="url" placeholder="https://…"></label>
+    </div>
+    <div style="margin-top:14px;display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <button class="btn" type="submit" id="c-add">Ajouter</button>
+      <span class="note" id="c-msg"></span>
+    </div>
+  </form>
+  <div class="toolbar">
+    <div class="seg" role="group" aria-label="Filtrer par statut" id="c-filter">
+      <button type="button" data-s="tous" aria-pressed="true">Toutes</button>
+      <button type="button" data-s="attente" aria-pressed="false">En attente</button>
+      <button type="button" data-s="entretien" aria-pressed="false">Entretien</button>
+      <button type="button" data-s="refus" aria-pressed="false">Refus</button>
+      <button type="button" data-s="acceptee" aria-pressed="false">Acceptée</button>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <button class="btn ghost sm" id="c-export" type="button">Sauvegarder (fichier)</button>
+      <label class="btn ghost sm" for="c-import" style="cursor:pointer">Restaurer une sauvegarde</label>
+      <input type="file" id="c-import" accept=".json,application/json" hidden>
+    </div>
+  </div>
+  <p class="note" id="c-count" style="margin:-10px 0 0">Tes candidatures sont enregistrées dans ce navigateur. Fais une sauvegarde de temps en temps.</p>
+  <div id="c-list" style="display:flex;flex-direction:column;gap:22px"></div>
+</section>
+
+</main>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+(() => {
+  const $ = (s) => document.querySelector(s);
+  const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const store = { get(k,d){try{const v=localStorage.getItem(k);return v==null?d:v}catch(e){return d}}, set(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}} };
+  const SECTEURS = ["Agence de communication","Beauté & cosmétique","Mode & luxe","Médias & presse","Tech & start-up","Sport","Culture & événementiel","Food & restauration","Tourisme & hôtellerie","Retail & e-commerce","Santé & bien-être","Associatif & public","Banque & assurance","Autre"];
+  const STATUTS = {attente:"En attente", entretien:"Entretien", refus:"Refus", acceptee:"Acceptée"};
+  const today = () => new Date().toISOString().slice(0,10);
+  const toast = (m) => { const t=$("#toast"); t.textContent=m; t.hidden=false; clearTimeout(toast._t); toast._t=setTimeout(()=>t.hidden=true,2400); };
+
+  /* ---------- Onglets ---------- */
+  const TABS = ["accueil","offres","lettre","candidatures"];
+  function show(){
+    const h = location.hash.slice(1); const tab = TABS.includes(h) ? h : "accueil";
+    TABS.forEach(t => { $("#v-"+t).hidden = t !== tab; });
+    document.querySelectorAll("nav.tabs a").forEach(a => { if(a.dataset.tab===tab) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
+  }
+  addEventListener("hashchange", () => { show(); scrollTo(0,0); });
+  show();
+
+  /* ---------- Données ---------- */
+  let offres = [];
+  let cands = []; try { cands = JSON.parse(store.get("pp-candidatures","[]")) || []; } catch(e){ cands = []; }
+  const saveCands = () => { if(!store.set("pp-candidatures", JSON.stringify(cands))) toast("Enregistrement impossible dans ce navigateur"); };
+  let typeFilter = store.get("pp-type","tous"), statusFilter = "tous";
+  let ville = store.get("pp-ville","");
+  $("#ville").value = ville;
+
+  /* ---------- Sites de recherche ---------- */
+  function renderSites(){
+    const q = ("community manager " + (typeFilter === "tous" ? "" : typeFilter)).trim();
+    const enc = encodeURIComponent(q), loc = encodeURIComponent(ville || "France"), cm = encodeURIComponent("community manager");
+    const sites = [
+      ["Indeed", `https://fr.indeed.com/jobs?q=${enc}&l=${loc}`],
+      ["LinkedIn", `https://www.linkedin.com/jobs/search/?keywords=${enc}&location=${loc}`],
+      ["Welcome to the Jungle", `https://www.welcometothejungle.com/fr/jobs?query=${cm}${typeFilter==="stage"?"&refinementList%5Bcontract_type%5D%5B%5D=internship":typeFilter==="alternance"?"&refinementList%5Bcontract_type%5D%5B%5D=apprenticeship":""}`],
+      ["HelloWork", `https://www.hellowork.com/fr-fr/emploi/recherche.html?k=${enc}&l=${encodeURIComponent(ville)}`],
+      ["France Travail", `https://candidat.francetravail.fr/offres/recherche?motsCles=${enc}`],
+      ["1jeune1solution", typeFilter==="stage" ? `https://www.1jeune1solution.gouv.fr/stages?q=${cm}` : `https://www.1jeune1solution.gouv.fr/apprentissage?libelleMetier=${cm}&codeRomes=E1101`],
+      ["La Bonne Alternance", `https://labonnealternance.apprentissage.beta.gouv.fr/`],
+      ["JobTeaser", `https://www.jobteaser.com/fr/job-offers?q=${enc}`],
+      ["Wizbii", `https://www.wizbii.com/bo/jobs?keywords=${enc}`],
+    ];
+    $("#sites").innerHTML = sites.map(([n,u]) => `<a class="site" href="${esc(u)}" target="_blank" rel="noopener"><b>${esc(n)}</b><span>Ouvrir la recherche ↗</span></a>`).join("");
+  }
+
+  /* ---------- Offres ---------- */
+  function renderOffres(){
+    document.querySelectorAll('#v-offres .seg button').forEach(b => b.setAttribute("aria-pressed", b.dataset.type===typeFilter));
+    const v = ville.trim().toLowerCase();
+    const list = offres.filter(o => (typeFilter==="tous" || o.type===typeFilter) && (!v || String(o.lieu||"").toLowerCase().includes(v)));
+    const applied = new Set(cands.map(c => c.offreId).filter(Boolean));
+    const recent = new Date(Date.now()-2*864e5).toISOString().slice(0,10);
+    if (!list.length){
+      $("#offers-list").innerHTML = `<div class="empty"><b>${offres.length ? "Aucune offre pour ce filtre" : "Les offres arrivent chaque matin"}</b><span>${offres.length ? "Change le type de contrat ou la ville." : "Le robot GitHub ajoute ici les nouvelles annonces tous les jours. En attendant, utilise les liens ci-dessous."}</span></div>`;
+    } else {
+      $("#offers-list").innerHTML = list.map(o => `
+        <article class="offer">
+          <div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:6px">
+              <span class="pill ${o.type==="stage"?"stage":"alternance"}">${o.type==="stage"?"Stage":"Alternance"}</span>
+              ${o.date>=recent?'<span class="pill new">Nouveau</span>':""}
+            </div>
+            <h3>${esc(o.titre)}</h3>
+            <div class="meta"><span>${esc(o.entreprise||"Entreprise non précisée")}</span>${o.lieu?`<span>${esc(o.lieu)}</span>`:""}${o.secteur?`<span>${esc(o.secteur)}</span>`:""}<span>via ${esc(o.source||"web")}</span>${o.date?`<span>${new Date(o.date).toLocaleDateString("fr-FR")}</span>`:""}</div>
+            ${o.description?`<p>${esc(o.description)}</p>`:""}
+          </div>
+          <div class="acts">
+            <button class="btn ghost sm" data-letter="${esc(o.id)}" type="button">Générer la lettre</button>
+            ${applied.has(o.id)?'<span class="pill new" style="align-self:center">Déjà postulé</span>':`<a class="btn sm" href="${esc(o.url||"#")}" target="_blank" rel="noopener" data-apply="${esc(o.id)}">Postuler ↗</a>`}
+          </div>
+        </article>`).join("");
+    }
+    $("#st-offres").textContent = offres.length;
+    const last = offres.map(o => o.date).filter(Boolean).sort().pop();
+    $("#offers-updated").textContent = last ? `Annonce la plus récente : ${new Date(last).toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})}` : "";
+    renderSites();
+  }
+  document.querySelectorAll('#v-offres .seg button').forEach(b => b.addEventListener("click", () => { typeFilter=b.dataset.type; store.set("pp-type",typeFilter); renderOffres(); }));
+  $("#ville").addEventListener("input", e => { ville=e.target.value; store.set("pp-ville",ville); renderOffres(); });
+  $("#offers-list").addEventListener("click", (e) => {
+    const ap = e.target.closest("[data-apply]"), lt = e.target.closest("[data-letter]");
+    if (ap){
+      const o = offres.find(x => x.id===ap.dataset.apply); if(!o) return;
+      addCand({entreprise:o.entreprise||"Entreprise non précisée", poste:o.titre||"Community Manager", lieu:o.lieu||"", secteur:o.secteur||"Autre", type:o.type||"alternance", date:today(), lien:o.url||"", statut:"attente", offreId:o.id});
+      toast("Ajoutée à tes candidatures");
+    }
+    if (lt){
+      const o = offres.find(x => x.id===lt.dataset.letter); if(!o) return;
+      $("#l-annonce").value = `${o.titre}\nEntreprise : ${o.entreprise||""}\nLieu : ${o.lieu||""}\nContrat : ${o.type}\nLien : ${o.url||""}\n\n${o.description||""}`;
+      $("#l-type").value = o.type==="stage"?"stage":"alternance";
+      updateLetterLink();
+      location.hash = "lettre";
+    }
+  });
+  fetch("offres.json?v=" + Date.now()).then(r => r.ok ? r.json() : []).then(d => {
+    offres = (Array.isArray(d) ? d : []).sort((a,b) => String(b.date).localeCompare(String(a.date)));
+    renderOffres();
+  }).catch(() => renderOffres());
+
+  /* ---------- Candidatures ---------- */
+  $("#c-secteur").innerHTML = SECTEURS.map(s => `<option>${esc(s)}</option>`).join("");
+  $("#c-date").value = today();
+  let pendingDelete = null;
+
+  function renderCands(){
+    const counts = {attente:0,entretien:0,refus:0,acceptee:0};
+    cands.forEach(c => counts[c.statut] = (counts[c.statut]||0)+1);
+    $("#st-total").textContent = cands.length; $("#st-attente").textContent = counts.attente; $("#st-entretien").textContent = counts.entretien;
+    document.querySelectorAll("#c-filter button").forEach(b => {
+      b.setAttribute("aria-pressed", b.dataset.s===statusFilter);
+      const n = b.dataset.s==="tous" ? cands.length : counts[b.dataset.s]||0;
+      b.textContent = (b.dataset.s==="tous"?"Toutes":STATUTS[b.dataset.s]) + ` (${n})`;
+    });
+    const list = cands.filter(c => statusFilter==="tous" || c.statut===statusFilter);
+    if (!list.length){ $("#c-list").innerHTML = `<div class="empty"><b>${cands.length?"Aucune candidature avec ce statut":"Aucune candidature pour l'instant"}</b><span>${cands.length?"Choisis un autre filtre.":"Ajoute ta première candidature avec le formulaire ci-dessus, ou clique sur Postuler dans les offres du jour."}</span></div>`; return; }
+    const groups = {};
+    list.forEach(c => (groups[c.secteur||"Autre"] ||= []).push(c));
+    const order = Object.keys(groups).sort((a,b) => groups[b].length-groups[a].length || a.localeCompare(b,"fr"));
+    $("#c-list").innerHTML = order.map(sec => `
+      <div class="sector">
+        <h3>${esc(sec)} <small>${groups[sec].length} candidature${groups[sec].length>1?"s":""}</small></h3>
+        ${groups[sec].sort((a,b)=>String(b.date).localeCompare(String(a.date))).map(c => `
+          <div class="app" data-s="${esc(c.statut)}">
+            <div style="min-width:0">
+              <b>${esc(c.entreprise)}</b> · ${esc(c.poste)}
+              <div class="meta">${[c.lieu, c.type==="stage"?"Stage":"Alternance", c.date?"envoyée le "+new Date(c.date).toLocaleDateString("fr-FR"):""].filter(Boolean).map(esc).join(" · ")}${c.lien?` · <a href="${esc(c.lien)}" target="_blank" rel="noopener">annonce ↗</a>`:""}</div>
+            </div>
+            <select class="i" data-status="${esc(c.id)}" aria-label="Statut de ${esc(c.entreprise)}">
+              ${Object.entries(STATUTS).map(([k,v]) => `<option value="${k}" ${c.statut===k?"selected":""}>${v}</option>`).join("")}
+            </select>
+            <div class="row-acts">${pendingDelete===c.id
+              ? `<span class="confirm">Supprimer ? <button class="btn danger sm" data-del-yes="${esc(c.id)}" type="button">Oui</button><button class="btn line sm" data-del-no type="button">Non</button></span>`
+              : `<button class="btn line sm" data-del="${esc(c.id)}" type="button" aria-label="Supprimer ${esc(c.entreprise)}">Supprimer</button>`}</div>
+          </div>`).join("")}
+      </div>`).join("");
+  }
+  document.querySelectorAll("#c-filter button").forEach(b => b.addEventListener("click", () => { statusFilter=b.dataset.s; renderCands(); }));
+
+  function addCand(c){
+    c.id = "c" + Date.now().toString(36) + Math.random().toString(36).slice(2,6);
+    c.creeLe = Date.now();
+    cands.push(c); saveCands(); renderCands(); renderOffres();
+  }
+  $("#c-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const c = { entreprise:$("#c-entreprise").value.trim(), poste:$("#c-poste").value.trim(), lieu:$("#c-lieu").value.trim(), secteur:$("#c-secteur").value, type:$("#c-type").value, date:$("#c-date").value, lien:$("#c-lien").value.trim(), statut:"attente" };
+    if (!c.entreprise || !c.poste) return;
+    addCand(c);
+    $("#c-entreprise").value = ""; $("#c-lieu").value = ""; $("#c-lien").value = "";
+    $("#c-msg").textContent = `${c.entreprise} ajoutée dans « ${c.secteur} ».`;
+  });
+  $("#c-list").addEventListener("change", (e) => {
+    const s = e.target.closest("[data-status]"); if(!s) return;
+    const c = cands.find(x => x.id===s.dataset.status); if(!c) return;
+    c.statut = s.value; saveCands(); renderCands(); toast("Statut mis à jour : "+STATUTS[s.value]);
+  });
+  $("#c-list").addEventListener("click", (e) => {
+    const d = e.target.closest("[data-del]"), y = e.target.closest("[data-del-yes]"), n = e.target.closest("[data-del-no]");
+    if (d){ pendingDelete = d.dataset.del; renderCands(); }
+    if (n){ pendingDelete = null; renderCands(); }
+    if (y){ pendingDelete = null; cands = cands.filter(c => c.id!==y.dataset.delYes); saveCands(); renderCands(); renderOffres(); toast("Candidature supprimée"); }
+  });
+  $("#c-export").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify(cands, null, 2)], {type:"application/json"});
+    const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `mes-candidatures-${today()}.json`;
+    document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+    toast("Sauvegarde téléchargée");
+  });
+  $("#c-import").addEventListener("change", async (e) => {
+    const f = e.target.files[0]; if(!f) return;
+    try {
+      const data = JSON.parse(await f.text());
+      if (!Array.isArray(data)) throw 0;
+      const ids = new Set(cands.map(c => c.id));
+      const nouv = data.filter(c => c && c.entreprise && !ids.has(c.id));
+      cands = cands.concat(nouv); saveCands(); renderCands(); renderOffres();
+      toast(`${nouv.length} candidature(s) restaurée(s)`);
+    } catch(err){ toast("Ce fichier n'est pas une sauvegarde valide"); }
+    e.target.value = "";
+  });
+
+  /* ---------- Lettre ---------- */
+  $("#l-profil").value = store.get("pp-profil","");
+  $("#l-nom").value = store.get("pp-nom","");
+  $("#l-out").value = store.get("pp-lettre","");
+  function buildPrompt(){
+    const annonce = $("#l-annonce").value.trim(), profil = $("#l-profil").value.trim();
+    return `Rédige-moi une lettre de motivation en français pour une candidature en ${$("#l-type").value} au poste décrit dans l'annonce ci-dessous.
+
+Règles :
+- 250 à 350 mots, ton : ${$("#l-ton").value}.
+- Structure : objet, formule d'appel, accroche qui cite l'entreprise et un élément précis de l'annonce, paragraphe "vous" (ce qui m'attire chez l'entreprise), paragraphe "moi" (mes compétences et expériences reliées aux missions, avec exemples concrets), paragraphe "nous" (ce que j'apporterai, disponibilités et rythme si alternance), demande d'entretien, formule de politesse.
+- Utilise uniquement les informations de mon profil. N'invente aucune expérience, école, chiffre ou diplôme.
+- Signe avec : ${$("#l-nom").value.trim() || "[Prénom Nom]"}.
+- Texte brut, sans markdown.
+
+ANNONCE :
+${annonce || "(colle l'annonce ici)"}
+
+MON PROFIL :
+${profil || "(profil non renseigné : reste général sur la motivation, sans inventer d'expérience)"}`;
+  }
+  function updateLetterLink(){
+    let q = buildPrompt();
+    if (q.length > 6000) q = q.slice(0, 6000);
+    $("#l-gen").href = "https://claude.ai/new?q=" + encodeURIComponent(q);
+  }
+  ["#l-annonce","#l-profil","#l-nom","#l-type","#l-ton"].forEach(s => $(s).addEventListener("input", updateLetterLink));
+  ["#l-type","#l-ton"].forEach(s => $(s).addEventListener("change", updateLetterLink));
+  updateLetterLink();
+  $("#l-gen").addEventListener("click", (e) => {
+    store.set("pp-profil",$("#l-profil").value); store.set("pp-nom",$("#l-nom").value);
+    if (!$("#l-annonce").value.trim()){ e.preventDefault(); $("#l-status").textContent = "Colle d'abord le texte de l'annonce."; return; }
+    $("#l-status").textContent = "Claude s'ouvre dans un nouvel onglet. Colle ensuite la lettre dans le cadre ci-dessous pour la garder.";
+  });
+  $("#l-copy-prompt").addEventListener("click", async () => {
+    const t = buildPrompt();
+    try { await navigator.clipboard.writeText(t); toast("Demande copiée : colle-la dans Claude"); } catch(e){ toast("Copie impossible dans ce navigateur"); }
+  });
+  $("#l-save-profil").addEventListener("click", () => { store.set("pp-profil",$("#l-profil").value); store.set("pp-nom",$("#l-nom").value); toast("Profil enregistré"); });
+  $("#l-out").addEventListener("input", () => store.set("pp-lettre", $("#l-out").value));
+
+  renderOffres(); renderCands();
+})();
+</script>
+</body>
+</html>

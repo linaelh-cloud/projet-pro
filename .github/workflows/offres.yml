@@ -1,0 +1,31 @@
+name: Offres du jour
+
+on:
+  schedule:
+    - cron: "0 6 * * *"   # tous les jours vers 7h (heure de Paris)
+  workflow_dispatch:       # bouton « Run workflow » pour lancer à la main
+
+permissions:
+  contents: write
+
+jobs:
+  offres:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Récupérer les nouvelles offres France Travail
+        env:
+          FT_CLIENT_ID: ${{ secrets.FT_CLIENT_ID }}
+          FT_CLIENT_SECRET: ${{ secrets.FT_CLIENT_SECRET }}
+          DEPARTEMENT: ${{ vars.DEPARTEMENT }}
+        run: python scripts/recuperer_offres.py 3
+      - name: Enregistrer les offres sur le site
+        run: |
+          git config user.name "robot-offres"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add offres.json
+          git diff --cached --quiet || git commit -m "Offres du jour $(date +%F)"
+          git push
