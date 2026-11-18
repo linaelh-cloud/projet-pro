@@ -96,6 +96,13 @@ def type_contrat(texte, nature="", indice=None):
     return None  # CDI/CDD classiques : ignorés
 
 
+PERTINENT = re.compile(r"community|social media|réseaux sociaux|reseaux sociaux|communication|content|contenu|brand|influence|digital|marketing|cm\\b", re.I)
+
+
+def pertinent(titre):
+    return bool(PERTINENT.search(titre or ""))
+
+
 def nettoyer(t):
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t or "")).strip()
 
@@ -206,12 +213,14 @@ def main():
     except (OSError, ValueError):
         existantes = []
     limite = (fin - timedelta(days=30)).strftime("%Y-%m-%d")
-    gardees = [o for o in existantes if (o.get("date") or "9999") >= limite]
+    gardees = [o for o in existantes if (o.get("date") or "9999") >= limite and pertinent(o.get("titre"))]
     ids = {o.get("id") for o in gardees}
     urls = {o.get("url") for o in gardees}
     cles = {((o.get("entreprise") or "").lower(), (o.get("titre") or "").lower()) for o in gardees if o.get("entreprise")}
     ajout = []
     for o in offres:
+        if not pertinent(o["titre"]):
+            continue
         cle = (o["entreprise"].lower(), o["titre"].lower())
         if o["id"] in ids or o["url"] in urls or (o["entreprise"] and cle in cles):
             continue
