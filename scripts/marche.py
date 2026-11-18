@@ -67,6 +67,21 @@ def nettoyer(t):
     return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", t or "")).strip()
 
 
+def annuel(x):
+    """Ramène un salaire affiché à un montant annuel brut : horaire (< 100) x 1 607 h, mensuel (< 10 000) x 12."""
+    try:
+        x = float(x)
+    except (TypeError, ValueError):
+        return None
+    if x <= 0:
+        return None
+    if x < 100:
+        x *= 1607
+    elif x < 10000:
+        x *= 12
+    return x if 5000 <= x <= 150000 else None
+
+
 def contrat(o):
     texte = (o.get("title", "") + " " + o.get("description", "")).lower()
     if re.search(r"alternan|apprenti|contrat pro", texte):
@@ -97,14 +112,14 @@ def main():
     # 1. Variantes d'intitulé : combien d'offres pour chaque appellation (phrase exacte)
     variantes = {}
     for v in VARIANTES:
-        rep = appel({"what_phrase": v, "results_per_page": 1})
+        rep = appel({"title_only": v, "results_per_page": 1})
         variantes[v] = int(rep.get("count") or 0)
         time.sleep(0.5)
 
     # 2. Offres de la requête principale
     offres, total = [], 0
     for p in range(1, PAGES + 1):
-        rep = appel({"what_phrase": REQUETE, "results_per_page": 50, "sort_by": "date"}, page=p)
+        rep = appel({"title_only": REQUETE, "results_per_page": 50, "sort_by": "date"}, page=p)
         total = int(rep.get("count") or total)
         res = rep.get("results") or []
         offres.extend(res)
@@ -113,11 +128,12 @@ def main():
         time.sleep(0.5)
 
     lignes = []
+    offres = [o for o in offres if re.search(r"community\s*manag|\bcm\b", nettoyer(o.get("title")).lower())]
     for o in offres:
         area = (o.get("location") or {}).get("area") or []
         affiche = str(o.get("salary_is_predicted", "1")) == "0"
         lignes.append({
-            "date_extraction": jour, "canal": "Adzuna", "requete": f'what_phrase="{REQUETE}", pays=fr',
+            "date_extraction": jour, "canal": "Adzuna", "requete": f'title_only="{REQUETE}", pays=fr',
             "id": o.get("id"), "intitule": nettoyer(o.get("title")),
             "entreprise": nettoyer((o.get("company") or {}).get("display_name")),
             "region": area[1] if len(area) > 1 else "", "departement": area[2] if len(area) > 2 else "",
@@ -148,8 +164,8 @@ def main():
         vals = []
         for l in lignes:
             if l["contrat"] == c and l["salaire_affiche"] == "oui":
-                mn, mx = float(l["salaire_min"] or 0), float(l["salaire_max"] or l["salaire_min"] or 0)
-                if mn > 0:
+                mn, mx = annuel(l["salaire_min"]), annuel(l["salaire_max"] or l["salaire_min"])
+                if mn and mx:
                     vals.append((mn + mx) / 2)
         if vals:
             vals.sort()
@@ -165,7 +181,7 @@ def main():
 
     marche = {
         "date": jour, "heure_utc": maintenant.strftime("%H:%M"), "canal": "Adzuna (API officielle, agrégateur d'offres)",
-        "requete": f'what_phrase="{REQUETE}", pays = France, tri par date, {PAGES} pages de 50 au plus',
+        "requete": f'title_only="{REQUETE}" (mots dans le titre), pays = France, tri par date, {PAGES} pages de 50 au plus ; puis titre vérifié (« community manag… » ou « CM »)',
         "total_annonce": total, "nb_analysees": n,
         "variantes": sorted(([k, v] for k, v in variantes.items()), key=lambda x: -x[1]),
         "regions": regions.most_common(13), "departements": deps.most_common(10),
