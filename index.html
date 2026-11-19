@@ -464,6 +464,21 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
 .view > div:first-child:not(.hero)::after,.hero::before{background:radial-gradient(circle,rgba(232,71,143,.28),transparent 65%)}
 .form-head .plus{background:rgba(232,71,143,.25);color:#FFB3D6}
 .lettre-doc{box-shadow:0 0 0 2px rgba(232,71,143,.5),var(--shadow-up)}
+/* Synthèse du métier */
+.synth{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:820px){.synth{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.synth{grid-template-columns:minmax(0,1fr)}}
+.syn{background:#fff;border:1px solid rgba(30,58,110,.14);border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:4px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.syn::after{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,#1E3A6E,#E8478F)}
+.syn-k{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#C4136F}
+.syn b{font-family:var(--display);font-size:26px;line-height:1.1;letter-spacing:-.02em;color:var(--plum)}
+.syn span:last-child{font-size:13px;color:var(--muted);line-height:1.45}
+.position{margin-top:14px;background:var(--grad);color:#fff;border-radius:20px;padding:20px 24px;position:relative;overflow:hidden;box-shadow:var(--shadow-up)}
+.position::before{content:"“";position:absolute;right:18px;top:-18px;font-family:var(--display);font-size:140px;line-height:1;color:rgba(255,179,214,.25)}
+.position .syn-k{color:#FFB3D6}
+.position p{margin:6px 0 0;font-size:16px;line-height:1.6;position:relative}
+.position b{color:#FFC7E0}
+
 </style>
 </head>
 <body>
@@ -615,11 +630,20 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
   <!-- 6 -->
   <div class="card part" id="s-position" data-n="06">
     <div class="eyebrow">6 · Bilan et plan d'action</div>
-    <h3 style="margin-top:4px">Ce que je conclus, et ce que je vais chercher cette année</h3>
-    <ul class="concl">
-      <li><b>Le métier recrute surtout en alternance et en stage</b>, et surtout en Île-de-France. En Auvergne, les offres publiées sont rares : je ne peux pas compter seulement sur les annonces.</li>
-      <li><b>Le marché caché est plus grand que le marché visible</b> : plus de 300 entreprises de communication, publicité et design dans le Puy-de-Dôme. Je vais les contacter directement.</li>
-    </ul>
+    <h3 style="margin-top:4px">Le métier en bref</h3>
+    <p class="note" style="margin:0 0 12px">Ce que les offres m'ont appris sur le métier de Community Manager, en six chiffres.</p>
+    <div class="synth" id="synth">
+      <div class="syn"><span class="syn-k">Le métier</span><b id="syn-metier">Community Manager</b><span id="syn-metier-t">Code ROME E1101. Intitulé voisin le plus recruté : « chargé de communication ».</span></div>
+      <div class="syn"><span class="syn-k">Le volume</span><b id="syn-vol">–</b><span id="syn-vol-t">annonces en France avec cet intitulé.</span></div>
+      <div class="syn"><span class="syn-k">Les contrats</span><b id="syn-contrat">–</b><span id="syn-contrat-t">des offres sont des alternances ou des stages : un métier qui s'ouvre aux jeunes diplômés.</span></div>
+      <div class="syn"><span class="syn-k">La géographie</span><b id="syn-geo">–</b><span id="syn-geo-t">des offres sont en Île-de-France.</span></div>
+      <div class="syn"><span class="syn-k">Les compétences</span><b id="syn-comp">–</b><span id="syn-comp-t">la compétence la plus citée dans les annonces.</span></div>
+      <div class="syn"><span class="syn-k">Le marché caché</span><b id="syn-cache">–</b><span id="syn-cache-t">entreprises de communication, publicité et design dans le Puy-de-Dôme, qui ne publient pas d'offre.</span></div>
+    </div>
+    <div class="position">
+      <span class="syn-k">Ma position</span>
+      <p>Community Manager est un métier qui s'ouvre par le <b>stage et l'alternance</b>, centré sur <b>l'animation de communauté et la création de contenu</b>. Les offres se concentrent à Paris : en Auvergne, je vais chercher les entreprises <b>directement</b>, sans attendre une annonce.</p>
+    </div>
     <h4 style="margin-top:14px">Mes 3 actions datées</h4>
     <div class="actions">
       <div class="action"><span class="date">Avant le 15/12/2026</span><b>Contacter 15 entreprises du 63</b><span>Choisies dans la base du marché caché, avec une candidature spontanée adaptée.</span><span class="preuve">Preuve : suivi dans l'onglet Mes candidatures</span></div>
@@ -1215,6 +1239,18 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
     $("#maj-marche").textContent = `Dernière extraction : ${dfr(m.date)} à ${m.heure_utc} (UTC), canal ${m.canal}.`;
     // 1. Variantes
     bars("#b-variantes", m.variantes);
+    // Synthèse (partie 6)
+    const pc = (a, b) => b ? Math.round(100 * a / b) + " %" : "–";
+    const cc = Object.fromEntries(m.contrats || []);
+    const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
+    set("syn-vol", nf(m.total_annonce));
+    set("syn-contrat", pc((cc["Alternance"] || 0) + (cc["Stage"] || 0), m.nb_analysees));
+    const idf = (m.regions || []).find(r => /le-de-france/i.test(r[0]));
+    set("syn-geo", idf ? pc(idf[1], m.nb_analysees) : "–");
+    const top = (m.competences?.["Compétences"] || [])[0];
+    if (top) { set("syn-comp", top[0]); set("syn-comp-t", `citée dans ${top[1]} offres sur ${m.nb_analysees} (${pc(top[1], m.nb_analysees)}), la compétence la plus demandée.`); }
+    const v2 = (m.variantes || []).filter(v => v[0] !== "community manager")[0];
+    if (v2) set("syn-metier-t", `Code ROME E1101. Intitulé voisin le plus recruté : « ${v2[0]} » (${nf(v2[1])} annonces).`);
     source("#src-variantes", {...m, requete: "title_only = chaque intitulé, pays = France"}, "le compteur d'Adzuna compte les annonces dont le titre contient tous ces mots, doublons compris");
     // 2. Offres
     const c = Object.fromEntries(m.contrats);
@@ -1276,6 +1312,7 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
   // 5. Marché caché du 63
   fetch("data/entreprises_63.json?v=" + Date.now()).then(r => r.ok ? r.json() : null).then(e => {
     if (!e) return;
+    { const e2 = document.getElementById("syn-cache"); if (e2) e2.textContent = nf(e.total); }
     $("#kpis-63").innerHTML = [[nf(e.total), "entreprises actives dans le 63"]].map(([v, l]) => `<div class="kpi"><b>${v}</b><span>${l}</span></div>`).join("");
     bars("#b-63", e.par_activite, e.total);
     const toutes = e.toutes || e.exemples || [];
