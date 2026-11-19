@@ -1,0 +1,29 @@
+{
+ "date": "2026-11-19",
+ "canal": "Adzuna (API officielle)",
+ "requete": "where=\"Puy-de-Dôme\", tous métiers, tri par date, 10 pages de 50 au plus",
+ "total_annonce": 10513,
+ "nb_analysees": 500,
+ "nb_employeurs": 172,
+ "recrutent": {
+  "527987135": [
+   {
+    "titre": "Commercial B To B H/F",
+    "url": "https://www.adzuna.fr/details/5970998442?utm_medium=api&utm_source=526fa391",
+    "date": "2026-11-19"
+   },
+   {
+    "titre": "Coordinateur d'Activité & Opérations Compétition F/H",
+    "url": "https://www.adzuna.fr/details/5970317025?utm_medium=api&utm_source=526fa391",
+    "date": "2026-11-18"
+   }
+  ],
+  "834365868": [
+   {
+    "titre": "Offre d'emploi: Traiteur de Saint Nectaire",
+    "url": "https://www.adzuna.fr/details/5970100084?utm_medium=api&utm_source=526fa391",
+    "date": "2026-11-18"
+   }
+  ]
+ }
+}
