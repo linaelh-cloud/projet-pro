@@ -515,7 +515,6 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   <div class="toolbar">
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <button class="btn" id="l-ia" type="button">Générer la lettre</button>
-      <a class="btn ghost" id="l-gen" href="https://claude.ai/new" target="_blank" rel="noopener">Ou ouvrir dans Claude ↗</a>
     </div>
     <button class="btn ghost sm" id="l-copy" type="button">Copier la lettre</button>
   </div>
@@ -837,6 +836,7 @@ MON CV
 ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
   }
   function updateLetterLink(){
+    if (!$("#l-gen")) return;
     const q = buildPrompt();
     $("#l-gen").href = "https://claude.ai/new?q=" + encodeURIComponent(q.length > 7500 ? q.slice(0, 7500) : q);
     $("#l-gen").dataset.long = q.length > 7500 ? "1" : "";
@@ -847,7 +847,7 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
     updateLetterLink();
   }));
   updateLetterLink();
-  $("#l-gen").addEventListener("click", (e) => {
+  $("#l-gen")?.addEventListener("click", (e) => {
     if (!$("#l-cv").value.trim()) { e.preventDefault(); $("#l-status").textContent = "Importe d'abord ton CV en PDF (étape 1)."; $("#cv-box").scrollIntoView({behavior: "smooth"}); return; }
     if (!$("#l-lien").value.trim() && !$("#l-annonce").value.trim()) { e.preventDefault(); $("#l-status").textContent = "Colle le lien de l'annonce (étape 2)."; return; }
     if ($("#l-gen").dataset.long) { e.preventDefault(); navigator.clipboard?.writeText(buildPrompt()).catch(() => {}); $("#l-status").textContent = "Demande trop longue pour un lien : elle est copiée, colle-la dans Claude."; window.open("https://claude.ai/new", "_blank"); return; }
@@ -921,7 +921,7 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
       $("#l-out").value = texte.trim(); store.set("pp-lettre", $("#l-out").value);
       $("#l-status").textContent = "Lettre prête ✓ Relis-la et corrige-la si besoin : vérifie surtout l'entreprise et le poste.";
     } catch (e) {
-      $("#l-status").textContent = !e.status ? "Le navigateur n'a pas pu joindre Gemini (connexion ou blocage). Réessaie, ou utilise « Ou ouvrir dans Claude »."
+      $("#l-status").textContent = !e.status ? "Le navigateur n'a pas pu joindre Gemini (vérifie ta connexion internet), puis réessaie."
         : e.status === 400 && /api key|API_KEY/i.test(e.message) ? "Ta clé Gemini est refusée : vérifie-la dans l'onglet Méthodologie."
         : [401, 403].includes(e.status) ? "Ta clé Gemini est refusée : vérifie-la dans l'onglet Méthodologie."
         : e.status === 429 ? "Limite gratuite atteinte pour le moment : réessaie dans une minute (ou demain si la limite du jour est atteinte)."
