@@ -15,7 +15,7 @@ from datetime import datetime, timezone
 DOSSIER = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(DOSSIER, "data")
 URL = "https://api.adzuna.com/v1/api/jobs/fr/search/{page}"
-PAGES = 10  # 10 pages x 50 = les 500 offres les plus récentes du département
+PAGES = 20  # 20 pages x 50 = les 1 000 offres les plus récentes du département
 FORMES = r"\b(SARL|SAS|SASU|SA|EURL|SNC|SCOP|SCI|EI|GROUPE|STE|SOCIETE|AGENCE|LA|LE|LES|L|DE|DU|DES|ET)\b"
 
 
@@ -26,10 +26,15 @@ def norm(t):
     return re.sub(r"\s+", " ", t).strip()
 
 
+GENERIQUES = {"COMMUNICATION", "DESIGN", "PUBLICITE", "MEDIA", "MEDIAS", "CONSEIL", "STUDIO", "PRODUCTION", "PRODUCTIONS",
+              "CREATION", "CREATIONS", "GRAPHIQUE", "DIGITAL", "MARKETING", "IMPRESSION", "EVENEMENT", "EVENEMENTS", "WEB", "FILMS"}
+
+
 def noms(nom):
     """Le nom principal et les noms entre parenthèses (enseignes), normalisés."""
     morceaux = [nom.split("(")[0]] + [x for p in re.findall(r"\(([^)]*)\)", nom) for x in p.split("/")]
-    return {n for n in (norm(m) for m in morceaux) if len(n) >= 4}
+    return {n for n in (norm(m) for m in morceaux) if len(n) >= 4 and n not in GENERIQUES
+            and not all(w in GENERIQUES for w in n.split())}
 
 
 def appel(page):
@@ -82,8 +87,10 @@ def main():
         for emp, liste in employeurs.items():
             if not emp:
                 continue
-            if any(c == emp or (len(c) >= 6 and (c in emp.split(" ") or re.search(r"\b" + re.escape(c) + r"\b", emp)))
-                   or (len(emp) >= 6 and re.search(r"\b" + re.escape(emp) + r"\b", c)) for c in cands):
+            # Égalité exacte, ou un nom d'au moins deux mots retrouvé en entier dans l'autre
+            if any(c == emp
+                   or (len(c.split()) >= 2 and re.search(r"\b" + re.escape(c) + r"\b", emp))
+                   or (len(emp.split()) >= 2 and re.search(r"\b" + re.escape(emp) + r"\b", c)) for c in cands):
                 trouve.setdefault(ent["siren"], []).extend(liste)
         if ent["siren"] in trouve:
             for o in trouve[ent["siren"]]:
