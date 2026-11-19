@@ -479,6 +479,9 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
 .position p{margin:6px 0 0;font-size:16px;line-height:1.6;position:relative}
 .position b{color:#FFC7E0}
 
+.confirm-post{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#FDF2F7,#FBE6F0);border:1px solid rgba(232,71,143,.35);border-radius:14px;padding:12px 14px;font-size:14px;color:var(--plum)}
+.confirm-post div{display:flex;gap:8px;flex-wrap:wrap}
+
 </style>
 </head>
 <body>
@@ -860,6 +863,7 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
 
   /* ---------- Données ---------- */
   let offres = [];
+  const aConfirmer = new Set();
   let cands = []; try { cands = JSON.parse(store.get("pp-candidatures","[]")) || []; } catch(e){ cands = []; }
   const saveCands = () => { if(!store.set("pp-candidatures", JSON.stringify(cands))) toast("Enregistrement impossible dans ce navigateur"); };
   let typeFilter = store.get("pp-type","tous"), statusFilter = "tous";
@@ -916,6 +920,11 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
             <button class="btn ghost sm" data-letter="${esc(o.id)}" type="button">Générer la lettre</button>
             ${applied.has(o.id)?'<span class="pill new" style="align-self:center">Déjà postulé</span>':`<a class="btn sm" href="${esc(o.url||"#")}" target="_blank" rel="noopener" data-apply="${esc(o.id)}">Postuler ↗</a>`}
           </div>
+          ${aConfirmer.has(o.id) && !applied.has(o.id) ? `<div class="confirm-post">
+            <span>Tu as envoyé ta candidature à <b>${esc(o.entreprise||"cette entreprise")}</b> ?</span>
+            <div><button class="btn sm" type="button" data-oui="${esc(o.id)}">Oui, l'ajouter à mes candidatures</button>
+            <button class="btn line sm" type="button" data-non="${esc(o.id)}">Pas encore</button></div>
+          </div>` : ""}
         </article>`).join("");
     }
     const last = offres.map(o => o.date).filter(Boolean).sort().pop();
@@ -932,8 +941,12 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
       return;
     }
     const ap = e.target.closest("[data-apply]"), lt = e.target.closest("[data-letter]");
-    if (ap){
-      const o = offres.find(x => x.id===ap.dataset.apply); if(!o) return;
+    const oui = e.target.closest("[data-oui]"), non = e.target.closest("[data-non]");
+    if (ap){ aConfirmer.add(ap.dataset.apply); setTimeout(renderOffres, 300); return; }
+    if (non){ aConfirmer.delete(non.dataset.non); renderOffres(); return; }
+    if (oui){
+      const o = offres.find(x => x.id===oui.dataset.oui); if(!o) return;
+      aConfirmer.delete(o.id);
       addCand({entreprise:o.entreprise||"Entreprise non précisée", poste:o.titre||"Community Manager", lieu:o.lieu||"", secteur:o.secteur||"Autre", type:o.type||"alternance", date:today(), lien:o.url||"", statut:"attente", offreId:o.id});
       toast("Ajoutée à tes candidatures");
     }
