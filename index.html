@@ -213,7 +213,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
       <a href="#offres" data-tab="offres">Offres du jour</a>
       <a href="#lettre" data-tab="lettre">Lettre de motivation</a>
       <a href="#candidatures" data-tab="candidatures">Mes candidatures</a>
-      <a href="#methode" data-tab="methode">Comment c'est fait</a>
+      <a href="#methode" data-tab="methode">Méthodologie</a>
     </nav>
   </div>
 </header>
@@ -241,18 +241,18 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   </div>
 
   <nav class="toc" aria-label="Sommaire">
-    <a href="#accueil" data-goto="s-nom">1. Le métier tel que le marché le nomme</a>
-    <a href="#accueil" data-goto="s-offres">2. Ce que disent les offres</a>
-    <a href="#accueil" data-goto="s-comp">3. Compétences et outils</a>
-    <a href="#accueil" data-goto="s-bouge">4. Comment le métier bouge</a>
-    <a href="#accueil" data-goto="s-acteurs">5. Les acteurs</a>
-    <a href="#accueil" data-goto="s-position">6. Ce que je vais chercher cette année</a>
-    <a href="#methode">7. Comment le site est fait</a>
+    <a href="#accueil" data-goto="s-nom">1. Intitulés et code métier</a>
+    <a href="#accueil" data-goto="s-offres">2. Le marché en chiffres</a>
+    <a href="#accueil" data-goto="s-comp">3. Compétences recherchées</a>
+    <a href="#accueil" data-goto="s-bouge">4. Évolution du métier</a>
+    <a href="#accueil" data-goto="s-acteurs">5. Les recruteurs</a>
+    <a href="#accueil" data-goto="s-position">6. Bilan et plan d'action</a>
+    <a href="#methode">7. Méthodologie</a>
   </nav>
 
   <!-- 1 -->
   <div class="card" id="s-nom">
-    <div class="eyebrow">1 · Le métier tel que le marché le nomme</div>
+    <div class="eyebrow">1 · Intitulés et code métier</div>
     <h3 style="margin-top:4px">Un intitulé, des variantes, un code</h3>
     <p class="note" style="margin:0 0 12px">Nombre d'offres en France dont le titre contient ces mots, le jour de la dernière extraction. « Chargé de communication » recrute presque autant que « community manager » : c'est un intitulé voisin à surveiller.</p>
     <div class="bars" id="b-variantes"></div>
@@ -269,7 +269,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 
   <!-- 2 -->
   <div class="card" id="s-offres">
-    <div class="eyebrow">2 · Ce que disent les offres</div>
+    <div class="eyebrow">2 · Le marché en chiffres</div>
     <h3 style="margin-top:4px">Volume, géographie, contrats, salaires affichés</h3>
     <div class="kpis" id="kpis"></div>
     <div class="grid2" style="margin-top:16px">
@@ -286,7 +286,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 
   <!-- 3 -->
   <div class="card" id="s-comp">
-    <div class="eyebrow">3 · Compétences et outils demandés</div>
+    <div class="eyebrow">3 · Compétences recherchées</div>
     <h3 style="margin-top:4px">Ce que les annonces citent, compté</h3>
     <div class="grid3">
       <div><h4>Réseaux sociaux</h4><div class="bars" id="b-reseaux"></div></div>
@@ -303,7 +303,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 
   <!-- 4 -->
   <div class="card" id="s-bouge">
-    <div class="eyebrow">4 · Comment le métier bouge</div>
+    <div class="eyebrow">4 · Évolution du métier</div>
     <h3 style="margin-top:4px">Une extraction par jour, pour voir le marché bouger</h3>
     <p class="note" style="margin:0 0 10px">Le robot ajoute une ligne chaque jour. Avec plusieurs semaines de données, on lit une tendance, pas une opinion.</p>
     <div style="overflow-x:auto"><table class="mini" id="t-histo"></table></div>
@@ -317,7 +317,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 
   <!-- 5 -->
   <div class="card" id="s-acteurs">
-    <div class="eyebrow">5 · Les acteurs</div>
+    <div class="eyebrow">5 · Les recruteurs</div>
     <h3 style="margin-top:4px">Qui recrute, et qui pourrait recruter sans le dire</h3>
     <div class="grid2">
       <div>
@@ -349,7 +349,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 
   <!-- 6 -->
   <div class="card" id="s-position">
-    <div class="eyebrow">6 · Ce que je vais chercher cette année</div>
+    <div class="eyebrow">6 · Bilan et plan d'action</div>
     <h3 style="margin-top:4px">Ce que je conclus, et ce que je vais chercher cette année</h3>
     <ul class="concl">
       <li><b>Le métier recrute surtout en alternance et en stage</b>, et surtout en Île-de-France. En Auvergne, les offres publiées sont rares : je ne peux pas compter seulement sur les annonces.</li>
@@ -370,7 +370,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 <!-- ============ METHODE ============ -->
 <section class="view" id="v-methode" hidden>
   <div>
-    <div class="eyebrow">Comment le site est fait</div>
+    <div class="eyebrow">7 · Méthodologie</div>
     <h2 style="font-size:32px;margin-top:4px">La chaîne complète</h2>
     <p class="lead" style="margin-top:6px">Une veille construite une fois, qui tourne toute seule. Tout est en ligne et daté sur GitHub, dans le dépôt <a href="https://github.com/linaelh-cloud/projet-pro" target="_blank" rel="noopener">linaelh-cloud/projet-pro</a>.</p>
   </div>
@@ -852,7 +852,7 @@ ${profil || "(profil non renseigné : reste général sur la motivation, sans in
     if (lignes.length < 2) { $("#t-histo").innerHTML = "<tr><td>Première extraction en cours.</td></tr>"; return; }
     const tete = ["Date", "Canal", "Requête", "Annonces (compteur)", "Analysées", "Alternance", "Stage", "CDI", "CDD / mission", "Salaires affichés", "IA citée"];
     const nbx = lignes.length - 1;
-    const ne = $("#n-extractions"); if (ne) ne.textContent = `${nbx} extraction${nbx > 1 ? "s" : ""} datée${nbx > 1 ? "s" : ""} depuis le ${dfr(lignes[1][0])}, une par jour : le tableau d'historique (partie 4) montre le marché bouger.`;
+    const ne = $("#n-extractions"); if (ne) ne.textContent = `${nbx} extraction${nbx > 1 ? "s" : ""} datée${nbx > 1 ? "s" : ""} depuis le ${dfr(lignes[1][0])}, une par jour : le tableau d'historique (partie 4, Évolution du métier) montre le marché bouger.`;
     $("#t-histo").innerHTML = `<tr>${tete.map(h => `<th>${h}</th>`).join("")}</tr>` + lignes.slice(1).reverse().slice(0, 30).map(l => `<tr>${l.map((v, i) => `<td>${i === 0 ? dfr(v) : esc(v)}</td>`).join("")}</tr>`).join("");
   });
 
