@@ -375,6 +375,72 @@ td.c-num{font-family:var(--display);font-weight:700;color:var(--accent);font-siz
 .card h4{display:flex;align-items:center;gap:8px}
 .card h4::before{content:"";width:6px;height:18px;border-radius:3px;background:var(--grad-btn);flex:none}
 
+/* ===== Boost 3 : Lettre et Candidatures ===== */
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lettre-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:22px;align-items:start}
+@media (max-width:900px){.lettre-grid{grid-template-columns:minmax(0,1fr)}}
+.lettre-steps{display:flex;flex-direction:column;gap:16px;position:relative}
+.step-card{background:#fff;border:1px solid rgba(196,19,111,.14);border-radius:22px;padding:20px 22px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:10px;position:relative;transition:box-shadow .2s,border-color .2s}
+.step-card:focus-within{border-color:var(--accent);box-shadow:var(--shadow-up)}
+.step-top{display:flex;align-items:center;gap:14px}
+.step-top h3{font-size:18px;letter-spacing:-.01em;margin:0}
+.step-card .step-n{width:42px;height:42px;font-size:18px;font-family:var(--display);background:var(--grad);box-shadow:0 8px 18px -8px rgba(196,19,111,.8);flex:none;margin:0}
+.step-card .i{border-radius:14px;border:1.5px solid #F3D3E3;background:#FFF9FC!important;padding:12px 14px;transition:border-color .2s,box-shadow .2s}
+.step-card .i:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(196,19,111,.12)}
+.drop{border-radius:18px;padding:26px}
+.drop b{font-family:var(--display);font-size:17px}
+.btn-xl{width:100%;padding:18px 22px;font-size:17px;border-radius:18px;font-family:var(--display);letter-spacing:-.01em}
+.btn-xl .spark{display:inline-block;margin-right:4px}
+@keyframes tourne{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:no-preference){.btn-xl:not(:disabled):hover .spark{animation:tourne 1.2s linear infinite}}
+.btn-xl:disabled{opacity:.75}
+#l-status:not(:empty){background:var(--rose-pale);color:var(--plum);border-radius:14px;padding:12px 14px;font-weight:600;font-size:13.5px;border-left:4px solid var(--accent)}
+#l-status[data-busy]::before{content:"";display:inline-block;width:12px;height:12px;border-radius:50%;border:2px solid var(--accent);border-top-color:transparent;margin-right:8px;vertical-align:-1px;animation:tourne .8s linear infinite}
+.lettre-doc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 76px);background:var(--grad);border-radius:26px;padding:12px;box-shadow:var(--shadow-up)}
+.doc-head{display:flex;align-items:center;gap:10px;padding:6px 8px 12px;color:#fff}
+.doc-head b{font-family:var(--display);font-size:17px;flex:1}
+.doc-dots{display:flex;gap:5px}.doc-dots i{width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.45)}.doc-dots i:first-child{background:#fff}
+.doc-head .btn.ghost{background:rgba(255,255,255,.2);color:#fff}
+.doc-head .btn.ghost:hover{background:#fff;color:var(--accent)}
+.paper{display:block;width:100%;min-height:560px;border:0;border-radius:16px;background:#fff;padding:34px;font-family:var(--body);font-size:14.5px;line-height:1.75;color:var(--ink);resize:vertical;box-shadow:inset 0 0 0 1px rgba(196,19,111,.08)}
+.paper:focus{outline:none;box-shadow:inset 0 0 0 2px var(--accent)}
+.paper::placeholder{color:#C08AA6;font-style:italic}
+.lettre-doc.busy .paper{background:linear-gradient(100deg,#fff 30%,#FFF0F7 50%,#fff 70%) 0 0/300% 100%;animation:brille 1.4s linear infinite}
+@keyframes brille{to{background-position:-300% 0}}
+@media (max-width:900px){.lettre-doc{position:static}.paper{min-height:380px;padding:22px}}
+
+.c-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+@media (max-width:700px){.c-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.c-stats .total{grid-column:1/-1}}
+.cstat{border-radius:18px;padding:16px 18px;display:flex;flex-direction:column;gap:2px;box-shadow:var(--shadow);border:1px solid rgba(196,19,111,.12);background:#fff}
+.cstat b{font-family:var(--display);font-size:32px;line-height:1;letter-spacing:-.02em}
+.cstat span{font-size:12.5px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.cstat.total{background:var(--grad);border:0}.cstat.total b,.cstat.total span{color:#fff}
+.cstat.attente b{color:#B86A00}.cstat.entretien b{color:#2753C7}.cstat.refus b{color:#C62F3A}.cstat.acceptee b{color:#14804A}
+.form-card{padding:0;overflow:hidden}
+.form-head{display:flex;align-items:center;gap:14px;background:var(--grad);color:#fff;padding:18px 22px}
+.form-head h3{color:#fff;margin:0;font-size:19px}
+.form-head span:not(.plus){font-size:13px;color:rgba(255,227,240,.9)}
+.form-head .plus{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.18);display:inline-flex;align-items:center;justify-content:center;font-size:24px;font-weight:700;flex:none}
+.form-card .form{padding:20px 22px 4px}
+.form-card > div:last-child{padding:0 22px 22px}
+.form-card .i{border-radius:12px;border:1.5px solid #F3D3E3;background:#FFF9FC!important}
+.form-card .i:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 4px rgba(196,19,111,.12)}
+.seg{background:#fff;border:1px solid rgba(196,19,111,.18);box-shadow:var(--shadow);padding:4px}
+.seg button[aria-pressed="true"]{background:var(--grad-btn);color:#fff}
+.sector h3{display:flex;align-items:center;gap:10px;font-size:20px}
+.sector h3::before{content:"";width:6px;height:22px;border-radius:3px;background:var(--grad-btn)}
+.sector h3 small{background:var(--grad-btn);color:#fff;font-family:var(--display);font-size:12px;min-width:24px;height:24px;border-radius:12px;display:inline-flex;align-items:center;justify-content:center;padding:0 7px}
+.app{border-radius:18px;border:1px solid rgba(196,19,111,.12);border-left-width:5px;box-shadow:var(--shadow);padding:14px 16px;transition:transform .2s,box-shadow .2s;grid-template-columns:minmax(0,1fr) 170px auto}
+.app:hover{transform:translateY(-2px);box-shadow:var(--shadow-up)}
+.app-main{display:flex;gap:12px;align-items:center;min-width:0}
+.avatar{width:42px;height:42px;border-radius:14px;background:var(--grad);color:#fff;font-family:var(--display);font-weight:800;font-size:15px;display:inline-flex;align-items:center;justify-content:center;flex:none}
+.app .poste{display:inline-block;background:var(--rose-pale);color:var(--plum-2);font-size:12px;font-weight:600;padding:2px 9px;border-radius:999px;margin-left:4px}
+.st-sel{border-radius:999px!important;font-weight:700;font-size:13px;padding:8px 12px;border:0!important}
+select.i.st-sel{border:0!important;border-radius:999px!important}select.i.st-attente{background:#FFF0D6!important;color:#8A4B00}select.i.st-entretien{background:#E2EAFF!important;color:#2753C7}select.i.st-refus{background:#FDE3E5!important;color:#C62F3A}select.i.st-acceptee{background:#DDF4E7!important;color:#14804A}
+.empty{border:2px dashed rgba(196,19,111,.3);background:linear-gradient(135deg,#FFF5FA,#fff);border-radius:22px}
+.empty b{font-family:var(--display);color:var(--plum)}
+@media (max-width:640px){.app{grid-template-columns:minmax(0,1fr)}}
+
 </style>
 </head>
 <body>
@@ -643,49 +709,43 @@ td.c-num{font-family:var(--display);font-weight:700;color:var(--accent);font-siz
     <p class="lead" style="margin-top:6px">Mon CV est importé en PDF (et remplacé quand je veux). Pour chaque offre, je colle le lien de l'annonce et j'indique ce que je veux mettre en avant : la lettre s'écrit sur cette page, adaptée à mon CV et à cette offre.</p>
   </div>
 
-  <div class="card cv-box" id="cv-box">
-    <div class="cv-head"><span class="step-n">1</span><b>Mon CV</b> <span class="cv-etat" id="cv-etat">Aucun CV importé</span></div>
-    <label class="drop" id="cv-drop" for="cv-file">
+  <div class="lettre-grid">
+    <div class="lettre-steps">
+      <div class="step-card" id="cv-box">
+        <div class="step-top"><span class="step-n">1</span><div><h3>Mon CV</h3><span class="cv-etat" id="cv-etat">Aucun CV importé</span></div></div>
+        <label class="drop" id="cv-drop" for="cv-file">
       <input type="file" id="cv-file" accept="application/pdf,.pdf" hidden>
       <span class="drop-t" id="cv-drop-t"><b>Importer mon CV (PDF)</b><br>Clique ici ou glisse le fichier. Pour le changer, importe simplement le nouveau.</span>
     </label>
-    <p class="note" style="margin:8px 0 0">Le PDF est lu dans ton navigateur : il n'est envoyé sur aucun serveur et n'est pas publié sur le site. Seul son texte est gardé, dans ce navigateur.</p>
-    <details class="alt-annonce" id="cv-texte-box">
+        <p class="note" style="margin:8px 0 0">Le PDF est lu dans ton navigateur : il n'est envoyé sur aucun serveur et n'est pas publié sur le site. Seul son texte est gardé, dans ce navigateur.</p>
+        <details class="alt-annonce" id="cv-texte-box">
       <summary>Voir ou corriger le texte lu dans le PDF</summary>
       <textarea class="i" id="l-cv" style="min-height:220px;margin-top:8px" placeholder="Le texte de ton CV apparaîtra ici après l'import."></textarea>
     </details>
-  </div>
-
-  <div class="card">
-    <label class="f"><span><span class="step-n">2</span> Lien de l'annonce</span>
-      <input class="i" id="l-lien" type="url" placeholder="https://… (Indeed, Welcome to the Jungle, site de l'entreprise…)">
-    </label>
-    <details class="alt-annonce" id="alt-annonce">
+      </div>
+      <div class="step-card">
+        <div class="step-top"><span class="step-n">2</span><div><h3>Lien de l'annonce</h3><span class="cv-etat">Indeed, Welcome to the Jungle, site de l'entreprise…</span></div></div>
+          <input class="i" id="l-lien" type="url" placeholder="https://… (Indeed, Welcome to the Jungle, site de l'entreprise…)">
+        <details class="alt-annonce" id="alt-annonce">
       <summary>Le lien ne s'ouvre pas (LinkedIn par exemple) ? Colle le texte de l'annonce</summary>
       <textarea class="i" id="l-annonce" style="min-height:140px;margin-top:8px" placeholder="Facultatif : le texte de l'annonce, si Claude ne peut pas ouvrir le lien."></textarea>
     </details>
-  </div>
-
-  <div class="card">
-    <label class="f"><span><span class="step-n">3</span> Ce que je veux mettre en avant</span>
-      <textarea class="i" id="l-avant" style="min-height:90px" placeholder="Ex. : mon stage chez … où j'ai fait grandir le compte Instagram, ma pratique de TikTok et du montage vidéo sur CapCut, mon intérêt pour la marque…"></textarea>
-    </label>
-  </div>
-
-  <p class="note" id="cle-manque" hidden>Pour générer la lettre sur cette page, enregistre d'abord ta clé Gemini gratuite dans l'onglet <a href="#methode">Méthodologie</a>.</p>
-
-
-  <div class="toolbar">
-    <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn" id="l-ia" type="button">Générer la lettre</button>
+      </div>
+      <div class="step-card">
+        <div class="step-top"><span class="step-n">3</span><div><h3>Ce que je veux mettre en avant</h3><span class="cv-etat">Une ou deux phrases</span></div></div>
+          <textarea class="i" id="l-avant" style="min-height:90px" placeholder="Ex. : mon stage chez … où j'ai fait grandir le compte Instagram, ma pratique de TikTok et du montage vidéo sur CapCut, mon intérêt pour la marque…"></textarea>
+      </div>
+      <p class="note" id="cle-manque" hidden>Pour générer la lettre sur cette page, enregistre d'abord ta clé Gemini gratuite dans l'onglet <a href="#methode">Méthodologie</a>.</p>
+      <button class="btn btn-xl" id="l-ia" type="button"><span class="spark" aria-hidden="true">✦</span> Générer ma lettre</button>
+      <div class="status-line" id="l-status"></div>
     </div>
-    <button class="btn ghost sm" id="l-copy" type="button">Copier la lettre</button>
-  </div>
-  <div class="status-line" id="l-status"></div>
 
-  <label class="f">Ma lettre
-    <textarea class="i letter-out" id="l-out" placeholder="La lettre s'écrit ici. Tu peux ensuite la modifier directement." style="min-height:380px"></textarea>
-  </label>
+    <div class="lettre-doc">
+      <div class="doc-head"><span class="doc-dots" aria-hidden="true"><i></i><i></i><i></i></span><b>Ma lettre</b><button class="btn ghost sm" id="l-copy" type="button">Copier la lettre</button></div>
+      <label for="l-out" class="sr">Ma lettre</label>
+      <textarea class="paper" id="l-out" placeholder="Ta lettre s'écrira ici, adaptée à ton CV et à l'offre. Tu pourras la modifier directement."></textarea>
+    </div>
+  </div>
 </section>
 
 <!-- ============ CANDIDATURES ============ -->
@@ -695,8 +755,9 @@ td.c-num{font-family:var(--display);font-weight:700;color:var(--accent);font-siz
     <h2 style="font-size:32px;margin-top:4px">Mes candidatures</h2>
     <p class="lead" style="margin-top:6px">Toutes tes candidatures, regroupées par secteur. Change le statut quand tu reçois une réponse.</p>
   </div>
-  <form class="card" id="c-form">
-    <h3>Ajouter une candidature</h3>
+  <div class="c-stats" id="c-stats"></div>
+  <form class="card form-card" id="c-form">
+    <div class="form-head"><span class="plus" aria-hidden="true">+</span><div><h3>Ajouter une candidature</h3><span>Entreprise, poste, lieu et secteur : elle rejoint ta liste, rangée par secteur.</span></div></div>
     <div class="form">
       <label class="f">Entreprise<input class="i" id="c-entreprise" required placeholder="Ex. : Sephora"></label>
       <label class="f">Poste<input class="i" id="c-poste" required placeholder="Ex. : Community Manager"></label>
@@ -851,6 +912,9 @@ td.c-num{font-family:var(--display);font-weight:700;color:var(--accent);font-siz
   function renderCands(){
     const counts = {attente:0,entretien:0,refus:0,acceptee:0};
     cands.forEach(c => counts[c.statut] = (counts[c.statut]||0)+1);
+    const cs = $("#c-stats");
+    if (cs) cs.innerHTML = [["total", cands.length, "Candidatures"], ["attente", counts.attente, "En attente"], ["entretien", counts.entretien, "Entretiens"], ["refus", counts.refus, "Refus"], ["acceptee", counts.acceptee, "Acceptées"]]
+      .map(([k, v, l]) => `<div class="cstat ${k}"><b>${v}</b><span>${l}</span></div>`).join("");
     document.querySelectorAll("#c-filter button").forEach(b => {
       b.setAttribute("aria-pressed", b.dataset.s===statusFilter);
       const n = b.dataset.s==="tous" ? cands.length : counts[b.dataset.s]||0;
@@ -863,14 +927,15 @@ td.c-num{font-family:var(--display);font-weight:700;color:var(--accent);font-siz
     const order = Object.keys(groups).sort((a,b) => groups[b].length-groups[a].length || a.localeCompare(b,"fr"));
     $("#c-list").innerHTML = order.map(sec => `
       <div class="sector">
-        <h3>${esc(sec)} <small>${groups[sec].length} candidature${groups[sec].length>1?"s":""}</small></h3>
+        <h3><span>${esc(sec)}</span> <small>${groups[sec].length}</small></h3>
         ${groups[sec].sort((a,b)=>String(b.date).localeCompare(String(a.date))).map(c => `
           <div class="app" data-s="${esc(c.statut)}">
-            <div style="min-width:0">
-              <b>${esc(c.entreprise)}</b> · ${esc(c.poste)}
-              <div class="meta">${[c.lieu, c.type==="stage"?"Stage":"Alternance", c.date?"envoyée le "+new Date(c.date).toLocaleDateString("fr-FR"):""].filter(Boolean).map(esc).join(" · ")}${c.lien?` · <a href="${esc(c.lien)}" target="_blank" rel="noopener">annonce ↗</a>`:""}</div>
+            <div class="app-main">
+              <span class="avatar" aria-hidden="true">${esc((c.entreprise||"?").trim().slice(0,2).toUpperCase())}</span>
+              <div style="min-width:0"><b>${esc(c.entreprise)}</b> <span class="poste">${esc(c.poste)}</span>
+              <div class="meta">${[c.lieu, c.type==="stage"?"Stage":"Alternance", c.date?"envoyée le "+new Date(c.date).toLocaleDateString("fr-FR"):""].filter(Boolean).map(esc).join(" · ")}${c.lien?` · <a href="${esc(c.lien)}" target="_blank" rel="noopener">annonce ↗</a>`:""}</div></div>
             </div>
-            <select class="i" data-status="${esc(c.id)}" aria-label="Statut de ${esc(c.entreprise)}">
+            <select class="i st-sel st-${esc(c.statut)}" data-status="${esc(c.id)}" aria-label="Statut de ${esc(c.entreprise)}">
               ${Object.entries(STATUTS).map(([k,v]) => `<option value="${k}" ${c.statut===k?"selected":""}>${v}</option>`).join("")}
             </select>
             <div class="row-acts">${pendingDelete===c.id
@@ -1078,7 +1143,7 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
     const m = $("#l-masque").checked ? masquer($("#l-cv").value) : {cv: $("#l-cv").value, table: {}};
     let prompt = buildPrompt(m.cv);
     if (Object.keys(m.table).length) prompt += "\n\nIMPORTANT : dans les coordonnées, recopie tels quels les repères entre crochets (par exemple [EMAIL1], [TELEPHONE2], [ADRESSE3]).";
-    $("#l-ia").disabled = true; $("#l-status").textContent = "Gemini lit l'annonce et écrit ta lettre… (10 à 40 secondes)";
+    $("#l-ia").disabled = true; $("#l-status").dataset.busy = "1"; $(".lettre-doc").classList.add("busy"); $("#l-status").textContent = "Gemini lit l'annonce et écrit ta lettre… (10 à 40 secondes)";
     try {
       const texte = remettre(await genererGemini(prompt, cle), m.table);
       $("#l-out").value = texte.trim(); store.set("pp-lettre", $("#l-out").value);
@@ -1089,7 +1154,7 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
         : [401, 403].includes(e.status) ? "Ta clé Gemini est refusée : vérifie-la dans l'onglet Méthodologie."
         : e.status === 429 ? "Limite gratuite atteinte pour le moment : réessaie dans une minute (ou demain si la limite du jour est atteinte)."
         : "Gemini a renvoyé une erreur (" + e.status + ") : " + e.message;
-    } finally { $("#l-ia").disabled = false; }
+    } finally { $("#l-ia").disabled = false; delete $("#l-status").dataset.busy; $(".lettre-doc").classList.remove("busy"); }
   });
   $("#l-copy").addEventListener("click", async () => {
     const t = $("#l-out").value; if (!t) return;
