@@ -299,10 +299,6 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     <h3 style="margin-top:4px">Une extraction par jour, pour voir le marché bouger</h3>
     <p class="note" style="margin:0 0 10px">Le robot ajoute une ligne chaque jour. Avec plusieurs semaines de données, on lit une tendance, pas une opinion.</p>
     <div style="overflow-x:auto"><table class="mini" id="t-histo"></table></div>
-    <h4 style="margin-top:16px">Les mots qui montent et qui reculent</h4>
-    <p class="note" style="margin:0 0 8px" id="n-mots"></p>
-    <div style="overflow-x:auto"><table class="mini" id="t-mots"></table></div>
-    <div class="source" id="src-mots"></div>
     <div class="quote">
       <b>Source emploi : Apec, « L'IA dans les métiers du commercial et du marketing » (mars 2026).</b>
       En 2025, les métiers commercial-marketing représentent 13 % des offres cadre de l'Apec qui mentionnent l'IA, contre 9 % en 2022. Les employeurs attendent surtout des usages concrets et du savoir-être, plus que des formations techniques.
@@ -838,23 +834,6 @@ ${profil || "(profil non renseigné : reste général sur la motivation, sans in
     const nbx = lignes.length - 1;
     const ne = $("#n-extractions"); if (ne) ne.textContent = `${nbx} extraction${nbx > 1 ? "s" : ""} datée${nbx > 1 ? "s" : ""} depuis le ${dfr(lignes[1][0])}, une par jour : le tableau d'historique (partie 4) montre le marché bouger.`;
     $("#t-histo").innerHTML = `<tr>${tete.map(h => `<th>${h}</th>`).join("")}</tr>` + lignes.slice(1).reverse().slice(0, 30).map(l => `<tr>${l.map((v, i) => `<td>${i === 0 ? dfr(v) : esc(v)}</td>`).join("")}</tr>`).join("");
-  });
-
-  // 4 bis. Les mots qui montent : première extraction comparée à la dernière
-  fetch("data/competences.csv?v=" + Date.now()).then(r => r.ok ? r.text() : "").then(t => {
-    const rows = t.trim().split("\n").slice(1).map(l => l.split(",")).filter(r => r.length >= 6);
-    if (!rows.length) return;
-    const dates = [...new Set(rows.map(r => r[0]))].sort();
-    const d0 = dates[0], d1 = dates[dates.length - 1];
-    const part = (d, mot) => { const r = rows.find(x => x[0] === d && x[3] === mot); return r ? 100 * (+r[4]) / Math.max(1, +r[5]) : 0; };
-    const mots = [...new Set(rows.map(r => r[3]))].map(mot => [mot, part(d0, mot), part(d1, mot)]).filter(x => x[1] || x[2]);
-    mots.sort((a, b) => (b[2] - b[1]) - (a[2] - a[1]) || b[2] - a[2]);
-    $("#n-mots").textContent = dates.length < 2 ? "Une seule extraction pour l'instant : la comparaison apparaîtra dès la suivante." :
-      `Part des offres qui citent chaque mot, le ${dfr(d0)} puis le ${dfr(d1)} (${dates.length} extractions). Sur quelques jours, les écarts restent faibles : la tendance se lira sur plusieurs semaines.`;
-    const sm = $("#src-mots"); if (sm) sm.innerHTML = `<b>Requête</b> title_only="community manager", pays = France, mots cherchés dans le titre et l'extrait de description · <b>Dates</b> ${dates.map(dfr).join(", ")} · <b>Canal</b> Adzuna · <b>Limites</b> extraits de description courts ; quelques jours d'écart ne font pas une tendance · <b>Données</b> <a href="https://github.com/linaelh-cloud/projet-pro/blob/main/data/competences.csv" target="_blank" rel="noopener">competences.csv</a>`;
-    const fl = (x) => x > 0.5 ? `<span class="pill-s ok">▲ +${x.toFixed(0)} pt</span>` : x < -0.5 ? `<span class="pill-s no">▼ ${x.toFixed(0)} pt</span>` : `<span class="pill-s mid">= stable</span>`;
-    $("#t-mots").innerHTML = `<tr><th>Mot</th><th>${dfr(d0)}</th><th>${dfr(d1)}</th><th>Évolution</th></tr>` +
-      mots.slice(0, 12).map(([mot, a, b]) => `<tr><td>${esc(mot)}</td><td>${a.toFixed(0)} %</td><td>${b.toFixed(0)} %</td><td>${fl(b - a)}</td></tr>`).join("");
   });
 
   // 5. Marché caché du 63
