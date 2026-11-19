@@ -191,6 +191,13 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 .t63 tr.rec td{background:var(--accent);color:#fff}
 .t63 tr.rec td a{color:#fff;font-weight:600}
 .t63 tr.rec .pill-s{background:#fff;color:var(--accent)}
+.offer .detail{display:none;margin-top:10px;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.offer.open .detail{display:block}
+.offer.open .extrait{display:none}
+.offer .detail p{display:block;-webkit-line-clamp:unset;overflow:visible;margin:0 0 8px}
+.offer .detail-txt{color:var(--ink);font-size:14.5px;line-height:1.6}
+.offer .detail-note{font-size:12.5px}
+.lien-detail{margin-top:8px;border:0;background:none;padding:0;color:var(--accent);font-weight:600;font-size:13px;cursor:pointer}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;z-index:20}
 @media (prefers-reduced-motion:no-preference){.btn,.site,nav.tabs a{transition:background .15s,border-color .15s}}
 </style>
@@ -589,7 +596,13 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
             </div>
             <h3>${esc(o.titre)}</h3>
             <div class="meta"><span>${esc(o.entreprise||"Entreprise non précisée")}</span>${o.lieu?`<span>${esc(o.lieu)}</span>`:""}${o.secteur?`<span>${esc(o.secteur)}</span>`:""}<span>via ${esc(o.source||"web")}</span>${o.date?`<span>${new Date(o.date).toLocaleDateString("fr-FR")}</span>`:""}</div>
-            ${o.description?`<p>${esc(o.description)}</p>`:""}
+            ${o.description?`<p class="extrait">${esc(o.description)}</p>
+            <div class="detail">
+              <p class="detail-txt">${esc(o.description)}${/[.!?…]$/.test(o.description.trim()) ? "" : " […]"}</p>
+              <p class="detail-note">Voici tout le texte fourni par ${esc(o.source||"la source")} : seulement le début de l'annonce. Pour lire la suite (profil recherché, outils, conditions), ouvre l'annonce d'origine.</p>
+              <a class="btn line sm" href="${esc(o.url||"#")}" target="_blank" rel="noopener">Lire l'annonce complète ↗</a>
+            </div>
+            <button class="lien-detail" type="button" data-toggle aria-expanded="false">Voir le détail ▾</button>`:""}
           </div>
           <div class="acts">
             <button class="btn ghost sm" data-letter="${esc(o.id)}" type="button">Générer la lettre</button>
@@ -604,6 +617,12 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   document.querySelectorAll('#v-offres .seg button').forEach(b => b.addEventListener("click", () => { typeFilter=b.dataset.type; store.set("pp-type",typeFilter); renderOffres(); }));
   $("#ville").addEventListener("input", e => { ville=e.target.value; store.set("pp-ville",ville); renderOffres(); });
   $("#offers-list").addEventListener("click", (e) => {
+    const tg = e.target.closest("[data-toggle]");
+    if (tg){
+      const art = tg.closest(".offer"); const ouvert = art.classList.toggle("open");
+      tg.setAttribute("aria-expanded", ouvert); tg.textContent = ouvert ? "Masquer le détail ▴" : "Voir le détail ▾";
+      return;
+    }
     const ap = e.target.closest("[data-apply]"), lt = e.target.closest("[data-letter]");
     if (ap){
       const o = offres.find(x => x.id===ap.dataset.apply); if(!o) return;
