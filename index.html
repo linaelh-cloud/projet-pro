@@ -336,6 +336,45 @@ table.mini tr:hover td{background:#FFF5FA}
 .brand-t b{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.03em}
 .brand-t b span{background:var(--grad-btn);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
 
+/* ===== Boost 2 : tableaux, sommaire, base du 63 ===== */
+.toc{gap:10px}
+.toc a{display:inline-flex;align-items:center;gap:10px;padding:7px 16px 7px 7px;font-size:13.5px}
+.toc a b{width:26px;height:26px;border-radius:50%;background:var(--grad-btn);color:#fff;display:inline-flex;align-items:center;justify-content:center;font-family:var(--display);font-size:13px;flex:none;box-shadow:0 4px 10px -4px rgba(196,19,111,.7)}
+.toc a:hover{background:var(--grad-btn);color:#fff;border-color:transparent}
+.toc a:hover b{background:#fff;color:var(--accent)}
+
+table.mini{border-collapse:separate;border-spacing:0;border:1px solid rgba(196,19,111,.15);border-radius:16px;overflow:hidden;background:#fff}
+table.mini tr:first-child th{background:var(--grad);color:#fff;border-bottom:0;padding:11px 12px;font-size:11px;letter-spacing:.08em}
+table.mini tr:first-child th:first-child{border-top-left-radius:15px}
+table.mini tr:first-child th:last-child{border-top-right-radius:15px}
+table.mini td{padding:10px 12px;border-bottom:1px solid #FBE4EF}
+table.mini tr:last-child td{border-bottom:0}
+table.mini tr:nth-child(odd):not(:first-child) td{background:#FFF7FB}
+table.mini tr:hover td{background:#FFEAF4}
+table.mini td:first-child{font-weight:600;color:var(--plum)}
+table.mini small{font-weight:600}
+#t-formation td:nth-child(2){font-family:var(--display);font-weight:700;color:var(--accent);font-size:15px;white-space:nowrap}
+.pill-s{font-size:12px;padding:4px 10px}
+.pill-s.ok{background:#DDF4E7;color:#0F6E3D}
+.pill-s.no{background:linear-gradient(135deg,#C4136F,#E8478F);color:#fff}
+.pill-s.mid{background:#FFE7C7;color:#8A4B00}
+.pill-s.non{background:#F4EEF1;color:var(--muted);font-weight:600}
+.pill-s{white-space:nowrap}
+td.c-date{white-space:nowrap}
+td.c-num{font-family:var(--display);font-weight:700;color:var(--accent);font-size:15px}
+
+.t63-wrap{border:1px solid rgba(196,19,111,.15);border-radius:16px;box-shadow:var(--shadow)}
+.t63-wrap table.mini{border:0;border-radius:0}
+.t63 th{background:var(--grad)!important;color:#fff!important}
+.t63 a.ent{color:var(--plum);font-weight:700;text-decoration:none;font-size:13.5px}
+.t63 a.ent:hover{color:var(--accent);text-decoration:underline}
+.t63 .lieu{display:inline-block;background:var(--rose-pale);color:var(--plum-2);padding:3px 9px;border-radius:999px;font-size:12px;font-weight:600;text-transform:capitalize}
+.t63 td.act{color:var(--muted);font-size:13px}
+.t63 .eff{display:inline-block;border:1px solid rgba(196,19,111,.25);padding:2px 8px;border-radius:8px;font-size:12px;font-weight:600;white-space:nowrap}
+.rec-info{background:linear-gradient(135deg,#FFF0F7,#FFE3F0);border:1px solid rgba(196,19,111,.15);border-left:5px solid var(--accent);border-radius:14px}
+.card h4{display:flex;align-items:center;gap:8px}
+.card h4::before{content:"";width:6px;height:18px;border-radius:3px;background:var(--grad-btn);flex:none}
+
 </style>
 </head>
 <body>
@@ -376,13 +415,13 @@ table.mini tr:hover td{background:#FFF5FA}
   </div>
 
   <nav class="toc" aria-label="Sommaire">
-    <a href="#accueil" data-goto="s-nom">1. Intitulés et code métier</a>
-    <a href="#accueil" data-goto="s-offres">2. Le marché en chiffres</a>
-    <a href="#accueil" data-goto="s-comp">3. Compétences recherchées</a>
-    <a href="#accueil" data-goto="s-bouge">4. Évolution du métier</a>
-    <a href="#accueil" data-goto="s-acteurs">5. Les recruteurs</a>
-    <a href="#accueil" data-goto="s-position">6. Bilan et plan d'action</a>
-    <a href="#methode">7. Méthodologie</a>
+    <a href="#accueil" data-goto="s-nom"><b>1</b>Intitulés et code métier</a>
+    <a href="#accueil" data-goto="s-offres"><b>2</b>Le marché en chiffres</a>
+    <a href="#accueil" data-goto="s-comp"><b>3</b>Compétences recherchées</a>
+    <a href="#accueil" data-goto="s-bouge"><b>4</b>Évolution du métier</a>
+    <a href="#accueil" data-goto="s-acteurs"><b>5</b>Les recruteurs</a>
+    <a href="#accueil" data-goto="s-position"><b>6</b>Bilan et plan d'action</a>
+    <a href="#methode"><b>7</b>Méthodologie</a>
   </nav>
 
   <!-- 1 -->
@@ -1145,7 +1184,7 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
     const tete = ["Date", "Canal", "Requête", "Annonces (compteur)", "Analysées", "Alternance", "Stage", "CDI", "CDD / mission", "Salaires affichés", "IA citée"];
     const nbx = lignes.length - 1;
     const ne = $("#n-extractions"); if (ne) ne.textContent = `${nbx} extraction${nbx > 1 ? "s" : ""} datée${nbx > 1 ? "s" : ""} depuis le ${dfr(lignes[1][0])}, une par jour : le tableau d'historique (partie 4, Évolution du métier) montre le marché bouger.`;
-    $("#t-histo").innerHTML = `<tr>${tete.map(h => `<th>${h}</th>`).join("")}</tr>` + lignes.slice(1).reverse().slice(0, 30).map(l => `<tr>${l.map((v, i) => `<td>${i === 0 ? dfr(v) : esc(v)}</td>`).join("")}</tr>`).join("");
+    $("#t-histo").innerHTML = `<tr>${tete.map(h => `<th>${h}</th>`).join("")}</tr>` + lignes.slice(1).reverse().slice(0, 30).map(l => `<tr>${l.map((v, i) => `<td class="${i === 0 ? "c-date" : i >= 3 ? "c-num" : ""}">${i === 0 ? new Date(v + "T12:00:00").toLocaleDateString("fr-FR") : esc(v)}</td>`).join("")}</tr>`).join("");
   });
 
   // 5. Marché caché du 63
@@ -1162,7 +1201,7 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
       $("#n-63").textContent = `${L.length} entreprise${L.length > 1 ? "s" : ""} affichée${L.length > 1 ? "s" : ""} sur ${toutes.length}.`;
       $("#t-63").innerHTML = `<tr><th>Entreprise</th><th>Commune</th><th>Activité</th><th>Effectif</th><th>Recrute ?</th></tr>` + (L.length ? L.map(x => {
         const r = rec[x.siren];
-        return `<tr class="${r ? "rec" : ""}"><td><a href="${esc(x.fiche)}" target="_blank" rel="noopener">${esc(x.nom)}</a></td><td>${esc(x.commune)}</td><td>${esc(x.activite)}</td><td>${esc(x.effectif)}</td><td>${r ? `<span class="pill-s ok">Oui, ${r.length} offre${r.length > 1 ? "s" : ""}</span> ${r.slice(0, 2).map(o => `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.titre)}</a>`).join(" · ")}` : `<span style="color:var(--muted)">Pas d'offre publiée</span>`}</td></tr>`;
+        return `<tr class="${r ? "rec" : ""}"><td><a class="ent" href="${esc(x.fiche)}" target="_blank" rel="noopener">${esc(x.nom)}</a></td><td><span class="lieu">${esc(x.commune)}</span></td><td class="act">${esc(x.activite)}</td><td><span class="eff">${esc(x.effectif)}</span></td><td>${r ? `<span class="pill-s ok">Oui, ${r.length} offre${r.length > 1 ? "s" : ""}</span> ${r.slice(0, 2).map(o => `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.titre)}</a>`).join(" · ")}` : `<span class="pill-s non">Pas d'offre</span>`}</td></tr>`;
       }).join("") : `<tr><td colspan="5">Aucune entreprise pour ce filtre.</td></tr>`);
     };
     $("#f-63").addEventListener("input", draw); $("#s-63").addEventListener("change", draw);
