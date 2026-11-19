@@ -1,6 +1,6 @@
 {
- "date": "2026-11-18",
- "heure_utc": "22:08",
+ "date": "2026-11-19",
+ "heure_utc": "00:55",
  "canal": "Adzuna (API officielle, agrégateur d'offres)",
  "requete": "title_only=\"community manager\" (mots dans le titre), pays = France, tri par date, 6 pages de 50 au plus ; puis titre vérifié (« community manag… » ou « CM »)",
  "total_annonce": 1176,
@@ -12,7 +12,7 @@
   ],
   [
    "chargé de communication",
-   1160
+   1161
   ],
   [
    "chargé de communication digitale",
