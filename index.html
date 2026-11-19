@@ -482,6 +482,10 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
 .confirm-post{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#FDF2F7,#FBE6F0);border:1px solid rgba(232,71,143,.35);border-radius:14px;padding:12px 14px;font-size:14px;color:var(--plum)}
 .confirm-post div{display:flex;gap:8px;flex-wrap:wrap}
 
+.deja{display:inline-flex;align-items:center;gap:6px;align-self:center}
+.annuler{border:0;background:none;padding:4px 6px;font-size:12.5px;font-weight:600;color:var(--muted);text-decoration:underline;cursor:pointer}
+.annuler:hover{color:#C62F3A}
+
 </style>
 </head>
 <body>
@@ -918,7 +922,7 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
           </div>
           <div class="acts">
             <button class="btn ghost sm" data-letter="${esc(o.id)}" type="button">Générer la lettre</button>
-            ${applied.has(o.id)?'<span class="pill new" style="align-self:center">Déjà postulé</span>':`<a class="btn sm" href="${esc(o.url||"#")}" target="_blank" rel="noopener" data-apply="${esc(o.id)}">Postuler ↗</a>`}
+            ${applied.has(o.id)?`<span class="deja"><span class="pill new">Déjà postulé</span><button class="annuler" type="button" data-annuler="${esc(o.id)}" title="Retirer de mes candidatures">Annuler</button></span>`:`<a class="btn sm" href="${esc(o.url||"#")}" target="_blank" rel="noopener" data-apply="${esc(o.id)}">Postuler ↗</a>`}
           </div>
           ${aConfirmer.has(o.id) && !applied.has(o.id) ? `<div class="confirm-post">
             <span>Tu as envoyé ta candidature à <b>${esc(o.entreprise||"cette entreprise")}</b> ?</span>
@@ -943,6 +947,8 @@ nav.tabs a[aria-current="page"]{box-shadow:inset 0 -2px 0 #E8478F,0 6px 16px -6p
     const ap = e.target.closest("[data-apply]"), lt = e.target.closest("[data-letter]");
     const oui = e.target.closest("[data-oui]"), non = e.target.closest("[data-non]");
     if (ap){ aConfirmer.add(ap.dataset.apply); setTimeout(renderOffres, 300); return; }
+    const an = e.target.closest("[data-annuler]");
+    if (an){ cands = cands.filter(c => c.offreId !== an.dataset.annuler); saveCands(); renderCands(); renderOffres(); toast("Retirée de tes candidatures"); return; }
     if (non){ aConfirmer.delete(non.dataset.non); renderOffres(); return; }
     if (oui){
       const o = offres.find(x => x.id===oui.dataset.oui); if(!o) return;
