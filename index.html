@@ -344,8 +344,8 @@ details.src .note{margin:8px 0 0 !important}
       <div>
         <h4>Entreprises qui publient le plus</h4>
         <div class="bars" id="b-entreprises"></div>
+        <p class="note dans-source">Constat : une grande partie des offres d'alternance vient d'écoles et d'organismes de formation qui recrutent des alternants pour leurs entreprises partenaires. Une offre ne veut donc pas toujours dire un employeur direct.</p>
         <div class="source" id="src-entreprises"></div>
-        <p class="note">Constat : une grande partie des offres d'alternance vient d'écoles et d'organismes de formation qui recrutent des alternants pour leurs entreprises partenaires. Une offre ne veut donc pas toujours dire un employeur direct.</p>
       </div>
       <div>
         <h4>Le marché caché : entreprises du Puy-de-Dôme</h4>
@@ -1073,7 +1073,7 @@ document.querySelectorAll(".source").forEach(el => {
   d.innerHTML = "<summary>Source et limites</summary>";
   el.before(d);
   const avant = d.previousElementSibling;
-  if (avant && avant.id === "n-extractions") d.appendChild(avant);
+  if (avant && (avant.id === "n-extractions" || avant.classList.contains("dans-source"))) d.appendChild(avant);
   d.appendChild(el);
 });
 </script>
