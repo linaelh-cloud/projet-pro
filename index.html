@@ -197,6 +197,13 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 .offer .detail-note{font-size:12.5px}
 .lien-detail{margin-top:8px;border:0;background:none;padding:0;color:var(--accent);font-weight:600;font-size:13px;cursor:pointer}
 .warn-box{margin:0 0 10px;font-size:12.5px;line-height:1.45;background:var(--warn-soft);color:var(--warn);border-radius:10px;padding:8px 10px}
+.cv-box summary,.alt-annonce summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.cv-box summary::-webkit-details-marker,.alt-annonce summary::-webkit-details-marker{display:none}
+.alt-annonce{margin-top:10px}
+.alt-annonce summary{font-size:13px;color:var(--accent);font-weight:600}
+.step-n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:700;margin-right:4px}
+.cv-etat{font-size:12.5px;color:var(--muted)}
+.cv-etat.ok{color:var(--ok);font-weight:600}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;z-index:20}
 @media (prefers-reduced-motion:no-preference){.btn,.site,nav.tabs a{transition:background .15s,border-color .15s}}
 </style>
@@ -449,38 +456,45 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 <!-- ============ LETTRE ============ -->
 <section class="view" id="v-lettre" hidden>
   <div>
-    <div class="eyebrow">Générée pour chaque annonce</div>
+    <div class="eyebrow">Une lettre adaptée à chaque offre</div>
     <h2 style="font-size:32px;margin-top:4px">Lettre de motivation</h2>
-    <p class="lead" style="margin-top:6px">Colle l'annonce, vérifie ton profil, puis clique sur <b>Générer la lettre</b>. Claude s'ouvre avec la demande prête et écrit ta lettre adaptée à l'annonce.</p>
+    <p class="lead" style="margin-top:6px">Mon CV est enregistré une fois. Pour chaque offre, je colle le lien de l'annonce et j'indique ce que je veux mettre en avant : Claude lit l'annonce et écrit une lettre adaptée à mon CV et à cette offre.</p>
   </div>
-  <div class="grid2">
-    <label class="f">L'annonce (texte complet)
-      <textarea class="i" id="l-annonce" style="min-height:220px" placeholder="Colle ici le texte de l'annonce : entreprise, missions, profil recherché…"></textarea>
+
+  <details class="card cv-box" id="cv-box">
+    <summary><span class="step-n">1</span><b>Mon CV</b> <span class="cv-etat" id="cv-etat">À remplir une seule fois</span></summary>
+    <p class="note" style="margin:10px 0 8px">Colle le texte de ton CV. Il est enregistré uniquement dans ce navigateur : il n'est pas publié sur le site ni sur GitHub.</p>
+    <textarea class="i" id="l-cv" style="min-height:260px" placeholder="Colle ici le texte complet de ton CV : coordonnées, formation, expériences, compétences, outils, langues, centres d'intérêt…"></textarea>
+    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn ghost sm" id="l-save-cv" type="button">Enregistrer mon CV</button>
+    </div>
+  </details>
+
+  <div class="card">
+    <label class="f"><span><span class="step-n">2</span> Lien de l'annonce</span>
+      <input class="i" id="l-lien" type="url" placeholder="https://… (Indeed, Welcome to the Jungle, site de l'entreprise…)">
     </label>
-    <label class="f">Mon profil (formation, expériences, points forts)
-      <textarea class="i" id="l-profil" style="min-height:220px" placeholder="Ex. : Étudiante en BTS Communication à Lyon, je cherche une alternance de 2 ans. Stage de 2 mois chez… J'ai géré le compte Instagram de… Je maîtrise Canva et CapCut…"></textarea>
+    <details class="alt-annonce" id="alt-annonce">
+      <summary>Le lien ne s'ouvre pas (LinkedIn par exemple) ? Colle le texte de l'annonce</summary>
+      <textarea class="i" id="l-annonce" style="min-height:140px;margin-top:8px" placeholder="Facultatif : le texte de l'annonce, si Claude ne peut pas ouvrir le lien."></textarea>
+    </details>
+  </div>
+
+  <div class="card">
+    <label class="f"><span><span class="step-n">3</span> Ce que je veux mettre en avant</span>
+      <textarea class="i" id="l-avant" style="min-height:90px" placeholder="Ex. : mon stage chez … où j'ai fait grandir le compte Instagram, ma pratique de TikTok et du montage vidéo sur CapCut, mon intérêt pour la marque…"></textarea>
     </label>
   </div>
-  <div class="form">
-    <label class="f">Mon prénom et nom<input class="i" id="l-nom" placeholder="Prénom Nom"></label>
-    <label class="f">Type de contrat
-      <select class="i" id="l-type"><option value="alternance">Alternance</option><option value="stage">Stage</option></select>
-    </label>
-    <label class="f">Ton de la lettre
-      <select class="i" id="l-ton"><option>Professionnel et chaleureux</option><option>Dynamique et créatif</option><option>Sobre et formel</option></select>
-    </label>
-  </div>
+
   <div class="toolbar">
     <div style="display:flex;gap:8px;flex-wrap:wrap">
       <a class="btn" id="l-gen" href="https://claude.ai/new" target="_blank" rel="noopener">Générer la lettre ↗</a>
       <button class="btn ghost" id="l-copy-prompt" type="button">Copier la demande</button>
     </div>
-    <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn ghost" id="l-save-profil" type="button">Enregistrer mon profil</button>
-    </div>
   </div>
-  <div class="status-line" id="l-status">Si Claude s'ouvre sans la demande, clique sur « Copier la demande » et colle-la dans Claude.</div>
-  <label class="f">Ma lettre finale (colle-la ici pour la garder avec l'annonce)
+  <div class="status-line" id="l-status">Claude s'ouvre dans un nouvel onglet avec la demande prête. S'il s'ouvre vide, clique sur « Copier la demande » et colle-la dans Claude.</div>
+
+  <label class="f">Ma lettre finale (colle-la ici pour la garder)
     <textarea class="i letter-out" id="l-out" placeholder="Colle ici la lettre écrite par Claude, puis modifie-la si besoin." style="min-height:300px"></textarea>
   </label>
 </section>
@@ -630,8 +644,8 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     }
     if (lt){
       const o = offres.find(x => x.id===lt.dataset.letter); if(!o) return;
-      $("#l-annonce").value = `${o.titre}\nEntreprise : ${o.entreprise||""}\nLieu : ${o.lieu||""}\nContrat : ${o.type}\nLien : ${o.url||""}\n\n${o.description||""}`;
-      $("#l-type").value = o.type==="stage"?"stage":"alternance";
+      $("#l-lien").value = o.url || "";
+      $("#l-annonce").value = `${o.titre}\nEntreprise : ${o.entreprise||""}\nLieu : ${o.lieu||""}\nContrat : ${o.type}\n\n${o.description||""} […]`;
       updateLetterLink();
       location.hash = "lettre";
     }
@@ -724,44 +738,61 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   });
 
   /* ---------- Lettre ---------- */
-  $("#l-profil").value = store.get("pp-profil","");
-  $("#l-nom").value = store.get("pp-nom","");
-  $("#l-out").value = store.get("pp-lettre","");
+  $("#l-cv").value = store.get("pp-cv", store.get("pp-profil", ""));
+  $("#l-avant").value = store.get("pp-avant", "");
+  $("#l-out").value = store.get("pp-lettre", "");
+  function etatCV(){
+    const n = $("#l-cv").value.trim().length;
+    $("#cv-etat").textContent = n ? `Enregistré ✓ (${n} caractères) · cliquer pour modifier` : "À remplir une seule fois";
+    $("#cv-etat").classList.toggle("ok", !!n);
+  }
+  if (!$("#l-cv").value.trim()) $("#cv-box").open = true;
+  etatCV();
   function buildPrompt(){
-    const annonce = $("#l-annonce").value.trim(), profil = $("#l-profil").value.trim();
-    return `Rédige-moi une lettre de motivation en français pour une candidature en ${$("#l-type").value} au poste décrit dans l'annonce ci-dessous.
+    const cv = $("#l-cv").value.trim(), lien = $("#l-lien").value.trim(), texte = $("#l-annonce").value.trim(), avant = $("#l-avant").value.trim();
+    return `Tu es expert·e en recrutement dans la communication digitale. Rédige ma lettre de motivation en français pour l'offre ci-dessous, personnalisée à partir de mon CV.
 
-Règles :
-- 250 à 350 mots, ton : ${$("#l-ton").value}.
-- Structure : objet, formule d'appel, accroche qui cite l'entreprise et un élément précis de l'annonce, paragraphe "vous" (ce qui m'attire chez l'entreprise), paragraphe "moi" (mes compétences et expériences reliées aux missions, avec exemples concrets), paragraphe "nous" (ce que j'apporterai, disponibilités et rythme si alternance), demande d'entretien, formule de politesse.
-- Utilise uniquement les informations de mon profil. N'invente aucune expérience, école, chiffre ou diplôme.
-- Signe avec : ${$("#l-nom").value.trim() || "[Prénom Nom]"}.
+ÉTAPES
+1. Lis l'annonce${lien ? ` à cette adresse : ${lien}` : ""}.${texte ? " Son texte est aussi copié plus bas." : " Si tu ne peux pas l'ouvrir, dis-le-moi et demande-moi de coller le texte de l'annonce : n'invente rien sur l'offre."}
+2. Repère l'entreprise, l'intitulé du poste, le type de contrat (stage ou alternance, avec la durée et le rythme si indiqués), les missions principales et les compétences demandées.
+3. Dans mon CV, choisis les 2 ou 3 expériences et compétences les plus utiles pour CETTE offre, et relie chacune à une mission précise de l'annonce, avec un exemple concret.
+4. Mets particulièrement en avant : ${avant || "ce qui, dans mon CV, correspond le mieux à l'annonce"}.
+
+RÈGLES
+- 250 à 350 mots, ton professionnel, naturel et chaleureux, sans formules creuses.
+- Structure : coordonnées tirées de mon CV, objet, formule d'appel, accroche qui cite l'entreprise et un élément précis de l'annonce, ce qui m'attire chez elle, ce que j'apporte (avec mes exemples), ce que je propose (disponibilités, rythme si alternance), demande d'entretien, formule de politesse, signature.
+- Reprends naturellement les mots-clés de l'annonce.
+- Utilise uniquement les informations de mon CV : n'invente aucune expérience, aucun diplôme, aucun chiffre.
 - Texte brut, sans markdown.
-
-ANNONCE :
-${annonce || "(colle l'annonce ici)"}
-
-MON PROFIL :
-${profil || "(profil non renseigné : reste général sur la motivation, sans inventer d'expérience)"}`;
+- Après la lettre, liste en 3 lignes : les éléments de l'annonce que tu as utilisés, les éléments de mon CV que tu as mis en avant, et ce qui manque dans mon CV pour cette offre.
+${texte ? `
+TEXTE DE L'ANNONCE
+${texte}
+` : ""}
+MON CV
+${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
   }
   function updateLetterLink(){
-    let q = buildPrompt();
-    if (q.length > 6000) q = q.slice(0, 6000);
-    $("#l-gen").href = "https://claude.ai/new?q=" + encodeURIComponent(q);
+    const q = buildPrompt();
+    $("#l-gen").href = "https://claude.ai/new?q=" + encodeURIComponent(q.length > 7500 ? q.slice(0, 7500) : q);
+    $("#l-gen").dataset.long = q.length > 7500 ? "1" : "";
   }
-  ["#l-annonce","#l-profil","#l-nom","#l-type","#l-ton"].forEach(s => $(s).addEventListener("input", updateLetterLink));
-  ["#l-type","#l-ton"].forEach(s => $(s).addEventListener("change", updateLetterLink));
+  ["#l-cv", "#l-lien", "#l-annonce", "#l-avant"].forEach(sel => $(sel).addEventListener("input", () => {
+    if (sel === "#l-cv") { store.set("pp-cv", $("#l-cv").value); etatCV(); }
+    if (sel === "#l-avant") store.set("pp-avant", $("#l-avant").value);
+    updateLetterLink();
+  }));
   updateLetterLink();
+  $("#l-save-cv").addEventListener("click", () => { store.set("pp-cv", $("#l-cv").value); etatCV(); $("#cv-box").open = false; toast("CV enregistré dans ce navigateur"); });
   $("#l-gen").addEventListener("click", (e) => {
-    store.set("pp-profil",$("#l-profil").value); store.set("pp-nom",$("#l-nom").value);
-    if (!$("#l-annonce").value.trim()){ e.preventDefault(); $("#l-status").textContent = "Colle d'abord le texte de l'annonce."; return; }
-    $("#l-status").textContent = "Claude s'ouvre dans un nouvel onglet. Colle ensuite la lettre dans le cadre ci-dessous pour la garder.";
+    if (!$("#l-cv").value.trim()) { e.preventDefault(); $("#cv-box").open = true; $("#l-status").textContent = "Colle d'abord ton CV (étape 1)."; return; }
+    if (!$("#l-lien").value.trim() && !$("#l-annonce").value.trim()) { e.preventDefault(); $("#l-status").textContent = "Colle le lien de l'annonce (étape 2)."; return; }
+    if ($("#l-gen").dataset.long) { e.preventDefault(); $("#l-status").textContent = "La demande est trop longue pour s'ouvrir directement : clique sur « Copier la demande », puis colle-la dans Claude."; return; }
+    $("#l-status").textContent = "Claude s'ouvre dans un nouvel onglet. Relis la lettre, puis colle-la dans le cadre ci-dessous pour la garder.";
   });
   $("#l-copy-prompt").addEventListener("click", async () => {
-    const t = buildPrompt();
-    try { await navigator.clipboard.writeText(t); toast("Demande copiée : colle-la dans Claude"); } catch(e){ toast("Copie impossible dans ce navigateur"); }
+    try { await navigator.clipboard.writeText(buildPrompt()); toast("Demande copiée : colle-la dans Claude"); window.open("https://claude.ai/new", "_blank"); } catch(e){ toast("Copie impossible dans ce navigateur"); }
   });
-  $("#l-save-profil").addEventListener("click", () => { store.set("pp-profil",$("#l-profil").value); store.set("pp-nom",$("#l-nom").value); toast("Profil enregistré"); });
   $("#l-out").addEventListener("input", () => store.set("pp-lettre", $("#l-out").value));
 
   renderOffres(); renderCands();
