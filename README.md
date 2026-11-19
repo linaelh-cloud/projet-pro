@@ -1,4 +1,4 @@
-# Projet Pro : Community Manager, le métier compté
+# Mon Projet Pro : Community Manager, le métier compté
 
 Séminaires métiers · M2 Marketing Opérationnel & Digital · IAE Clermont Auvergne · 2026-2027
 Lina El Hamzaoui
@@ -14,7 +14,7 @@ Ce site rend compte du métier que je vise, **Community Manager**, à partir des
 | Intitulé principal | Community Manager |
 | Variantes suivies | Social media manager, chargé·e de communication digitale, content manager, brand content manager, chargé·e de communication, responsable communication digitale, influence manager |
 | Code ROME | **E1101** · Animation de site multimédia (répertoire ROME de France Travail, via Métierscope) |
-| Contrat recherché | Alternance ou stage |
+| Contrat recherché | Stage de 3 à 6 mois à partir de janvier 2027 (Master 2), ou alternance |
 
 ### Les questions que je pose au marché
 
@@ -28,16 +28,16 @@ Ce site rend compte du métier que je vise, **Community Manager**, à partir des
 
 | Onglet | Contenu |
 |---|---|
-| Mon métier compté | Variantes d'intitulé, volume, régions, contrats, salaires affichés, compétences et outils comptés, historique, acteurs, ma position et mes 3 actions datées |
-| Offres du jour | Les nouvelles offres de stage et d'alternance, filtrables, avec un bouton pour postuler |
-| Lettre de motivation | Prépare une lettre adaptée à une annonce avec Claude |
+| Mon métier compté | 1. Intitulés et code métier · 2. Le marché en chiffres · 3. Compétences recherchées (et ce que ma formation ne me donnera pas) · 4. Évolution du métier · 5. Les recruteurs (dont le marché caché du 63) · 6. Bilan et plan d'action. Chaque chiffre a sa source et ses limites, dans un menu « Source et limites » |
+| Offres du jour | Les nouvelles offres de stage et d'alternance trouvées par la veille, filtrables, dépliables, avec un bouton pour postuler |
+| Lettre de motivation | Écrit sur la page une lettre adaptée à une offre (API Gemini), à partir de mon CV en PDF, du lien de l'annonce et de ce que je veux mettre en avant |
 | Mes candidatures | Suivi de mes candidatures par secteur et par statut (enregistré dans mon navigateur uniquement) |
-| Comment c'est fait | La chaîne complète, les canaux, les scripts, la règle RGPD et les limites |
+| Méthodologie | La chaîne complète, les canaux, les scripts, la règle RGPD et les limites |
 
 ## Comment le site est fait
 
 ```
-API Adzuna + API Recherche d'entreprises
+API Adzuna + API Recherche d'entreprises (+ API Gemini pour la lettre)
         → scripts Python (scripts/)
         → données datées (data/)
         → GitHub Actions (toutes les 3 heures, ordinateur éteint)
@@ -50,7 +50,8 @@ API Adzuna + API Recherche d'entreprises
 |---|---|---|
 | [API Adzuna](https://developer.adzuna.com) (agrégateur, clé gratuite) | Offres du jour et comptage du marché | Actif |
 | [API Recherche d'entreprises](https://recherche-entreprises.api.gouv.fr) (data.gouv, sans clé) | Entreprises du Puy-de-Dôme proches du métier (marché caché) | Actif |
-| API France Travail « Offres d'emploi v2 » | Canal commun du cours | Accès demandé le 18/11/2026 : l'API n'est plus en libre-service. Le script `recuperer_offres.py` l'utilisera dès que l'accès sera accordé |
+| API Gemini de Google (offre gratuite, clé personnelle) | Rédaction de la lettre de motivation | Actif : la clé reste dans mon navigateur ; téléphone, e-mail et adresse sont masqués avant l'envoi |
+| API France Travail « Offres d'emploi v2 » | Canal commun du cours | Accès demandé : l'API n'est plus en libre-service. Le script `recuperer_offres.py` l'utilisera dès que l'accès sera accordé |
 | LinkedIn, Indeed, Apec | Recherche manuelle uniquement | Leurs conditions d'utilisation interdisent le scraping : aucun robot |
 
 ### Les scripts
@@ -84,12 +85,26 @@ Relancer une extraction à la main : onglet **Actions** du dépôt → **Offres 
 - Seules des **données d'entreprise** sont enregistrées (nom, SIREN, activité, commune, effectif, date de création). Les noms des dirigeants et les entrepreneurs individuels, dont le nom est celui d'une personne, sont exclus.
 - Aucun contact nominatif n'est collecté : ni e-mail, ni téléphone, ni nom de personne.
 - Aucun fichier n'est constitué pour être revendu ou partagé.
-- Mes candidatures restent dans mon navigateur : elles ne sont pas publiées sur GitHub.
+- Mes candidatures et mon CV restent dans mon navigateur : ils ne sont pas publiés sur GitHub.
+- Pour la lettre de motivation, mon téléphone, mon e-mail et mon adresse sont remplacés par des repères avant l'envoi à Gemini, puis remis dans la lettre.
 - Les clés des API sont dans les **Secrets** de GitHub, jamais dans le code.
+
+## Le métier en bref (extraction du 19/11/2026)
+
+| | |
+|---|---|
+| Le volume | 1 176 annonces en France avec « community manager » dans le titre |
+| Les contrats | 62 % des offres analysées sont des alternances ou des stages |
+| La géographie | 43 % des offres sont en Île-de-France |
+| La compétence la plus citée | Modération et animation de communauté (35 % des offres) |
+| L'intitulé voisin | « Chargé de communication », presque autant d'offres (1 161) |
+| Le marché caché | 330 entreprises de communication, publicité et design dans le Puy-de-Dôme, aucune avec une offre publiée |
+
+Ces chiffres sont mis à jour automatiquement sur le site.
 
 ## Ma position et mes 3 actions datées
 
-Le métier recrute surtout en alternance et en stage, et surtout en Île-de-France ; en Auvergne, les offres publiées sont rares, mais le marché caché du Puy-de-Dôme compte plus de 300 entreprises de communication, de publicité et de design. La vidéo courte et TikTok sont au cœur des annonces : c'est ce que je dois prouver.
+Community Manager est un métier qui s'ouvre par le stage et l'alternance, centré sur l'animation de communauté et la création de contenu. Les offres se concentrent à Paris : en Auvergne, je vais chercher les entreprises directement, sans attendre une annonce.
 
 | Date | Action | Preuve |
 |---|---|---|
