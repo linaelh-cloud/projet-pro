@@ -290,6 +290,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     <h4 style="margin-top:16px">Les mots qui montent et qui reculent</h4>
     <p class="note" style="margin:0 0 8px" id="n-mots"></p>
     <div style="overflow-x:auto"><table class="mini" id="t-mots"></table></div>
+    <div class="source" id="src-mots"></div>
     <div class="quote">
       <b>Source emploi : Apec, « L'IA dans les métiers du commercial et du marketing » (mars 2026).</b>
       En 2025, les métiers commercial-marketing représentent 13 % des offres cadre de l'Apec qui mentionnent l'IA, contre 9 % en 2022. Les employeurs attendent surtout des usages concrets et du savoir-être, plus que des formations techniques.
@@ -306,6 +307,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
       <div>
         <h4>Entreprises qui publient le plus</h4>
         <div class="bars" id="b-entreprises"></div>
+        <div class="source" id="src-entreprises"></div>
         <p class="note">Constat : une grande partie des offres d'alternance vient d'écoles et d'organismes de formation qui recrutent des alternants pour leurs entreprises partenaires. Une offre ne veut donc pas toujours dire un employeur direct.</p>
       </div>
       <div>
@@ -776,7 +778,7 @@ ${profil || "(profil non renseigné : reste général sur la motivation, sans in
     bars("#b-contrats", m.contrats, n);
     const sal = Object.entries(m.salaires || {});
     $("#t-salaires").innerHTML = `<tr><th>Contrat</th><th>Offres</th><th>Médiane</th><th>Fourchette</th></tr>` + (sal.length ? sal.map(([k, s]) => `<tr><td>${esc(k)}</td><td>${s.nb}</td><td>${nf(s.mediane)} €</td><td>${nf(s.min)} à ${nf(s.max)} €</td></tr>`).join("") : `<tr><td colspan="4">Aucun salaire affiché</td></tr>`);
-    $("#n-salaires").textContent = `Seulement ${m.nb_salaires_affiches} offres sur ${n} affichent un salaire : ces chiffres sont des salaires affichés, trop peu nombreux pour décrire le métier. Repère : l'insertion à un an des diplômés de l'IAE est de 2 433 € brut mensuel médian (chiffre du cours).`;
+    $("#n-salaires").textContent = `Seulement ${m.nb_salaires_affiches} offres sur ${n} affichent un salaire : ces chiffres sont des salaires affichés, trop peu nombreux pour décrire le métier. Repère : l'insertion à un an des diplômés de l'IAE est de 2 433 € brut mensuel médian (deck de rentrée de l'IAE, cité dans le cours Séminaires métiers du 22/09/2026).`;
     source("#src-offres", m, "Adzuna ne regroupe pas tous les sites ; le contrat est déduit du texte ; les salaires horaires et mensuels sont ramenés à l'année (× 1 607 h ou × 12)");
     // 3. Compétences
     bars("#b-reseaux", m.competences["Réseaux"], n);
@@ -804,6 +806,7 @@ ${profil || "(profil non renseigné : reste général sur la motivation, sans in
     source("#src-comp", m, "mots cherchés dans le titre et l'extrait de description fourni par l'API, pas dans l'annonce complète : ce sont des minimums");
     // 5. Entreprises qui publient
     bars("#b-entreprises", (m.entreprises || []).slice(0, 10));
+    source("#src-entreprises", m, "nom de l'entreprise tel que publié par Adzuna : une même entreprise peut apparaître sous plusieurs orthographes");
     const ia = (m.competences["Outils"] || []).find(r => r[0].startsWith("ChatGPT"));
     $("#n-ia").textContent = `Dans mes offres du ${dfr(m.date)}, l'IA générative est citée dans ${ia ? ia[1] : 0} offres sur ${n} (extraits de description). À suivre dans l'historique ci-dessus.`;
   }).catch(() => { $("#maj-marche").textContent = "Données du marché indisponibles pour le moment."; });
@@ -829,6 +832,7 @@ ${profil || "(profil non renseigné : reste général sur la motivation, sans in
     mots.sort((a, b) => (b[2] - b[1]) - (a[2] - a[1]) || b[2] - a[2]);
     $("#n-mots").textContent = dates.length < 2 ? "Une seule extraction pour l'instant : la comparaison apparaîtra dès la suivante." :
       `Part des offres qui citent chaque mot, le ${dfr(d0)} puis le ${dfr(d1)} (${dates.length} extractions). Sur quelques jours, les écarts restent faibles : la tendance se lira sur plusieurs semaines.`;
+    const sm = $("#src-mots"); if (sm) sm.innerHTML = `<b>Requête</b> title_only="community manager", pays = France, mots cherchés dans le titre et l'extrait de description · <b>Dates</b> ${dates.map(dfr).join(", ")} · <b>Canal</b> Adzuna · <b>Limites</b> extraits de description courts ; quelques jours d'écart ne font pas une tendance · <b>Données</b> <a href="https://github.com/linaelh-cloud/projet-pro/blob/main/data/competences.csv" target="_blank" rel="noopener">competences.csv</a>`;
     const fl = (x) => x > 0.5 ? `<span class="pill-s ok">▲ +${x.toFixed(0)} pt</span>` : x < -0.5 ? `<span class="pill-s no">▼ ${x.toFixed(0)} pt</span>` : `<span class="pill-s mid">= stable</span>`;
     $("#t-mots").innerHTML = `<tr><th>Mot</th><th>${dfr(d0)}</th><th>${dfr(d1)}</th><th>Évolution</th></tr>` +
       mots.slice(0, 12).map(([mot, a, b]) => `<tr><td>${esc(mot)}</td><td>${a.toFixed(0)} %</td><td>${b.toFixed(0)} %</td><td>${fl(b - a)}</td></tr>`).join("");
