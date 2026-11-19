@@ -1,5 +1,5 @@
 {
- "date": "2026-11-18",
+ "date": "2026-11-19",
  "canal": "API Recherche d'entreprises (recherche-entreprises.api.gouv.fr)",
  "requete": "siège dans le 63, entreprises actives, NAF 73.11Z, 70.21Z, 73.12Z, 74.10Z, 59.11B",
  "total": 330,
@@ -70,7 +70,7 @@
  ],
  "exemples": [
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "CENTRE FRANCE PUBLICITE (CFP)",
    "siren": "329337984",
@@ -84,7 +84,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/329337984"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "2G PUBLICITE (2 G PUBLICITE - LE REVE DU DOGON)",
    "siren": "421840877",
@@ -98,7 +98,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421840877"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "QUI PLUS EST",
    "siren": "451572176",
@@ -112,7 +112,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/451572176"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "LES COULEURS DU TEMPS",
    "siren": "487652000",
@@ -126,7 +126,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/487652000"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "RIOT HOUSE PRODUCTION (RIOT HOUSE / KLEEK / LA PACKSHOTERIE)",
    "siren": "538949272",
@@ -140,7 +140,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/538949272"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "THE BOSON PROJECT",
    "siren": "789508843",
@@ -154,7 +154,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/789508843"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "CLAP AGENCY (CLAP AGENCY)",
    "siren": "919753194",
@@ -168,7 +168,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/919753194"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "CONJONCTURE SA MARKETTING DEVELOPPEMENT (LAMARCK)",
    "siren": "318100773",
@@ -182,7 +182,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/318100773"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "DANSNOSCOEURS (DANSNOSCOEURS)",
    "siren": "517833448",
@@ -196,7 +196,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/517833448"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "DANYLAK ET PY PUBLICITE PEINTE",
    "siren": "338617244",
@@ -210,7 +210,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/338617244"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "DE VISU",
    "siren": "379785637",
@@ -224,7 +224,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/379785637"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "MOTO AXE",
    "siren": "394426795",
@@ -238,7 +238,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/394426795"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "NECA-MONTAGE ET AFFICHAGE EN PUBLICITE",
    "siren": "317962207",
@@ -252,7 +252,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/317962207"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "OCTOPUS COMMUNICATION",
    "siren": "539356154",
@@ -266,7 +266,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/539356154"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "OPPIDUM COMMUNICATION",
    "siren": "502181969",
@@ -280,7 +280,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/502181969"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "SESIOM (SES)",
    "siren": "914528005",
@@ -294,7 +294,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914528005"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "SOCIETE DE PUBLICITE CASTELPONTINE ET ENSEIGNES (SPC ENSEIGNES)",
    "siren": "889213088",
@@ -308,7 +308,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889213088"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "TEKATE PRODUCTION (EN VRAI)",
    "siren": "913079216",
@@ -322,7 +322,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913079216"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "VICE VERSA (VICE VERSA)",
    "siren": "887981140",
@@ -336,7 +336,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/887981140"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "VINGT DEUX",
    "siren": "853249621",
@@ -350,7 +350,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/853249621"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "2 D (COMM 360)",
    "siren": "832175012",
@@ -364,7 +364,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832175012"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "AGENCE CHARLIE (AGENCE CHARLIE)",
    "siren": "953195005",
@@ -378,7 +378,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953195005"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "AGM COMMUNICATION",
    "siren": "421699935",
@@ -392,7 +392,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421699935"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "ATALANTE PRODUCTIONS",
    "siren": "384922837",
@@ -406,7 +406,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/384922837"
   },
   {
-   "date_extraction": "2026-11-18",
+   "date_extraction": "2026-11-19",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "BISCUIT PRODUCTION (BISCUIT PRODUCTION)",
    "siren": "802483461",
@@ -418,6 +418,2978 @@
    "date_creation": "2014-05-19",
    "categorie": "PME",
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802483461"
+  }
+ ],
+ "toutes": [
+  {
+   "nom": "CENTRE FRANCE PUBLICITE (CFP)",
+   "siren": "329337984",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "100-199",
+   "date_creation": "1984-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/329337984"
+  },
+  {
+   "nom": "2G PUBLICITE (2 G PUBLICITE - LE REVE DU DOGON)",
+   "siren": "421840877",
+   "activite": "Agences de publicité",
+   "commune": "MALAUZAT",
+   "effectif": "20-49",
+   "date_creation": "1999-03-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421840877"
+  },
+  {
+   "nom": "QUI PLUS EST",
+   "siren": "451572176",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CHAMALIERES",
+   "effectif": "20-49",
+   "date_creation": "2004-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/451572176"
+  },
+  {
+   "nom": "LES COULEURS DU TEMPS",
+   "siren": "487652000",
+   "activite": "Activités spécialisées de design",
+   "commune": "RIOM",
+   "effectif": "10-19",
+   "date_creation": "2006-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/487652000"
+  },
+  {
+   "nom": "RIOT HOUSE PRODUCTION (RIOT HOUSE / KLEEK / LA PACKSHOTERIE)",
+   "siren": "538949272",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHATEAUGAY",
+   "effectif": "10-19",
+   "date_creation": "2012-01-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/538949272"
+  },
+  {
+   "nom": "THE BOSON PROJECT",
+   "siren": "789508843",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "MOZAC",
+   "effectif": "10-19",
+   "date_creation": "2012-11-19",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/789508843"
+  },
+  {
+   "nom": "CLAP AGENCY (CLAP AGENCY)",
+   "siren": "919753194",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "6-9",
+   "date_creation": "2022-09-28",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/919753194"
+  },
+  {
+   "nom": "CONJONCTURE SA MARKETTING DEVELOPPEMENT (LAMARCK)",
+   "siren": "318100773",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "6-9",
+   "date_creation": "1980-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/318100773"
+  },
+  {
+   "nom": "DANSNOSCOEURS (DANSNOSCOEURS)",
+   "siren": "517833448",
+   "activite": "Régie publicitaire de médias",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "6-9",
+   "date_creation": "2009-10-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/517833448"
+  },
+  {
+   "nom": "DANYLAK ET PY PUBLICITE PEINTE",
+   "siren": "338617244",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "6-9",
+   "date_creation": "1986-04-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/338617244"
+  },
+  {
+   "nom": "DE VISU",
+   "siren": "379785637",
+   "activite": "Régie publicitaire de médias",
+   "commune": "LEMPDES",
+   "effectif": "6-9",
+   "date_creation": "1990-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/379785637"
+  },
+  {
+   "nom": "MOTO AXE",
+   "siren": "394426795",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "6-9",
+   "date_creation": "1994-01-25",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/394426795"
+  },
+  {
+   "nom": "NECA-MONTAGE ET AFFICHAGE EN PUBLICITE",
+   "siren": "317962207",
+   "activite": "Agences de publicité",
+   "commune": "AUBIERE",
+   "effectif": "6-9",
+   "date_creation": "1980-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/317962207"
+  },
+  {
+   "nom": "OCTOPUS COMMUNICATION",
+   "siren": "539356154",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "6-9",
+   "date_creation": "2012-01-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/539356154"
+  },
+  {
+   "nom": "OPPIDUM COMMUNICATION",
+   "siren": "502181969",
+   "activite": "Agences de publicité",
+   "commune": "ISSOIRE",
+   "effectif": "6-9",
+   "date_creation": "2008-01-11",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/502181969"
+  },
+  {
+   "nom": "SESIOM (SES)",
+   "siren": "914528005",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "6-9",
+   "date_creation": "2022-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914528005"
+  },
+  {
+   "nom": "SOCIETE DE PUBLICITE CASTELPONTINE ET ENSEIGNES (SPC ENSEIGNES)",
+   "siren": "889213088",
+   "activite": "Agences de publicité",
+   "commune": "PONT-DU-CHATEAU",
+   "effectif": "6-9",
+   "date_creation": "2020-09-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889213088"
+  },
+  {
+   "nom": "TEKATE PRODUCTION (EN VRAI)",
+   "siren": "913079216",
+   "activite": "Agences de publicité",
+   "commune": "COURNON-D'AUVERGNE",
+   "effectif": "6-9",
+   "date_creation": "2022-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913079216"
+  },
+  {
+   "nom": "VICE VERSA (VICE VERSA)",
+   "siren": "887981140",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ROMAGNAT",
+   "effectif": "6-9",
+   "date_creation": "2020-08-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/887981140"
+  },
+  {
+   "nom": "VINGT DEUX",
+   "siren": "853249621",
+   "activite": "Agences de publicité",
+   "commune": "AUBIERE",
+   "effectif": "6-9",
+   "date_creation": "2019-08-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/853249621"
+  },
+  {
+   "nom": "2 D (COMM 360)",
+   "siren": "832175012",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ISSOIRE",
+   "effectif": "3-5",
+   "date_creation": "2017-09-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832175012"
+  },
+  {
+   "nom": "AGENCE CHARLIE (AGENCE CHARLIE)",
+   "siren": "953195005",
+   "activite": "Agences de publicité",
+   "commune": "CHAMALIERES",
+   "effectif": "3-5",
+   "date_creation": "2023-05-26",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953195005"
+  },
+  {
+   "nom": "AGM COMMUNICATION",
+   "siren": "421699935",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "1999-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421699935"
+  },
+  {
+   "nom": "ATALANTE PRODUCTIONS",
+   "siren": "384922837",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "1992-04-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/384922837"
+  },
+  {
+   "nom": "BISCUIT PRODUCTION (BISCUIT PRODUCTION)",
+   "siren": "802483461",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2014-05-19",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802483461"
+  },
+  {
+   "nom": "C.O.M.E.D.I.",
+   "siren": "431989771",
+   "activite": "Activités spécialisées de design",
+   "commune": "SAINT-VICTOR-MONTVIANEIX",
+   "effectif": "3-5",
+   "date_creation": "2000-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/431989771"
+  },
+  {
+   "nom": "CASTEL PUB RB",
+   "siren": "888708724",
+   "activite": "Activités spécialisées de design",
+   "commune": "PONT-DU-CHATEAU",
+   "effectif": "3-5",
+   "date_creation": "2020-09-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/888708724"
+  },
+  {
+   "nom": "CENTRE FRANCE COMMUNICATIONS (CFC)",
+   "siren": "330026261",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "1984-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/330026261"
+  },
+  {
+   "nom": "COELTO SERVICES",
+   "siren": "881055933",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "BEAUMONT",
+   "effectif": "3-5",
+   "date_creation": "2020-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/881055933"
+  },
+  {
+   "nom": "COM'COMMERCE",
+   "siren": "815285788",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2015-12-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/815285788"
+  },
+  {
+   "nom": "COM'IN",
+   "siren": "842475519",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2018-09-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/842475519"
+  },
+  {
+   "nom": "COMGAX",
+   "siren": "840572861",
+   "activite": "Agences de publicité",
+   "commune": "CEYRAT",
+   "effectif": "3-5",
+   "date_creation": "2018-06-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/840572861"
+  },
+  {
+   "nom": "COMMUN ACOR",
+   "siren": "495252108",
+   "activite": "Régie publicitaire de médias",
+   "commune": "LA MONNERIE-LE-MONTEL",
+   "effectif": "3-5",
+   "date_creation": "2007-04-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/495252108"
+  },
+  {
+   "nom": "DA PIEDADE (SAS DA PIEDADE)",
+   "siren": "877536763",
+   "activite": "Agences de publicité",
+   "commune": "BLANZAT",
+   "effectif": "3-5",
+   "date_creation": "2019-09-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/877536763"
+  },
+  {
+   "nom": "LEMON (LEMON)",
+   "siren": "802711796",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2014-06-09",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/802711796"
+  },
+  {
+   "nom": "LUDO CONCEPT",
+   "siren": "984123554",
+   "activite": "Agences de publicité",
+   "commune": "COURNON-D'AUVERGNE",
+   "effectif": "3-5",
+   "date_creation": "2024-01-29",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/984123554"
+  },
+  {
+   "nom": "MEDIAFIX (LAMARCK)",
+   "siren": "448530683",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2003-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/448530683"
+  },
+  {
+   "nom": "PHOEBUS COMMUNICATION",
+   "siren": "429204159",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "BEAUMONT",
+   "effectif": "3-5",
+   "date_creation": "2000-02-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/429204159"
+  },
+  {
+   "nom": "SARL COM RB",
+   "siren": "792576563",
+   "activite": "Agences de publicité",
+   "commune": "COURNON-D'AUVERGNE",
+   "effectif": "3-5",
+   "date_creation": "2013-05-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/792576563"
+  },
+  {
+   "nom": "SARL MAGMA CREA",
+   "siren": "494071160",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2007-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/494071160"
+  },
+  {
+   "nom": "SETT COM DEVELOPPEMENT",
+   "siren": "953956703",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ROYAT",
+   "effectif": "3-5",
+   "date_creation": "2023-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953956703"
+  },
+  {
+   "nom": "SOC EDIT TOURISME THERM SETT COMMUNIC (SETT COMMUNICATION)",
+   "siren": "480208677",
+   "activite": "Agences de publicité",
+   "commune": "ROYAT",
+   "effectif": "3-5",
+   "date_creation": "2005-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/480208677"
+  },
+  {
+   "nom": "STUDIO C",
+   "siren": "384358925",
+   "activite": "Agences de publicité",
+   "commune": "RIOM",
+   "effectif": "3-5",
+   "date_creation": "1992-02-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/384358925"
+  },
+  {
+   "nom": "TOURING INFO SERVICE MASSIF CENTRAL",
+   "siren": "442054565",
+   "activite": "Régie publicitaire de médias",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2002-05-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/442054565"
+  },
+  {
+   "nom": "TREDART",
+   "siren": "791310162",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2013-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/791310162"
+  },
+  {
+   "nom": "TURBULENCES",
+   "siren": "829649938",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "2017-05-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/829649938"
+  },
+  {
+   "nom": "VISIUM",
+   "siren": "779223163",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "3-5",
+   "date_creation": "1900-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/779223163"
+  },
+  {
+   "nom": "... COMME UNE IMAGE.",
+   "siren": "437564594",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHAMALIERES",
+   "effectif": "1-2",
+   "date_creation": "2001-05-14",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/437564594"
+  },
+  {
+   "nom": "28 BIS",
+   "siren": "800043523",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ISSOIRE",
+   "effectif": "1-2",
+   "date_creation": "2014-01-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/800043523"
+  },
+  {
+   "nom": "4 X 3 CONSEIL",
+   "siren": "494076490",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2007-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/494076490"
+  },
+  {
+   "nom": "ACO'DIS EUROPE",
+   "siren": "327437604",
+   "activite": "Agences de publicité",
+   "commune": "RIOM",
+   "effectif": "1-2",
+   "date_creation": "1983-05-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/327437604"
+  },
+  {
+   "nom": "ACSENS (ACSENS)",
+   "siren": "909325284",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2022-01-04",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/909325284"
+  },
+  {
+   "nom": "AGEMIOS",
+   "siren": "479178154",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2004-10-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/479178154"
+  },
+  {
+   "nom": "AGEN'SYZ",
+   "siren": "985137561",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2024-02-27",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/985137561"
+  },
+  {
+   "nom": "AGENCE SAS (SAS COMMUNICATION)",
+   "siren": "527987135",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2010-10-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/527987135"
+  },
+  {
+   "nom": "AGREESTUDIO (AGREESTUDIO)",
+   "siren": "528438732",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2010-12-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/528438732"
+  },
+  {
+   "nom": "ARGUMENTS (ARGUMENTS)",
+   "siren": "829930973",
+   "activite": "Agences de publicité",
+   "commune": "ISSOIRE",
+   "effectif": "1-2",
+   "date_creation": "2017-05-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/829930973"
+  },
+  {
+   "nom": "AUVERGRAF",
+   "siren": "840872477",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2018-07-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/840872477"
+  },
+  {
+   "nom": "AXESSDRONE",
+   "siren": "891202194",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "AUBIAT",
+   "effectif": "1-2",
+   "date_creation": "2020-11-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/891202194"
+  },
+  {
+   "nom": "AZTECH CREATION (AZTECH CREATION)",
+   "siren": "812878445",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "MUR-SUR-ALLIER",
+   "effectif": "1-2",
+   "date_creation": "2015-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/812878445"
+  },
+  {
+   "nom": "BB COMMUNICATION",
+   "siren": "803598903",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2014-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803598903"
+  },
+  {
+   "nom": "BGC TOSCANE AGENCE CONSEILS EN COMMUNICATION (BGC TOSCANE)",
+   "siren": "837604859",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2018-02-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837604859"
+  },
+  {
+   "nom": "CADUCEEPROD",
+   "siren": "830591814",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "RIOM",
+   "effectif": "1-2",
+   "date_creation": "2017-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/830591814"
+  },
+  {
+   "nom": "CEROLIA",
+   "siren": "418437547",
+   "activite": "Agences de publicité",
+   "commune": "MIREFLEURS",
+   "effectif": "1-2",
+   "date_creation": "1998-04-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/418437547"
+  },
+  {
+   "nom": "CLOSETTE (CLOSETTE)",
+   "siren": "928120542",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CHAMALIERES",
+   "effectif": "1-2",
+   "date_creation": "2024-04-24",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/928120542"
+  },
+  {
+   "nom": "CLP",
+   "siren": "485278931",
+   "activite": "Agences de publicité",
+   "commune": "SAINT-DIERY",
+   "effectif": "1-2",
+   "date_creation": "2005-12-31",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/485278931"
+  },
+  {
+   "nom": "COMCO",
+   "siren": "478709686",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CHAMALIERES",
+   "effectif": "1-2",
+   "date_creation": "2004-09-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/478709686"
+  },
+  {
+   "nom": "CONSILHOM DIGITAL",
+   "siren": "908827876",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "RIOM",
+   "effectif": "1-2",
+   "date_creation": "2022-01-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/908827876"
+  },
+  {
+   "nom": "COSSEE DE MAULDE",
+   "siren": "439350596",
+   "activite": "Activités spécialisées de design",
+   "commune": "AULHAT-FLAT",
+   "effectif": "1-2",
+   "date_creation": "2001-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/439350596"
+  },
+  {
+   "nom": "COWORK&COM (COWORK&COM)",
+   "siren": "825210867",
+   "activite": "Agences de publicité",
+   "commune": "SAYAT",
+   "effectif": "1-2",
+   "date_creation": "2017-01-23",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/825210867"
+  },
+  {
+   "nom": "DA'COM",
+   "siren": "850671058",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2019-05-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/850671058"
+  },
+  {
+   "nom": "DESIGN & COULEURS",
+   "siren": "824133532",
+   "activite": "Activités spécialisées de design",
+   "commune": "SAINT-MAURICE",
+   "effectif": "1-2",
+   "date_creation": "2016-11-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/824133532"
+  },
+  {
+   "nom": "DHOME (CONSTANT COMMUNICATION)",
+   "siren": "910481407",
+   "activite": "Activités spécialisées de design",
+   "commune": "VINZELLES",
+   "effectif": "1-2",
+   "date_creation": "2022-03-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/910481407"
+  },
+  {
+   "nom": "DIS OUI NINON",
+   "siren": "905003729",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CEYRAT",
+   "effectif": "1-2",
+   "date_creation": "2021-10-29",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/905003729"
+  },
+  {
+   "nom": "ECORESCOM",
+   "siren": "822407532",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "BROUSSE",
+   "effectif": "1-2",
+   "date_creation": "2016-09-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/822407532"
+  },
+  {
+   "nom": "ED2C",
+   "siren": "821133444",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "TALLENDE",
+   "effectif": "1-2",
+   "date_creation": "2016-06-23",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/821133444"
+  },
+  {
+   "nom": "G&M PRODUCTION (G&M PRODUCTION)",
+   "siren": "799824164",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "JOB",
+   "effectif": "1-2",
+   "date_creation": "2014-01-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/799824164"
+  },
+  {
+   "nom": "GOODIES BY K",
+   "siren": "929381929",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2024-05-30",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/929381929"
+  },
+  {
+   "nom": "HAGE CONSEIL",
+   "siren": "507809945",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "BILLOM",
+   "effectif": "1-2",
+   "date_creation": "2008-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/507809945"
+  },
+  {
+   "nom": "HEAVENWRAP",
+   "siren": "987606647",
+   "activite": "Agences de publicité",
+   "commune": "ARLANC",
+   "effectif": "1-2",
+   "date_creation": "2024-02-29",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/987606647"
+  },
+  {
+   "nom": "IM FACTORY (IM FACTORY)",
+   "siren": "807935507",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2014-11-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/807935507"
+  },
+  {
+   "nom": "IMPACTVISION (IMPACT VISION)",
+   "siren": "880366075",
+   "activite": "Agences de publicité",
+   "commune": "LA ROCHE-BLANCHE",
+   "effectif": "1-2",
+   "date_creation": "2020-01-06",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/880366075"
+  },
+  {
+   "nom": "JCP VACANCES",
+   "siren": "539732784",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2012-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/539732784"
+  },
+  {
+   "nom": "KANTI",
+   "siren": "799808100",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2013-12-30",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/799808100"
+  },
+  {
+   "nom": "LD3V (LD3V)",
+   "siren": "840329544",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "SAYAT",
+   "effectif": "1-2",
+   "date_creation": "2018-06-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/840329544"
+  },
+  {
+   "nom": "LE MONDE A GRATTER (LE MONDE A GRATTER) (LMAG)",
+   "siren": "910455807",
+   "activite": "Activités spécialisées de design",
+   "commune": "PONT-DU-CHATEAU",
+   "effectif": "1-2",
+   "date_creation": "2022-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/910455807"
+  },
+  {
+   "nom": "LE PUY DE LA COM",
+   "siren": "841764913",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2018-08-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/841764913"
+  },
+  {
+   "nom": "LES ASSOCIES DU MARKETING",
+   "siren": "978295889",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "LA ROCHE-BLANCHE",
+   "effectif": "1-2",
+   "date_creation": "2023-08-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/978295889"
+  },
+  {
+   "nom": "LUDS",
+   "siren": "931195697",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2024-07-17",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/931195697"
+  },
+  {
+   "nom": "MANO RB (PANO SIGN SERVICE ISSOIRE)",
+   "siren": "922434816",
+   "activite": "Agences de publicité",
+   "commune": "ISSOIRE",
+   "effectif": "1-2",
+   "date_creation": "2022-12-19",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/922434816"
+  },
+  {
+   "nom": "MARQUE AUVERGNE",
+   "siren": "532156643",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2011-05-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/532156643"
+  },
+  {
+   "nom": "MODULE, ORGANISATION, KITCHEN, LUXURY, ELEMENT, EN ABREGE M.O.K.L.E. (M.O.K.L.E.)",
+   "siren": "985377118",
+   "activite": "Activités spécialisées de design",
+   "commune": "SAINT-VICTOR-MONTVIANEIX",
+   "effectif": "1-2",
+   "date_creation": "2024-02-21",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/985377118"
+  },
+  {
+   "nom": "NANAKIA",
+   "siren": "847548807",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "BEAUMONT",
+   "effectif": "1-2",
+   "date_creation": "2019-01-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847548807"
+  },
+  {
+   "nom": "OBJECT AS A SERVICE (OAAS)",
+   "siren": "818827172",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERLANDE",
+   "effectif": "1-2",
+   "date_creation": "2016-03-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/818827172"
+  },
+  {
+   "nom": "OZLADECO",
+   "siren": "982116527",
+   "activite": "Activités spécialisées de design",
+   "commune": "ISSOIRE",
+   "effectif": "1-2",
+   "date_creation": "2023-11-29",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/982116527"
+  },
+  {
+   "nom": "POINT COM",
+   "siren": "909015307",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "AUBIAT",
+   "effectif": "1-2",
+   "date_creation": "2022-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/909015307"
+  },
+  {
+   "nom": "QAPTURE",
+   "siren": "947908026",
+   "activite": "Agences de publicité",
+   "commune": "BRASSAC-LES-MINES",
+   "effectif": "1-2",
+   "date_creation": "2023-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/947908026"
+  },
+  {
+   "nom": "RELEADS (RELEADS)",
+   "siren": "935389429",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2024-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/935389429"
+  },
+  {
+   "nom": "RESOLUTIONS (RESOLUTIONS)",
+   "siren": "901199760",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "SAINT-GENES-CHAMPANELLE",
+   "effectif": "1-2",
+   "date_creation": "2021-06-30",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/901199760"
+  },
+  {
+   "nom": "SANSUNMOT (EDITIONS SANSUNMOT)",
+   "siren": "884643933",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2020-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/884643933"
+  },
+  {
+   "nom": "SAYLESS",
+   "siren": "949946289",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2023-03-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949946289"
+  },
+  {
+   "nom": "SBAF",
+   "siren": "509069704",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2008-11-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/509069704"
+  },
+  {
+   "nom": "SILVY ROSSIGNOL (ADEQUATEMENT VOTRE)",
+   "siren": "825226632",
+   "activite": "Activités spécialisées de design",
+   "commune": "COURNON-D'AUVERGNE",
+   "effectif": "1-2",
+   "date_creation": "2017-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/825226632"
+  },
+  {
+   "nom": "SKB MEDIAS",
+   "siren": "811278332",
+   "activite": "Régie publicitaire de médias",
+   "commune": "PUY-GUILLAUME",
+   "effectif": "1-2",
+   "date_creation": "2015-05-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/811278332"
+  },
+  {
+   "nom": "STUDIO HELLO (STUDIO HELLO)",
+   "siren": "984419168",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2024-01-27",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/984419168"
+  },
+  {
+   "nom": "STUDIO LIGNE NOIRE",
+   "siren": "917776239",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "1-2",
+   "date_creation": "2022-08-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/917776239"
+  },
+  {
+   "nom": "STUDIO MANDARINE",
+   "siren": "891933772",
+   "activite": "Agences de publicité",
+   "commune": "CHAMALIERES",
+   "effectif": "1-2",
+   "date_creation": "2020-12-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/891933772"
+  },
+  {
+   "nom": "WEBAOLYS",
+   "siren": "797834116",
+   "activite": "Agences de publicité",
+   "commune": "CHAMALIERES",
+   "effectif": "1-2",
+   "date_creation": "2013-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/797834116"
+  },
+  {
+   "nom": "AGENCE MKF (AGENCE MKF)",
+   "siren": "898800347",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "0 salarié",
+   "date_creation": "2021-04-26",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/898800347"
+  },
+  {
+   "nom": "ODDITYLINE",
+   "siren": "891850802",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "0 salarié",
+   "date_creation": "2020-11-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/891850802"
+  },
+  {
+   "nom": "SKOTCH PROD (SKOTCH PROD)",
+   "siren": "901509877",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHATEL-GUYON",
+   "effectif": "0 salarié",
+   "date_creation": "2021-08-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/901509877"
+  },
+  {
+   "nom": "3COM SAH",
+   "siren": "813177441",
+   "activite": "Agences de publicité",
+   "commune": "LEZOUX",
+   "effectif": "Non renseigné",
+   "date_creation": "2015-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/813177441"
+  },
+  {
+   "nom": "98INVEST",
+   "siren": "912576717",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-04-12",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/912576717"
+  },
+  {
+   "nom": "ADA SIGNALETIQUE",
+   "siren": "104557376",
+   "activite": "Activités spécialisées de design",
+   "commune": "LEMPDES",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-05-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/104557376"
+  },
+  {
+   "nom": "AGENCE DESIGN ESPACES (ADE)",
+   "siren": "521031625",
+   "activite": "Activités spécialisées de design",
+   "commune": "LES MARTRES-DE-VEYRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2010-03-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/521031625"
+  },
+  {
+   "nom": "AIMD",
+   "siren": "912995750",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "BAGNOLS",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-05-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/912995750"
+  },
+  {
+   "nom": "AIR PRO TECH",
+   "siren": "912012861",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "PLAUZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-03-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/912012861"
+  },
+  {
+   "nom": "ALTER EGO 13 (OCS CONCEPT ANDRE LAVAL)",
+   "siren": "789752581",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "JOZE",
+   "effectif": "Non renseigné",
+   "date_creation": "2012-11-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/789752581"
+  },
+  {
+   "nom": "ANDD (ANDD)",
+   "siren": "934248097",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-10-14",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/934248097"
+  },
+  {
+   "nom": "ANIM CONTACT (ANIM CONTACT)",
+   "siren": "987369741",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "SAINT-BONNET-LES-ALLIER",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-03-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/987369741"
+  },
+  {
+   "nom": "ANNUAIRES ET MEDIAS STRATEGIES AUVERGNE (AMSA)",
+   "siren": "502262207",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2008-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/502262207"
+  },
+  {
+   "nom": "ANTEMIC",
+   "siren": "987354776",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-03-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/987354776"
+  },
+  {
+   "nom": "APAX",
+   "siren": "485195549",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2005-09-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/485195549"
+  },
+  {
+   "nom": "ARA MUSIC",
+   "siren": "798870317",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-11-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/798870317"
+  },
+  {
+   "nom": "ARCHI3D MON PERMIS DE CONSTRUIRE (ARCHI3D MON PERMIS DE CONSTRUIRE) (ARC3D)",
+   "siren": "890668148",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-11-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/890668148"
+  },
+  {
+   "nom": "ARCHITECTURE GENERALE",
+   "siren": "940347404",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-01-31",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/940347404"
+  },
+  {
+   "nom": "ARVERNE INDZIGN (INDZIGN)",
+   "siren": "103886198",
+   "activite": "Activités spécialisées de design",
+   "commune": "RIOM",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-04-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/103886198"
+  },
+  {
+   "nom": "ASS LA FOUGERAIE",
+   "siren": "408229334",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "BRASSAC-LES-MINES",
+   "effectif": "Non renseigné",
+   "date_creation": "1996-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/408229334"
+  },
+  {
+   "nom": "ASSOCIATION MEDIA IMAGE ET SON (ACMIS)",
+   "siren": "390847374",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "1993-03-24",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/390847374"
+  },
+  {
+   "nom": "ATTRAKTION (VULCAVENTURE)",
+   "siren": "819966862",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ROYAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2016-04-25",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/819966862"
+  },
+  {
+   "nom": "AUBIN DERIGON (INST'UP AGENCY)",
+   "siren": "892763756",
+   "activite": "Agences de publicité",
+   "commune": "AMBERT",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-01-11",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/892763756"
+  },
+  {
+   "nom": "AURELIE VADOT",
+   "siren": "978960466",
+   "activite": "Activités spécialisées de design",
+   "commune": "COMBRONDE",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/978960466"
+  },
+  {
+   "nom": "AURELIN ADVISORY",
+   "siren": "132150293",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "TEILHEDE",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-10-28",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/132150293"
+  },
+  {
+   "nom": "AUVERGNE COMM'UNIQUE (AUVERGNE COMM'UNIQUE)",
+   "siren": "832803258",
+   "activite": "Agences de publicité",
+   "commune": "BUSSIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2017-10-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832803258"
+  },
+  {
+   "nom": "AUVERGNE MOBILIERS URBAINS",
+   "siren": "928802180",
+   "activite": "Agences de publicité",
+   "commune": "SAINT-JULIEN-DE-COPPEL",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-05-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/928802180"
+  },
+  {
+   "nom": "AVANT PREMIERE",
+   "siren": "393976121",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "1993-12-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/393976121"
+  },
+  {
+   "nom": "BEE YOUR COMM (BEE YOUR COMM)",
+   "siren": "979045846",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-08-31",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/979045846"
+  },
+  {
+   "nom": "BIEN VU",
+   "siren": "100352830",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-01-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/100352830"
+  },
+  {
+   "nom": "BIM MARKETING",
+   "siren": "902876275",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "RIOM",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/902876275"
+  },
+  {
+   "nom": "BLUE REFLEX",
+   "siren": "389034380",
+   "activite": "Agences de publicité",
+   "commune": "COURNON-D'AUVERGNE",
+   "effectif": "Non renseigné",
+   "date_creation": "1992-10-26",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/389034380"
+  },
+  {
+   "nom": "BONGO",
+   "siren": "450121462",
+   "activite": "Agences de publicité",
+   "commune": "COURNON-D'AUVERGNE",
+   "effectif": "Non renseigné",
+   "date_creation": "2003-09-23",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/450121462"
+  },
+  {
+   "nom": "BY PUBLICOM (BY PUBLICOM)",
+   "siren": "812438760",
+   "activite": "Agences de publicité",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2015-07-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/812438760"
+  },
+  {
+   "nom": "CA VA TA DECO ? (CA VA TA DECO ?)",
+   "siren": "930876164",
+   "activite": "Agences de publicité",
+   "commune": "RIOM",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-07-09",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/930876164"
+  },
+  {
+   "nom": "CABINET DE CURIOSITES (CABINET DE CURIOSITES) (CC)",
+   "siren": "913892402",
+   "activite": "Activités spécialisées de design",
+   "commune": "LA BOURBOULE",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913892402"
+  },
+  {
+   "nom": "CAP !",
+   "siren": "822575148",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2016-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/822575148"
+  },
+  {
+   "nom": "CAPTURE PRODUCTIONS",
+   "siren": "994990034",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "AUBIERE",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-12-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/994990034"
+  },
+  {
+   "nom": "CENTRALE DES ENTREPRISES",
+   "siren": "421749219",
+   "activite": "Agences de publicité",
+   "commune": "AUBIERE",
+   "effectif": "Non renseigné",
+   "date_creation": "1999-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421749219"
+  },
+  {
+   "nom": "CHRISTELLE LUCAS",
+   "siren": "838122687",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2018-03-12",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/838122687"
+  },
+  {
+   "nom": "CLELINE",
+   "siren": "952619344",
+   "activite": "Activités spécialisées de design",
+   "commune": "BEAUMONT",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-05-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/952619344"
+  },
+  {
+   "nom": "CLM INVEST GROUP",
+   "siren": "934350364",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-10-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/934350364"
+  },
+  {
+   "nom": "CLUB MAESTRO",
+   "siren": "922138144",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "THIERS",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-12-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/922138144"
+  },
+  {
+   "nom": "COCON DESIGN",
+   "siren": "992618389",
+   "activite": "Activités spécialisées de design",
+   "commune": "AYDAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-10-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/992618389"
+  },
+  {
+   "nom": "COLORBLIND PRODUCTION",
+   "siren": "922322912",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "POUZOL",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-01-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/922322912"
+  },
+  {
+   "nom": "COM ON MARS",
+   "siren": "790372429",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-01-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/790372429"
+  },
+  {
+   "nom": "COM.STUDUO (COM.STUDUO)",
+   "siren": "980557953",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-09-29",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/980557953"
+  },
+  {
+   "nom": "COMMIXMEDIA",
+   "siren": "934644717",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "VIC-LE-COMTE",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-10-12",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/934644717"
+  },
+  {
+   "nom": "CONTI",
+   "siren": "991147752",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-07-28",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/991147752"
+  },
+  {
+   "nom": "COVARTY",
+   "siren": "105962641",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-06-04",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/105962641"
+  },
+  {
+   "nom": "CPA DESIGN",
+   "siren": "525301065",
+   "activite": "Activités spécialisées de design",
+   "commune": "TEILHEDE",
+   "effectif": "Non renseigné",
+   "date_creation": "2010-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/525301065"
+  },
+  {
+   "nom": "CREAFA",
+   "siren": "751704446",
+   "activite": "Activités spécialisées de design",
+   "commune": "CEBAZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2012-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/751704446"
+  },
+  {
+   "nom": "CREASTORM",
+   "siren": "491236147",
+   "activite": "Agences de publicité",
+   "commune": "VERTAIZON",
+   "effectif": "Non renseigné",
+   "date_creation": "2006-07-06",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/491236147"
+  },
+  {
+   "nom": "CYCOMA",
+   "siren": "812750131",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "RIOM",
+   "effectif": "Non renseigné",
+   "date_creation": "2015-07-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/812750131"
+  },
+  {
+   "nom": "DE LIL PAPEL",
+   "siren": "903588218",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-09-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/903588218"
+  },
+  {
+   "nom": "DEEP TRUTH",
+   "siren": "844789164",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "BRASSAC-LES-MINES",
+   "effectif": "Non renseigné",
+   "date_creation": "2018-12-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/844789164"
+  },
+  {
+   "nom": "DEER PICTURE CONSULT",
+   "siren": "847673340",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2019-01-23",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/847673340"
+  },
+  {
+   "nom": "DELCROIX AGENCEMENT",
+   "siren": "794641894",
+   "activite": "Activités spécialisées de design",
+   "commune": "THIERS",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-06-19",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/794641894"
+  },
+  {
+   "nom": "DELRIEU CAPITAL (D.C)",
+   "siren": "953156411",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "SERVANT",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-05-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953156411"
+  },
+  {
+   "nom": "DESIGN COORDINATION (DESIGN COORDINATION)",
+   "siren": "799643697",
+   "activite": "Activités spécialisées de design",
+   "commune": "ISSOIRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2014-01-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/799643697"
+  },
+  {
+   "nom": "DESIGNTA",
+   "siren": "880448600",
+   "activite": "Activités spécialisées de design",
+   "commune": "CREVANT-LAVEINE",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-01-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/880448600"
+  },
+  {
+   "nom": "DESTINATION DECO",
+   "siren": "940516859",
+   "activite": "Activités spécialisées de design",
+   "commune": "AUTHEZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-02-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/940516859"
+  },
+  {
+   "nom": "DEV&PROD",
+   "siren": "894480847",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CEBAZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-02-12",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/894480847"
+  },
+  {
+   "nom": "DIFASPO",
+   "siren": "513938142",
+   "activite": "Agences de publicité",
+   "commune": "AUBIERE",
+   "effectif": "Non renseigné",
+   "date_creation": "2009-06-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/513938142"
+  },
+  {
+   "nom": "DIGIWEB CONSEIL",
+   "siren": "942185802",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-03-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/942185802"
+  },
+  {
+   "nom": "DISTINCTIV",
+   "siren": "107266991",
+   "activite": "Agences de publicité",
+   "commune": "SAINT-BEAUZIRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-07-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/107266991"
+  },
+  {
+   "nom": "DMB COMMUNICATION",
+   "siren": "813634193",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2015-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/813634193"
+  },
+  {
+   "nom": "DOMSQUARE",
+   "siren": "818426637",
+   "activite": "Activités spécialisées de design",
+   "commune": "CEBAZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2016-01-04",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/818426637"
+  },
+  {
+   "nom": "DOUBLE SALTO",
+   "siren": "804790087",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2014-09-26",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/804790087"
+  },
+  {
+   "nom": "DTEC AGENCY",
+   "siren": "884939943",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "SAINT-ELOY-LES-MINES",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/884939943"
+  },
+  {
+   "nom": "E3J CONSEIL",
+   "siren": "948937040",
+   "activite": "Régie publicitaire de médias",
+   "commune": "CHIDRAC",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-02-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948937040"
+  },
+  {
+   "nom": "ECO.TRAV",
+   "siren": "981710825",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-11-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/981710825"
+  },
+  {
+   "nom": "ECOMMUNITY",
+   "siren": "918993262",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CEYSSAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-08-12",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/918993262"
+  },
+  {
+   "nom": "EFFUSIVE",
+   "siren": "849022488",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2019-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/849022488"
+  },
+  {
+   "nom": "EK.LECTIK",
+   "siren": "508014453",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2008-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/508014453"
+  },
+  {
+   "nom": "EKODRONE (EKODRONE)",
+   "siren": "812906568",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2015-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/812906568"
+  },
+  {
+   "nom": "ELBUMP ! (ELBUMP !)",
+   "siren": "850899832",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2019-05-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/850899832"
+  },
+  {
+   "nom": "EPURES D'INTERIEURS",
+   "siren": "934425703",
+   "activite": "Activités spécialisées de design",
+   "commune": "CHATEL-GUYON",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-10-17",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/934425703"
+  },
+  {
+   "nom": "ES DESIGN (ELODIE SAUGUES DESIGN)",
+   "siren": "834365868",
+   "activite": "Activités spécialisées de design",
+   "commune": "SAINT JEAN D'HEURS",
+   "effectif": "Non renseigné",
+   "date_creation": "2018-01-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/834365868"
+  },
+  {
+   "nom": "ESPACE CONSTRUCTION",
+   "siren": "439701749",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2001-11-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/439701749"
+  },
+  {
+   "nom": "ETIN SPORT",
+   "siren": "105613632",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "AYDAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-05-23",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/105613632"
+  },
+  {
+   "nom": "EURL AGRAF'PUB",
+   "siren": "481292290",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2005-03-21",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/481292290"
+  },
+  {
+   "nom": "EVENTIELLES",
+   "siren": "948312962",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "SAINT-BEAUZIRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-01-23",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948312962"
+  },
+  {
+   "nom": "EVENTTOCONTENT",
+   "siren": "101310050",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-02-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/101310050"
+  },
+  {
+   "nom": "F2C",
+   "siren": "508835725",
+   "activite": "Agences de publicité",
+   "commune": "CHATEL-GUYON",
+   "effectif": "Non renseigné",
+   "date_creation": "2008-11-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/508835725"
+  },
+  {
+   "nom": "FACTION AUDIOVISUAL (FACTION AUDIOVISUAL)",
+   "siren": "803829522",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2014-07-11",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803829522"
+  },
+  {
+   "nom": "FAST",
+   "siren": "944708189",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-05-14",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/944708189"
+  },
+  {
+   "nom": "FEDERATION DES ASS DES COMMERCANTS",
+   "siren": "440060713",
+   "activite": "Agences de publicité",
+   "commune": "ISSOIRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2001-12-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/440060713"
+  },
+  {
+   "nom": "FLAIR OFFICIEL (FLAIR)",
+   "siren": "943339655",
+   "activite": "Activités spécialisées de design",
+   "commune": "CHATEAUGAY",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-04-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/943339655"
+  },
+  {
+   "nom": "FRET (FRTE)",
+   "siren": "944073618",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-05-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/944073618"
+  },
+  {
+   "nom": "GD DEVELOPPEMENT",
+   "siren": "482788262",
+   "activite": "Agences de publicité",
+   "commune": "CEBAZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2005-06-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/482788262"
+  },
+  {
+   "nom": "GLOBAFIRST",
+   "siren": "478921380",
+   "activite": "Agences de publicité",
+   "commune": "LES MARTRES-DE-VEYRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2004-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/478921380"
+  },
+  {
+   "nom": "GRAPH123",
+   "siren": "528299084",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2010-10-27",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/528299084"
+  },
+  {
+   "nom": "GUYONNET & TROCELLI (OMELHIER)",
+   "siren": "992965103",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "VOLLORE-MONTAGNE",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-10-21",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/992965103"
+  },
+  {
+   "nom": "GV MANAGEMENT TOOLS (GV MANAGEMENT TOOLS)",
+   "siren": "789071586",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2012-10-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/789071586"
+  },
+  {
+   "nom": "H2M",
+   "siren": "941922171",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-03-11",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/941922171"
+  },
+  {
+   "nom": "HN COMMUNICATION",
+   "siren": "984889261",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "AUBIERE",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-02-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/984889261"
+  },
+  {
+   "nom": "HOMSTART",
+   "siren": "949559900",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-02-21",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/949559900"
+  },
+  {
+   "nom": "HORIZON PHARMA",
+   "siren": "993413244",
+   "activite": "Agences de publicité",
+   "commune": "PONT-DU-CHATEAU",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-10-28",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/993413244"
+  },
+  {
+   "nom": "HSTAG",
+   "siren": "920770831",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-10-24",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/920770831"
+  },
+  {
+   "nom": "ICKONE (ICKONE)",
+   "siren": "520747577",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2010-03-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/520747577"
+  },
+  {
+   "nom": "ID4V - IMPRIMERIE DES 4 VENTS",
+   "siren": "850401316",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "MUR-SUR-ALLIER",
+   "effectif": "Non renseigné",
+   "date_creation": "2019-05-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/850401316"
+  },
+  {
+   "nom": "IMPRESSION INTERNATIONALE PROMOTION MARKETING",
+   "siren": "379839202",
+   "activite": "Agences de publicité",
+   "commune": "THIERS",
+   "effectif": "Non renseigné",
+   "date_creation": "1990-10-30",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/379839202"
+  },
+  {
+   "nom": "IN MY CITY (IN MY CITY) (IMC)",
+   "siren": "531621951",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2011-04-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/531621951"
+  },
+  {
+   "nom": "INSIDE AUDIOVISUEL",
+   "siren": "983531674",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "ROMAGNAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-01-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/983531674"
+  },
+  {
+   "nom": "INTERPUB",
+   "siren": "428737225",
+   "activite": "Régie publicitaire de médias",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "1999-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/428737225"
+  },
+  {
+   "nom": "ISBA",
+   "siren": "904273299",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-10-12",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/904273299"
+  },
+  {
+   "nom": "ITINERANS",
+   "siren": "498762236",
+   "activite": "Agences de publicité",
+   "commune": "ROCHEFORT-MONTAGNE",
+   "effectif": "Non renseigné",
+   "date_creation": "2007-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/498762236"
+  },
+  {
+   "nom": "J&J",
+   "siren": "878932623",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2019-11-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/878932623"
+  },
+  {
+   "nom": "JACK & RUSSEL",
+   "siren": "813753787",
+   "activite": "Activités spécialisées de design",
+   "commune": "CHATEL-GUYON",
+   "effectif": "Non renseigné",
+   "date_creation": "2015-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/813753787"
+  },
+  {
+   "nom": "JAIM LA DECO (PLAN B INTERIOR DESIGN)",
+   "siren": "102581873",
+   "activite": "Activités spécialisées de design",
+   "commune": "PARENT",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-03-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/102581873"
+  },
+  {
+   "nom": "JIBOO",
+   "siren": "509693990",
+   "activite": "Régie publicitaire de médias",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2008-12-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/509693990"
+  },
+  {
+   "nom": "JLC COURTAGE",
+   "siren": "795376920",
+   "activite": "Régie publicitaire de médias",
+   "commune": "RIS",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-08-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/795376920"
+  },
+  {
+   "nom": "KASTORS",
+   "siren": "992347260",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-10-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/992347260"
+  },
+  {
+   "nom": "KIPLING (KIPLING)",
+   "siren": "483398681",
+   "activite": "Agences de publicité",
+   "commune": "SAINT-BEAUZIRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2005-08-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/483398681"
+  },
+  {
+   "nom": "KIWEEZ (KIWEEZ) (KIWEEZ)",
+   "siren": "490597432",
+   "activite": "Agences de publicité",
+   "commune": "CEILLOUX",
+   "effectif": "Non renseigné",
+   "date_creation": "2006-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/490597432"
+  },
+  {
+   "nom": "KREADOME",
+   "siren": "994687911",
+   "activite": "Agences de publicité",
+   "commune": "CEBAZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-12-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/994687911"
+  },
+  {
+   "nom": "KREAMIX",
+   "siren": "883830804",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/883830804"
+  },
+  {
+   "nom": "L&M STYL'ART",
+   "siren": "922674023",
+   "activite": "Activités spécialisées de design",
+   "commune": "SAINT-SATURNIN",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-01-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/922674023"
+  },
+  {
+   "nom": "L'AGENCE (L'AGENCE)",
+   "siren": "990392110",
+   "activite": "Agences de publicité",
+   "commune": "CHATELDON",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/990392110"
+  },
+  {
+   "nom": "L'ART DE LA RESINE",
+   "siren": "978256048",
+   "activite": "Activités spécialisées de design",
+   "commune": "BEAULIEU",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-06-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/978256048"
+  },
+  {
+   "nom": "LA BOITE QUI FILME (LA BOITE QUI FILME)",
+   "siren": "927784041",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-04-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/927784041"
+  },
+  {
+   "nom": "LA MAISON AUX MILLE IMAGES",
+   "siren": "518814017",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "BILLOM",
+   "effectif": "Non renseigné",
+   "date_creation": "2009-11-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/518814017"
+  },
+  {
+   "nom": "LA MASCOTTERIE (LA MASCOTTERIE)",
+   "siren": "990046682",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CHAPTUZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-08-11",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/990046682"
+  },
+  {
+   "nom": "LE BUREAU DES CURIEUSES AVENTURES",
+   "siren": "995027943",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "BILLOM",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-10-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/995027943"
+  },
+  {
+   "nom": "LE CUIVRE BLEU",
+   "siren": "951800473",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-04-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/951800473"
+  },
+  {
+   "nom": "LE DRONISTE (LE DRONISTE)",
+   "siren": "999647944",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-12-29",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/999647944"
+  },
+  {
+   "nom": "LE HERON",
+   "siren": "887763019",
+   "activite": "Activités spécialisées de design",
+   "commune": "ISSOIRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/887763019"
+  },
+  {
+   "nom": "LE VRAI ARTISAN",
+   "siren": "902434471",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "PONT-DU-CHATEAU",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-08-19",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/902434471"
+  },
+  {
+   "nom": "LE Z PRODUCTION",
+   "siren": "107450629",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-06-28",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/107450629"
+  },
+  {
+   "nom": "LIMAGNE SIGNALETIQUE",
+   "siren": "109853143",
+   "activite": "Agences de publicité",
+   "commune": "RIOM",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/109853143"
+  },
+  {
+   "nom": "LINOVA",
+   "siren": "790759880",
+   "activite": "Agences de publicité",
+   "commune": "BAS-ET-LEZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/790759880"
+  },
+  {
+   "nom": "LIVR 'E' VOUS",
+   "siren": "837598911",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2018-01-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837598911"
+  },
+  {
+   "nom": "LOCYVA (LOCYVA)",
+   "siren": "130985476",
+   "activite": "Agences de publicité",
+   "commune": "AUBIERE",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-10-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/130985476"
+  },
+  {
+   "nom": "LONDON BUS",
+   "siren": "384256327",
+   "activite": "Agences de publicité",
+   "commune": "SAINT-AMANT-TALLENDE",
+   "effectif": "Non renseigné",
+   "date_creation": "1992-01-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/384256327"
+  },
+  {
+   "nom": "LUCAS RAY PRODUCTION",
+   "siren": "923820609",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "JOB",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-07-25",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/923820609"
+  },
+  {
+   "nom": "M2ACOM CONSULTING",
+   "siren": "513180117",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2009-06-20",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/513180117"
+  },
+  {
+   "nom": "MAISON HERITAGE CAPITAL (MAISON HERITAGE CAPITAL)",
+   "siren": "991476979",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ORLEAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-09-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/991476979"
+  },
+  {
+   "nom": "MATAUCY EDITO",
+   "siren": "790610422",
+   "activite": "Agences de publicité",
+   "commune": "SAINT-GERVAIS-SOUS-MEYMONT",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-01-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/790610422"
+  },
+  {
+   "nom": "MATIERES VIVES",
+   "siren": "899869218",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-05-12",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/899869218"
+  },
+  {
+   "nom": "MAXPICTURES",
+   "siren": "923159610",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "ARLANC",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-02-23",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/923159610"
+  },
+  {
+   "nom": "MCD DECORATION",
+   "siren": "900140237",
+   "activite": "Activités spécialisées de design",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/900140237"
+  },
+  {
+   "nom": "MCDL CREATIVE",
+   "siren": "101718666",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-02-23",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/101718666"
+  },
+  {
+   "nom": "MEDAULT (AIRKODE DOME PUB)",
+   "siren": "934920893",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-10-24",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/934920893"
+  },
+  {
+   "nom": "MEDIA 63",
+   "siren": "794028340",
+   "activite": "Agences de publicité",
+   "commune": "COURNON-D'AUVERGNE",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-06-24",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/794028340"
+  },
+  {
+   "nom": "MEDIABLEND AGENCY",
+   "siren": "943628610",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "SAINT-PARDOUX",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-04-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/943628610"
+  },
+  {
+   "nom": "MEMOIRE AUDIOVISUELLE INEDITE D'AUVERGNE - MAIA -",
+   "siren": "521860346",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "RIOM",
+   "effectif": "Non renseigné",
+   "date_creation": "2010-01-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/521860346"
+  },
+  {
+   "nom": "MEUFS BANALES",
+   "siren": "990956542",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-08-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/990956542"
+  },
+  {
+   "nom": "MHA DESIGN",
+   "siren": "890548746",
+   "activite": "Activités spécialisées de design",
+   "commune": "SAINT-OURS",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-10-28",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/890548746"
+  },
+  {
+   "nom": "MHM ENGINEERING CONSTRUCTION",
+   "siren": "980727275",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CEBAZAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-10-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/980727275"
+  },
+  {
+   "nom": "MIRAI VISION AGENCY",
+   "siren": "101849511",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-02-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/101849511"
+  },
+  {
+   "nom": "MISCELLANEE PRODUCTIONS",
+   "siren": "923025134",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "AMBERT",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-01-28",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/923025134"
+  },
+  {
+   "nom": "MOVE IN GENERATIONS (MIG)",
+   "siren": "888136678",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-07-14",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/888136678"
+  },
+  {
+   "nom": "MT AGENCY (MT AGENCY)",
+   "siren": "131634677",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "MOZAC",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-10-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/131634677"
+  },
+  {
+   "nom": "MUSCLAURE",
+   "siren": "943976407",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-12-13",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/943976407"
+  },
+  {
+   "nom": "NATSIRT WORKS",
+   "siren": "918445487",
+   "activite": "Activités spécialisées de design",
+   "commune": "CHATEL-GUYON",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-08-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/918445487"
+  },
+  {
+   "nom": "NEES DEVELOPEMENT",
+   "siren": "441135480",
+   "activite": "Agences de publicité",
+   "commune": "AUZAT-LA-COMBELLE",
+   "effectif": "Non renseigné",
+   "date_creation": "2002-03-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/441135480"
+  },
+  {
+   "nom": "OBJECTIF AUVERGNE",
+   "siren": "903640969",
+   "activite": "Agences de publicité",
+   "commune": "SAINT-OURS",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-08-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/903640969"
+  },
+  {
+   "nom": "OCTOBRE NOVEMBRE CULTURE ET COMMUNICATION (OCTOBRE NOVEMBRE CULTURE ET COMMUNICATION) (OCTOBRE NOVEMBRE CUL)",
+   "siren": "837516079",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ROMAGNAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2018-01-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/837516079"
+  },
+  {
+   "nom": "OLIVIER BIANCHI CONSEIL",
+   "siren": "130212087",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-09-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/130212087"
+  },
+  {
+   "nom": "ONE VISION AUVERGNE",
+   "siren": "938459559",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/938459559"
+  },
+  {
+   "nom": "ONYVA.FR (ONYVA.FR) (ONYVA)",
+   "siren": "752729855",
+   "activite": "Agences de publicité",
+   "commune": "NOHANENT",
+   "effectif": "Non renseigné",
+   "date_creation": "2012-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/752729855"
+  },
+  {
+   "nom": "OSE COACHING & CONSULTING",
+   "siren": "939120861",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-01-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/939120861"
+  },
+  {
+   "nom": "OSIRIS PRODUCTION",
+   "siren": "831875661",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2017-06-16",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/831875661"
+  },
+  {
+   "nom": "OUAGAMEDIA (OUAGAMEDIA)",
+   "siren": "944355171",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-05-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/944355171"
+  },
+  {
+   "nom": "PASCAL COMBES",
+   "siren": "790813901",
+   "activite": "Activités spécialisées de design",
+   "commune": "ISSOIRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/790813901"
+  },
+  {
+   "nom": "PEGASUS AUDIOVISUEL",
+   "siren": "393999750",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "1993-09-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/393999750"
+  },
+  {
+   "nom": "PEP'S",
+   "siren": "934784323",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "MONT-DORE",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-11-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/934784323"
+  },
+  {
+   "nom": "PIKEKOM",
+   "siren": "948371190",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "VIC-LE-COMTE",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-01-24",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948371190"
+  },
+  {
+   "nom": "PIXIXEL (PIXIXEL)",
+   "siren": "938833316",
+   "activite": "Activités spécialisées de design",
+   "commune": "CHARBONNIERES-LES-VARENNES",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/938833316"
+  },
+  {
+   "nom": "PUB&KOM (PUB&KOM)",
+   "siren": "930328570",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-04-17",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/930328570"
+  },
+  {
+   "nom": "QR-CADRE.COM",
+   "siren": "928488428",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-05-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/928488428"
+  },
+  {
+   "nom": "QUADRI",
+   "siren": "489171298",
+   "activite": "Agences de publicité",
+   "commune": "ESCOUTOUX",
+   "effectif": "Non renseigné",
+   "date_creation": "2006-03-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/489171298"
+  },
+  {
+   "nom": "QUARKONIA",
+   "siren": "899287767",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "NOHANENT",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-01-15",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/899287767"
+  },
+  {
+   "nom": "R&S HIGH LINE COMMUNICATION",
+   "siren": "835401688",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "ROMAGNAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2018-02-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/835401688"
+  },
+  {
+   "nom": "R.P EQUITATION",
+   "siren": "819093469",
+   "activite": "Agences de publicité",
+   "commune": "PESCHADOIRES",
+   "effectif": "Non renseigné",
+   "date_creation": "2016-02-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/819093469"
+  },
+  {
+   "nom": "RDV (RDV)",
+   "siren": "529234148",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "PONT-DU-CHATEAU",
+   "effectif": "Non renseigné",
+   "date_creation": "2011-01-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/529234148"
+  },
+  {
+   "nom": "RESSCOM (RESSCOM)",
+   "siren": "892753690",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-01-04",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/892753690"
+  },
+  {
+   "nom": "REVOLUTION!TV (REVOLUTION!TV) (R!TV)",
+   "siren": "913531117",
+   "activite": "Régie publicitaire de médias",
+   "commune": "LAMONTGIE",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-05-12",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913531117"
+  },
+  {
+   "nom": "SARL ICOMBRAILLES",
+   "siren": "534786090",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "LA CELLETTE",
+   "effectif": "Non renseigné",
+   "date_creation": "2011-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/534786090"
+  },
+  {
+   "nom": "SARL JEANMOREL COMMUNICATION",
+   "siren": "443004536",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2002-09-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/443004536"
+  },
+  {
+   "nom": "SARL QUEYRIAUX-COMMUNICATION",
+   "siren": "489115261",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2006-03-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/489115261"
+  },
+  {
+   "nom": "SARL S-KREA (S-KREA)",
+   "siren": "828864488",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "SAINT-BEAUZIRE",
+   "effectif": "Non renseigné",
+   "date_creation": "2017-02-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/828864488"
+  },
+  {
+   "nom": "SAS IJEN",
+   "siren": "950372375",
+   "activite": "Agences de publicité",
+   "commune": "CEYRAT",
+   "effectif": "Non renseigné",
+   "date_creation": "1989-10-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/950372375"
+  },
+  {
+   "nom": "SAT8",
+   "siren": "799266267",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2014-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/799266267"
+  },
+  {
+   "nom": "SC CREADECO",
+   "siren": "792503435",
+   "activite": "Activités spécialisées de design",
+   "commune": "AIGUEPERSE",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-04-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/792503435"
+  },
+  {
+   "nom": "SEENUP",
+   "siren": "999912538",
+   "activite": "Agences de publicité",
+   "commune": "ROYAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-12-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/999912538"
+  },
+  {
+   "nom": "SICOM",
+   "siren": "913868568",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "AUBIERE",
+   "effectif": "Non renseigné",
+   "date_creation": "2010-10-27",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913868568"
+  },
+  {
+   "nom": "SIGN-RJX",
+   "siren": "931465850",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-07-24",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/931465850"
+  },
+  {
+   "nom": "SOCIAL UNIT CONTENT (DUSK ET SOCIAL UNIT CONTENT) (SOCIAL UNIT CONTENT)",
+   "siren": "533488540",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2011-07-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/533488540"
+  },
+  {
+   "nom": "SOGOOD'I.D.",
+   "siren": "753141928",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2012-09-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/753141928"
+  },
+  {
+   "nom": "SQNCE",
+   "siren": "934112780",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2024-10-14",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/934112780"
+  },
+  {
+   "nom": "START REC",
+   "siren": "389899766",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "BILLOM",
+   "effectif": "Non renseigné",
+   "date_creation": "1993-01-26",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/389899766"
+  },
+  {
+   "nom": "STORIES STUDIO",
+   "siren": "894862077",
+   "activite": "Agences de publicité",
+   "commune": "CHATEL-GUYON",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-03-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/894862077"
+  },
+  {
+   "nom": "STORVYA",
+   "siren": "993534080",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-11-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/993534080"
+  },
+  {
+   "nom": "STUDIIO COCO",
+   "siren": "921343380",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-11-14",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/921343380"
+  },
+  {
+   "nom": "STUDIO CAHIER DE BROUILLON (SCB)",
+   "siren": "995143799",
+   "activite": "Activités spécialisées de design",
+   "commune": "PARENTIGNAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-12-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/995143799"
+  },
+  {
+   "nom": "STUDIOS 44",
+   "siren": "933593402",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "SAINT-GEORGES-SUR-ALLIER",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-01-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/933593402"
+  },
+  {
+   "nom": "SUBTILL",
+   "siren": "884976051",
+   "activite": "Activités spécialisées de design",
+   "commune": "AULHAT-FLAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-06-30",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/884976051"
+  },
+  {
+   "nom": "SUNSET PROVENCE",
+   "siren": "501906838",
+   "activite": "Activités spécialisées de design",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "2008-01-03",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/501906838"
+  },
+  {
+   "nom": "SUPERLUX DESIGN (SUPERLUX)",
+   "siren": "888023173",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2020-07-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/888023173"
+  },
+  {
+   "nom": "SUZANNE FILMS",
+   "siren": "923509277",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-06-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/923509277"
+  },
+  {
+   "nom": "SYLLAB COMMUNICATION",
+   "siren": "990108631",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-08-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/990108631"
+  },
+  {
+   "nom": "TELE COMBRAILLES",
+   "siren": "420243966",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CHAMALIERES",
+   "effectif": "Non renseigné",
+   "date_creation": "1996-11-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/420243966"
+  },
+  {
+   "nom": "TEXTILE DESIGN & CONSEIL",
+   "siren": "823775952",
+   "activite": "Activités spécialisées de design",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2016-11-09",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/823775952"
+  },
+  {
+   "nom": "THE WALKING BOX",
+   "siren": "798364758",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "DURTOL",
+   "effectif": "Non renseigné",
+   "date_creation": "2013-09-26",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/798364758"
+  },
+  {
+   "nom": "TNT REGIE 63",
+   "siren": "750184905",
+   "activite": "Régie publicitaire de médias",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2012-02-22",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/750184905"
+  },
+  {
+   "nom": "TOP RP",
+   "siren": "803843697",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2014-08-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/803843697"
+  },
+  {
+   "nom": "TRACTION LAB",
+   "siren": "101793263",
+   "activite": "Agences de publicité",
+   "commune": "EFFIAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-02-27",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/101793263"
+  },
+  {
+   "nom": "TRAIT D'UNION COMMUNICATION",
+   "siren": "921261541",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2022-11-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/921261541"
+  },
+  {
+   "nom": "UNION DES COMMERCANTS (UCASG)",
+   "siren": "380676932",
+   "activite": "Agences de publicité",
+   "commune": "SAINT-GEORGES-DE-MONS",
+   "effectif": "Non renseigné",
+   "date_creation": "1970-12-25",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/380676932"
+  },
+  {
+   "nom": "UNKNOTTED (UNKNOTTED)",
+   "siren": "839061256",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CULHAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2018-03-30",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/839061256"
+  },
+  {
+   "nom": "URX",
+   "siren": "999590177",
+   "activite": "Activités spécialisées de design",
+   "commune": "AYDAT",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-01-08",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/999590177"
+  },
+  {
+   "nom": "VERSO DESIGN STUDIO",
+   "siren": "951960103",
+   "activite": "Activités spécialisées de design",
+   "commune": "SAINT-MAURICE",
+   "effectif": "Non renseigné",
+   "date_creation": "2023-04-18",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/951960103"
+  },
+  {
+   "nom": "VIA CONSULTING",
+   "siren": "539050906",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "TALLENDE",
+   "effectif": "Non renseigné",
+   "date_creation": "2012-01-02",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/539050906"
+  },
+  {
+   "nom": "VISA PRODUCTION",
+   "siren": "511932675",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2009-04-14",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/511932675"
+  },
+  {
+   "nom": "VOLCA-DIFFUSION",
+   "siren": "988998738",
+   "activite": "Agences de publicité",
+   "commune": "LA BOURBOULE",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-07-01",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/988998738"
+  },
+  {
+   "nom": "VOLCOM MEDIA",
+   "siren": "490001302",
+   "activite": "Régie publicitaire de médias",
+   "commune": "PONT-DU-CHATEAU",
+   "effectif": "Non renseigné",
+   "date_creation": "2006-04-27",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/490001302"
+  },
+  {
+   "nom": "VULTEK",
+   "siren": "944178573",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-05-07",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/944178573"
+  },
+  {
+   "nom": "WB PROD (AVIDA)",
+   "siren": "530310838",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "SAINT-GERMAIN-LEMBRON",
+   "effectif": "Non renseigné",
+   "date_creation": "2011-01-28",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/530310838"
+  },
+  {
+   "nom": "WHOOP PRODUCTION (WHOOP PROD)",
+   "siren": "903057180",
+   "activite": "Production de films institutionnels et publicitaires",
+   "commune": "SAINT-SATURNIN",
+   "effectif": "Non renseigné",
+   "date_creation": "2021-09-10",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/903057180"
+  },
+  {
+   "nom": "YO  UNITED (YO  UNITED)",
+   "siren": "945333995",
+   "activite": "Agences de publicité",
+   "commune": "CLERMONT-FERRAND",
+   "effectif": "Non renseigné",
+   "date_creation": "2025-06-05",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/945333995"
   }
  ]
 }

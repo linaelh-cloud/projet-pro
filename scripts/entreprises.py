@@ -93,7 +93,9 @@ def main():
                "requete": "siège dans le 63, entreprises actives, NAF " + ", ".join(NAF), "total": len(lignes),
                "avec_salaries": len(avec_salaries), "par_activite": sorted(par_naf.items(), key=lambda x: -x[1]),
                "communes": sorted(communes.items(), key=lambda x: -x[1])[:10],
-               "exemples": avec_salaries[:25]}, open(meta, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+               "exemples": avec_salaries[:25],
+               "toutes": [{k: l[k] for k in ("nom", "siren", "activite", "commune", "effectif", "date_creation", "fiche")} for l in lignes]},
+              open(meta, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print(f"{jour} : {len(lignes)} entreprises du 63 ({len(avec_salaries)} avec salariés).")
 
 

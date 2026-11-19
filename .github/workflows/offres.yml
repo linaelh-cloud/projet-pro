@@ -31,6 +31,11 @@ jobs:
         run: python scripts/marche.py
       - name: Mettre à jour les entreprises du 63 (une fois par semaine)
         run: python scripts/entreprises.py
+      - name: Repérer les entreprises du 63 qui recrutent (une fois par jour)
+        env:
+          ADZUNA_APP_ID: ${{ secrets.ADZUNA_APP_ID }}
+          ADZUNA_APP_KEY: ${{ secrets.ADZUNA_APP_KEY }}
+        run: python scripts/recrutent.py
       - name: Enregistrer les offres et les données sur le site
         run: |
           git config user.name "robot-offres"
