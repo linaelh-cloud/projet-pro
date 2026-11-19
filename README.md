@@ -58,7 +58,7 @@ API Adzuna + API Recherche d'entreprises
 | Fichier | Rôle | Fréquence |
 |---|---|---|
 | `scripts/recuperer_offres.py` | Nouvelles offres de stage et d'alternance → `offres.json` (onglet Offres du jour) | Toutes les 3 heures |
-| `scripts/marche.py` | Extraction datée du marché → `data/offres_AAAA-MM-JJ.csv`, `data/historique.csv`, `data/variantes.csv`, `data/marche.json` | Une fois par jour |
+| `scripts/marche.py` | Extraction datée du marché → `data/offres_AAAA-MM-JJ.csv`, `data/historique.csv`, `data/variantes.csv`, `data/competences.csv` (mots comptés par date), `data/marche.json` | Une fois par jour |
 | `scripts/entreprises.py` | Entreprises du 63 → `data/entreprises_63.csv` et `.json` | Une fois par semaine |
 | `.github/workflows/offres.yml` | Le robot GitHub Actions qui lance les scripts et enregistre les données par un commit | Toutes les 3 heures (et bouton « Run workflow ») |
 

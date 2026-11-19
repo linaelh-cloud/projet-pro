@@ -226,7 +226,8 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     <a href="#accueil" data-goto="s-comp">3. Compétences et outils</a>
     <a href="#accueil" data-goto="s-bouge">4. Comment le métier bouge</a>
     <a href="#accueil" data-goto="s-acteurs">5. Les acteurs</a>
-    <a href="#accueil" data-goto="s-position">6. Ma position et mes actions</a>
+    <a href="#accueil" data-goto="s-position">6. Ce que je vais chercher cette année</a>
+    <a href="#methode">7. Comment le site est fait</a>
   </nav>
 
   <!-- 1 -->
@@ -259,6 +260,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
         <p class="note" id="n-salaires"></p>
       </div>
     </div>
+    <p class="note" id="n-extractions" style="margin-top:10px"></p>
     <div class="source" id="src-offres"></div>
   </div>
 
@@ -273,16 +275,8 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     </div>
     <div class="gap">
       <h4>Ce que ma formation ne me donnera pas</h4>
-      <p class="note" style="margin:0 0 8px">Comparaison entre les compétences les plus citées et les unités d'enseignement du M2 MOD (fiche publique de la formation : stratégie marketing digitale, animation des communautés, relation client, search et performance digitale).</p>
-      <table class="mini">
-        <tr><th>Demandé dans les offres</th><th>Dans ma formation ?</th></tr>
-        <tr><td>Modération, animation de communauté</td><td><span class="pill-s ok">Oui</span> UE Animation des communautés</td></tr>
-        <tr><td>Stratégie social media, reporting / KPI</td><td><span class="pill-s ok">Oui</span> UE Stratégie marketing digitale, Search et performance</td></tr>
-        <tr><td>Création de contenu vidéo (Reels, TikTok), montage</td><td><span class="pill-s no">À aller chercher</span> CapCut, Premiere Pro</td></tr>
-        <tr><td>TikTok comme canal principal</td><td><span class="pill-s no">À aller chercher</span> pratique sur un compte réel</td></tr>
-        <tr><td>Influence et partenariats créateurs</td><td><span class="pill-s mid">En partie</span> à approfondir</td></tr>
-        <tr><td>IA générative pour produire du contenu</td><td><span class="pill-s mid">En partie</span> usage à prouver</td></tr>
-      </table>
+      <p class="note" style="margin:0 0 8px">Chaque compétence comptée dans les offres, confrontée aux unités d'enseignement du M2 MOD (fiche publique de la formation : stratégie marketing digitale, animation des communautés, relation client, search et performance digitale).</p>
+      <table class="mini" id="t-formation"></table>
     </div>
     <div class="source" id="src-comp"></div>
   </div>
@@ -293,6 +287,9 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     <h3 style="margin-top:4px">Une extraction par jour, pour voir le marché bouger</h3>
     <p class="note" style="margin:0 0 10px">Le robot ajoute une ligne chaque jour. Avec plusieurs semaines de données, on lit une tendance, pas une opinion.</p>
     <div style="overflow-x:auto"><table class="mini" id="t-histo"></table></div>
+    <h4 style="margin-top:16px">Les mots qui montent et qui reculent</h4>
+    <p class="note" style="margin:0 0 8px" id="n-mots"></p>
+    <div style="overflow-x:auto"><table class="mini" id="t-mots"></table></div>
     <div class="quote">
       <b>Source emploi : Apec, « L'IA dans les métiers du commercial et du marketing » (mars 2026).</b>
       En 2025, les métiers commercial-marketing représentent 13 % des offres cadre de l'Apec qui mentionnent l'IA, contre 9 % en 2022. Les employeurs attendent surtout des usages concrets et du savoir-être, plus que des formations techniques.
@@ -320,11 +317,14 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     <h4 style="margin-top:14px">Exemples d'entreprises du 63 avec des salariés</h4>
     <div style="overflow-x:auto"><table class="mini" id="t-63"></table></div>
     <div class="source" id="src-63"></div>
+    <h4 style="margin-top:16px">Les professionnels qui exercent ce métier</h4>
+    <p class="note" style="margin:0 0 8px">Repérés à la main sur LinkedIn, dans des entreprises qui recrutent cet intitulé. Prénom, fonction et entreprise uniquement (règle RGPD).</p>
+    <table class="mini" id="t-pros"><tr><th>Prénom</th><th>Fonction</th><th>Entreprise</th></tr><tr><td colspan="3">En cours de repérage</td></tr></table>
   </div>
 
   <!-- 6 -->
   <div class="card" id="s-position">
-    <div class="eyebrow">6 · Ma position</div>
+    <div class="eyebrow">6 · Ce que je vais chercher cette année</div>
     <h3 style="margin-top:4px">Ce que je conclus, et ce que je vais chercher cette année</h3>
     <ul class="concl">
       <li><b>Le métier recrute surtout en alternance et en stage</b>, et surtout en Île-de-France. En Auvergne, les offres publiées sont rares : je ne peux pas compter seulement sur les annonces.</li>
@@ -340,12 +340,6 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     </div>
   </div>
 
-  <div class="stats" id="home-stats">
-    <div class="stat"><b id="st-total">0</b><span>Mes candidatures</span></div>
-    <div class="stat"><b id="st-attente">0</b><span>En attente</span></div>
-    <div class="stat"><b id="st-entretien">0</b><span>Entretiens</span></div>
-    <div class="stat"><b id="st-offres">0</b><span>Offres stage / alternance</span></div>
-  </div>
 </section>
 
 <!-- ============ METHODE ============ -->
@@ -413,7 +407,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   <div>
     <div class="eyebrow">Mises à jour chaque matin</div>
     <h2 style="font-size:32px;margin-top:4px">Offres du jour</h2>
-    <p class="lead" style="margin-top:6px">Les nouvelles annonces de Community Manager arrivent ici automatiquement. Cliquer sur <b>Postuler</b> ouvre l'annonce et l'ajoute à tes candidatures.</p>
+    <p class="lead" style="margin-top:6px">La veille tourne, le site affiche ce qu'elle trouve : les nouvelles annonces de stage et d'alternance de Community Manager arrivent ici automatiquement (API Adzuna, toutes les 3 heures). Cliquer sur <b>Postuler</b> ouvre l'annonce et l'ajoute à tes candidatures.</p>
   </div>
   <div class="toolbar">
     <div class="seg" role="group" aria-label="Type de contrat">
@@ -427,12 +421,6 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   </div>
   <div class="offers" id="offers-list"></div>
   <p class="note" id="offers-updated"></p>
-
-  <div class="card">
-    <h3>Chercher directement sur les sites</h3>
-    <p class="note" style="margin:0 0 12px">Chaque lien ouvre la recherche déjà faite, avec le type de contrat et la ville choisis.</p>
-    <div class="sites" id="sites"></div>
-  </div>
 </section>
 
 <!-- ============ LETTRE ============ -->
@@ -548,6 +536,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 
   /* ---------- Sites de recherche ---------- */
   function renderSites(){
+    if (!$("#sites")) return;
     const q = ("community manager " + (typeFilter === "tous" ? "" : typeFilter)).trim();
     const enc = encodeURIComponent(q), loc = encodeURIComponent(ville || "France"), cm = encodeURIComponent("community manager");
     const sites = [
@@ -591,7 +580,6 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
           </div>
         </article>`).join("");
     }
-    $("#st-offres").textContent = offres.length;
     const last = offres.map(o => o.date).filter(Boolean).sort().pop();
     $("#offers-updated").textContent = last ? `Annonce la plus récente : ${new Date(last).toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long"})}` : "";
     renderSites();
@@ -625,7 +613,6 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   function renderCands(){
     const counts = {attente:0,entretien:0,refus:0,acceptee:0};
     cands.forEach(c => counts[c.statut] = (counts[c.statut]||0)+1);
-    $("#st-total").textContent = cands.length; $("#st-attente").textContent = counts.attente; $("#st-entretien").textContent = counts.entretien;
     document.querySelectorAll("#c-filter button").forEach(b => {
       b.setAttribute("aria-pressed", b.dataset.s===statusFilter);
       const n = b.dataset.s==="tous" ? cands.length : counts[b.dataset.s]||0;
@@ -795,6 +782,25 @@ ${profil || "(profil non renseigné : reste général sur la motivation, sans in
     bars("#b-reseaux", m.competences["Réseaux"], n);
     bars("#b-comp", m.competences["Compétences"], n);
     bars("#b-outils", m.competences["Outils"], n);
+    // Compétences comptées, confrontées à la formation
+    const cnt = {}; Object.values(m.competences).forEach(g => g.forEach(([k, v]) => cnt[k] = v));
+    const F = [
+      ["Modération / animation de communauté", ["Modération / animation"], "ok", "UE Animation des communautés"],
+      ["Création de contenu", ["Création de contenu"], "ok", "UE Animation des communautés"],
+      ["Stratégie social media", ["Stratégie social media"], "ok", "UE Stratégie marketing digitale"],
+      ["Reporting / KPI", ["Reporting / KPI"], "ok", "UE Search et performance digitale"],
+      ["Publicité (Ads), SEO", ["Publicité (Ads)", "SEO"], "ok", "UE Search et performance digitale"],
+      ["TikTok", ["TikTok"], "no", "Pas d'enseignement dédié : à pratiquer sur un vrai compte"],
+      ["Vidéo, Reels, montage", ["Vidéo / Reels", "CapCut", "Suite Adobe"], "no", "Pas d'enseignement dédié : CapCut, Premiere Pro"],
+      ["Influence et créateurs", ["Influence"], "mid", "Abordé en partie : à approfondir"],
+      ["IA générative", ["ChatGPT / IA générative"], "mid", "Utilisée en cours : usage à prouver"],
+      ["Veille", ["Veille"], "ok", "Pratiquée dans ce projet"],
+    ];
+    const lab = {ok: "Oui", no: "À aller chercher", mid: "En partie"};
+    $("#t-formation").innerHTML = `<tr><th>Demandé dans les offres</th><th>Offres qui le citent</th><th>Dans ma formation ?</th></tr>` +
+      F.map(([nom, cles, st, det]) => { const v = Math.max(...cles.map(k => cnt[k] || 0)); return [nom, v, st, det]; })
+       .sort((a, b) => b[1] - a[1])
+       .map(([nom, v, st, det]) => `<tr><td>${esc(nom)}</td><td>${v} / ${n} <small style="color:var(--muted)">(${pct(v, n)})</small></td><td><span class="pill-s ${st}">${lab[st]}</span> ${esc(det)}</td></tr>`).join("");
     source("#src-comp", m, "mots cherchés dans le titre et l'extrait de description fourni par l'API, pas dans l'annonce complète : ce sont des minimums");
     // 5. Entreprises qui publient
     bars("#b-entreprises", (m.entreprises || []).slice(0, 10));
@@ -807,7 +813,25 @@ ${profil || "(profil non renseigné : reste général sur la motivation, sans in
     const lignes = t.trim().split("\n").map(l => l.split(","));
     if (lignes.length < 2) { $("#t-histo").innerHTML = "<tr><td>Première extraction en cours.</td></tr>"; return; }
     const tete = ["Date", "Canal", "Requête", "Annonces (compteur)", "Analysées", "Alternance", "Stage", "CDI", "CDD / mission", "Salaires affichés", "IA citée"];
+    const nbx = lignes.length - 1;
+    const ne = $("#n-extractions"); if (ne) ne.textContent = `${nbx} extraction${nbx > 1 ? "s" : ""} datée${nbx > 1 ? "s" : ""} depuis le ${dfr(lignes[1][0])}, une par jour : le tableau d'historique (partie 4) montre le marché bouger.`;
     $("#t-histo").innerHTML = `<tr>${tete.map(h => `<th>${h}</th>`).join("")}</tr>` + lignes.slice(1).reverse().slice(0, 30).map(l => `<tr>${l.map((v, i) => `<td>${i === 0 ? dfr(v) : esc(v)}</td>`).join("")}</tr>`).join("");
+  });
+
+  // 4 bis. Les mots qui montent : première extraction comparée à la dernière
+  fetch("data/competences.csv?v=" + Date.now()).then(r => r.ok ? r.text() : "").then(t => {
+    const rows = t.trim().split("\n").slice(1).map(l => l.split(",")).filter(r => r.length >= 6);
+    if (!rows.length) return;
+    const dates = [...new Set(rows.map(r => r[0]))].sort();
+    const d0 = dates[0], d1 = dates[dates.length - 1];
+    const part = (d, mot) => { const r = rows.find(x => x[0] === d && x[3] === mot); return r ? 100 * (+r[4]) / Math.max(1, +r[5]) : 0; };
+    const mots = [...new Set(rows.map(r => r[3]))].map(mot => [mot, part(d0, mot), part(d1, mot)]).filter(x => x[1] || x[2]);
+    mots.sort((a, b) => (b[2] - b[1]) - (a[2] - a[1]) || b[2] - a[2]);
+    $("#n-mots").textContent = dates.length < 2 ? "Une seule extraction pour l'instant : la comparaison apparaîtra dès la suivante." :
+      `Part des offres qui citent chaque mot, le ${dfr(d0)} puis le ${dfr(d1)} (${dates.length} extractions). Sur quelques jours, les écarts restent faibles : la tendance se lira sur plusieurs semaines.`;
+    const fl = (x) => x > 0.5 ? `<span class="pill-s ok">▲ +${x.toFixed(0)} pt</span>` : x < -0.5 ? `<span class="pill-s no">▼ ${x.toFixed(0)} pt</span>` : `<span class="pill-s mid">= stable</span>`;
+    $("#t-mots").innerHTML = `<tr><th>Mot</th><th>${dfr(d0)}</th><th>${dfr(d1)}</th><th>Évolution</th></tr>` +
+      mots.slice(0, 12).map(([mot, a, b]) => `<tr><td>${esc(mot)}</td><td>${a.toFixed(0)} %</td><td>${b.toFixed(0)} %</td><td>${fl(b - a)}</td></tr>`).join("");
   });
 
   // 5. Marché caché du 63

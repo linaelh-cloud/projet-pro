@@ -98,6 +98,20 @@ def contrat(o):
     return "Non précisé"
 
 
+def ecrire_competences(jour, comptes, n):
+    """Une ligne par mot et par jour : c'est ce qui permet de voir les mots qui montent."""
+    chemin = os.path.join(DATA, "competences.csv")
+    neuf = not os.path.exists(chemin)
+    with open(chemin, "a", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        if neuf:
+            w.writerow(["date", "canal", "groupe", "mot", "nb_offres", "nb_analysees"])
+        for groupe, mots in MOTS.items():
+            c = dict(comptes.get(groupe, []))
+            for nom in mots:
+                w.writerow([jour, "Adzuna", groupe, nom, c.get(nom, 0), n])
+
+
 def main():
     if not os.environ.get("ADZUNA_APP_ID") or not os.environ.get("ADZUNA_APP_KEY"):
         sys.exit("ERREUR : ADZUNA_APP_ID et ADZUNA_APP_KEY manquants (Secrets GitHub).")
@@ -201,6 +215,7 @@ def main():
             w.writerow(["date", "canal", "requete", "total_annonce", "nb_analysees", "alternance", "stage", "cdi", "cdd_mission", "salaires_affiches", "ia_citee"])
         ia = dict(comptes["Outils"]).get("ChatGPT / IA générative", 0)
         w.writerow([jour, "Adzuna", REQUETE, total, n, contrats.get("Alternance", 0), contrats.get("Stage", 0), contrats.get("CDI", 0), contrats.get("CDD / mission", 0), nb_affiches, ia])
+    ecrire_competences(jour, comptes, n)
     var = os.path.join(DATA, "variantes.csv")
     neuf = not os.path.exists(var)
     with open(var, "a", newline="", encoding="utf-8") as f:
