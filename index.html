@@ -220,6 +220,7 @@ details.src[open] summary::after{content:"▴"}
 details.src summary:hover{color:var(--accent);border-color:var(--accent)}
 details.src .source{margin-top:8px}
 details.src .note{margin:8px 0 0 !important}
+details.src .warn-box,details.src .quote{margin:8px 0 0}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;z-index:20}
 @media (prefers-reduced-motion:no-preference){.btn,.site,nav.tabs a{transition:background .15s,border-color .15s}}
 </style>
@@ -298,7 +299,7 @@ details.src .note{margin:8px 0 0 !important}
       <div><h4>Par type de contrat</h4><div class="bars" id="b-contrats"></div>
         <h4 style="margin-top:16px">Salaires affichés (brut annuel)</h4>
         <table class="mini" id="t-salaires"></table>
-        <p class="note" id="n-salaires"></p>
+        <p class="note a-replier" id="n-salaires"></p>
       </div>
     </div>
     <p class="note" id="n-extractions" style="margin-top:10px"></p>
@@ -312,7 +313,7 @@ details.src .note{margin:8px 0 0 !important}
     <div class="grid3">
       <div><h4>Réseaux sociaux</h4><div class="bars" id="b-reseaux"></div></div>
       <div><h4>Compétences</h4><div class="bars" id="b-comp"></div></div>
-      <div><h4>Outils</h4><p class="warn-box">⚠️ Chiffres très incomplets : Adzuna ne donne que le début des annonces, et les outils (Canva, Adobe, Meta Business Suite…) sont surtout cités plus bas, dans le profil recherché. Un outil absent ici n'est pas un outil absent des annonces.</p><div class="bars" id="b-outils"></div></div>
+      <div><h4>Outils</h4><p class="warn-box a-replier">⚠️ Chiffres très incomplets : Adzuna ne donne que le début des annonces, et les outils (Canva, Adobe, Meta Business Suite…) sont surtout cités plus bas, dans le profil recherché. Un outil absent ici n'est pas un outil absent des annonces.</p><div class="bars" id="b-outils"></div></div>
     </div>
     <div class="gap">
       <h4>Ce que ma formation ne me donnera pas</h4>
@@ -328,12 +329,14 @@ details.src .note{margin:8px 0 0 !important}
     <h3 style="margin-top:4px">Une extraction par jour, pour voir le marché bouger</h3>
     <p class="note" style="margin:0 0 10px">Le robot ajoute une ligne chaque jour. Avec plusieurs semaines de données, on lit une tendance, pas une opinion.</p>
     <div style="overflow-x:auto"><table class="mini" id="t-histo"></table></div>
+    <div class="a-replier">
     <div class="quote">
       <b>Source emploi : Apec, « L'IA dans les métiers du commercial et du marketing » (mars 2026).</b>
       En 2025, les métiers commercial-marketing représentent 13 % des offres cadre de l'Apec qui mentionnent l'IA, contre 9 % en 2022. Les employeurs attendent surtout des usages concrets et du savoir-être, plus que des formations techniques.
       <a href="https://www.apec.fr/tendances-emploi-cadre/evolution-des-metiers-et-competences/quel-impact-de-l-ia-sur-les-competences-des-metiers-du-commercial-et-du-marketing-.html" target="_blank" rel="noopener">Lire l'étude ↗</a>
     </div>
     <p class="note" id="n-ia" style="margin-top:10px"></p>
+    </div>
   </div>
 
   <!-- 5 -->
@@ -1067,6 +1070,12 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
 </script>
 <script>
 /* Sources repliées : chaque encadré « source » devient un petit menu à déplier */
+document.querySelectorAll(".a-replier").forEach(el => {
+  const d = document.createElement("details");
+  d.className = "src";
+  d.innerHTML = "<summary>Source et limites</summary>";
+  el.before(d); d.appendChild(el);
+});
 document.querySelectorAll(".source").forEach(el => {
   const d = document.createElement("details");
   d.className = "src";
