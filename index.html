@@ -204,6 +204,10 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 .step-n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:700;margin-right:4px}
 .cv-etat{font-size:12.5px;color:var(--muted)}
 .cv-etat.ok{color:var(--ok);font-weight:600}
+.cv-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.drop{display:block;border:2px dashed var(--accent);border-radius:14px;padding:22px;text-align:center;cursor:pointer;background:var(--accent-soft);font-size:14px;line-height:1.5;color:var(--muted)}
+.drop b{color:var(--accent);font-size:15px}
+.drop.over{background:var(--pink-soft)}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;z-index:20}
 @media (prefers-reduced-motion:no-preference){.btn,.site,nav.tabs a{transition:background .15s,border-color .15s}}
 </style>
@@ -458,17 +462,21 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   <div>
     <div class="eyebrow">Une lettre adaptée à chaque offre</div>
     <h2 style="font-size:32px;margin-top:4px">Lettre de motivation</h2>
-    <p class="lead" style="margin-top:6px">Mon CV est enregistré une fois. Pour chaque offre, je colle le lien de l'annonce et j'indique ce que je veux mettre en avant : Claude lit l'annonce et écrit une lettre adaptée à mon CV et à cette offre.</p>
+    <p class="lead" style="margin-top:6px">Mon CV est importé en PDF (et remplacé quand je veux). Pour chaque offre, je colle le lien de l'annonce et j'indique ce que je veux mettre en avant : Claude lit l'annonce et écrit une lettre adaptée à mon CV et à cette offre.</p>
   </div>
 
-  <details class="card cv-box" id="cv-box">
-    <summary><span class="step-n">1</span><b>Mon CV</b> <span class="cv-etat" id="cv-etat">À remplir une seule fois</span></summary>
-    <p class="note" style="margin:10px 0 8px">Colle le texte de ton CV. Il est enregistré uniquement dans ce navigateur : il n'est pas publié sur le site ni sur GitHub.</p>
-    <textarea class="i" id="l-cv" style="min-height:260px" placeholder="Colle ici le texte complet de ton CV : coordonnées, formation, expériences, compétences, outils, langues, centres d'intérêt…"></textarea>
-    <div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap">
-      <button class="btn ghost sm" id="l-save-cv" type="button">Enregistrer mon CV</button>
-    </div>
-  </details>
+  <div class="card cv-box" id="cv-box">
+    <div class="cv-head"><span class="step-n">1</span><b>Mon CV</b> <span class="cv-etat" id="cv-etat">Aucun CV importé</span></div>
+    <label class="drop" id="cv-drop" for="cv-file">
+      <input type="file" id="cv-file" accept="application/pdf,.pdf" hidden>
+      <span class="drop-t" id="cv-drop-t"><b>Importer mon CV (PDF)</b><br>Clique ici ou glisse le fichier. Pour le changer, importe simplement le nouveau.</span>
+    </label>
+    <p class="note" style="margin:8px 0 0">Le PDF est lu dans ton navigateur : il n'est envoyé sur aucun serveur et n'est pas publié sur le site. Seul son texte est gardé, dans ce navigateur.</p>
+    <details class="alt-annonce" id="cv-texte-box">
+      <summary>Voir ou corriger le texte lu dans le PDF</summary>
+      <textarea class="i" id="l-cv" style="min-height:220px;margin-top:8px" placeholder="Le texte de ton CV apparaîtra ici après l'import."></textarea>
+    </details>
+  </div>
 
   <div class="card">
     <label class="f"><span><span class="step-n">2</span> Lien de l'annonce</span>
@@ -742,12 +750,49 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   $("#l-avant").value = store.get("pp-avant", "");
   $("#l-out").value = store.get("pp-lettre", "");
   function etatCV(){
-    const n = $("#l-cv").value.trim().length;
-    $("#cv-etat").textContent = n ? `Enregistré ✓ (${n} caractères) · cliquer pour modifier` : "À remplir une seule fois";
+    const n = $("#l-cv").value.trim().length, nom = store.get("pp-cv-nom", ""), d = store.get("pp-cv-date", "");
+    $("#cv-etat").textContent = n ? `✓ ${nom || "CV enregistré"}${d ? " · importé le " + new Date(d).toLocaleDateString("fr-FR") : ""}` : "Aucun CV importé";
     $("#cv-etat").classList.toggle("ok", !!n);
   }
-  if (!$("#l-cv").value.trim()) $("#cv-box").open = true;
   etatCV();
+  async function lirePDF(f){
+    if (!f) return;
+    if (!/\.pdf$/i.test(f.name) && f.type !== "application/pdf") { toast("Choisis un fichier PDF"); return; }
+    if (!window.pdfjsLib) { toast("Lecteur PDF indisponible : recharge la page"); return; }
+    $("#cv-drop-t").innerHTML = "<b>Lecture du PDF…</b>";
+    try {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+      const pdf = await pdfjsLib.getDocument({data: await f.arrayBuffer()}).promise;
+      let texte = "";
+      for (let i = 1; i <= pdf.numPages; i++) {
+        const c = await (await pdf.getPage(i)).getTextContent();
+        let y = null;
+        for (const it of c.items) {
+          const yy = Math.round(it.transform[5]);
+          if (y !== null && Math.abs(yy - y) > 2) texte += "\n";
+          else if (y !== null && it.str && !texte.endsWith(" ")) texte += " ";
+          texte += it.str; y = yy;
+        }
+        texte += "\n\n";
+      }
+      texte = texte.replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+      if (texte.length < 50) { toast("Ce PDF ne contient pas de texte lisible (PDF image ?)"); $("#cv-drop-t").innerHTML = "<b>Importer mon CV (PDF)</b><br>Ce PDF semble être une image : exporte-le en PDF texte depuis Canva ou Word."; return; }
+      $("#l-cv").value = texte;
+      store.set("pp-cv", texte); store.set("pp-cv-nom", f.name); store.set("pp-cv-date", new Date().toISOString());
+      etatCV(); updateLetterLink();
+      $("#cv-drop-t").innerHTML = "<b>Remplacer mon CV (PDF)</b><br>Clique ici ou glisse un nouveau fichier.";
+      toast("CV importé ✓");
+    } catch (e) {
+      toast("Impossible de lire ce PDF");
+      $("#cv-drop-t").innerHTML = "<b>Importer mon CV (PDF)</b><br>Impossible de lire ce fichier : essaie un autre export PDF.";
+    }
+  }
+  $("#cv-file").addEventListener("change", e => { lirePDF(e.target.files[0]); e.target.value = ""; });
+  const dz = $("#cv-drop");
+  ["dragover", "dragenter"].forEach(t => dz.addEventListener(t, e => { e.preventDefault(); dz.classList.add("over"); }));
+  ["dragleave", "drop"].forEach(t => dz.addEventListener(t, e => { e.preventDefault(); dz.classList.remove("over"); }));
+  dz.addEventListener("drop", e => lirePDF(e.dataTransfer.files[0]));
+  if ($("#l-cv").value.trim()) $("#cv-drop-t").innerHTML = "<b>Remplacer mon CV (PDF)</b><br>Clique ici ou glisse un nouveau fichier.";
   function buildPrompt(){
     const cv = $("#l-cv").value.trim(), lien = $("#l-lien").value.trim(), texte = $("#l-annonce").value.trim(), avant = $("#l-avant").value.trim();
     return `Tu es expert·e en recrutement dans la communication digitale. Rédige ma lettre de motivation en français pour l'offre ci-dessous, personnalisée à partir de mon CV.
@@ -783,9 +828,8 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
     updateLetterLink();
   }));
   updateLetterLink();
-  $("#l-save-cv").addEventListener("click", () => { store.set("pp-cv", $("#l-cv").value); etatCV(); $("#cv-box").open = false; toast("CV enregistré dans ce navigateur"); });
   $("#l-gen").addEventListener("click", (e) => {
-    if (!$("#l-cv").value.trim()) { e.preventDefault(); $("#cv-box").open = true; $("#l-status").textContent = "Colle d'abord ton CV (étape 1)."; return; }
+    if (!$("#l-cv").value.trim()) { e.preventDefault(); $("#l-status").textContent = "Importe d'abord ton CV en PDF (étape 1)."; $("#cv-box").scrollIntoView({behavior: "smooth"}); return; }
     if (!$("#l-lien").value.trim() && !$("#l-annonce").value.trim()) { e.preventDefault(); $("#l-status").textContent = "Colle le lien de l'annonce (étape 2)."; return; }
     if ($("#l-gen").dataset.long) { e.preventDefault(); $("#l-status").textContent = "La demande est trop longue pour s'ouvrir directement : clique sur « Copier la demande », puis colle-la dans Claude."; return; }
     $("#l-status").textContent = "Claude s'ouvre dans un nouvel onglet. Relis la lettre, puis colle-la dans le cadre ci-dessous pour la garder.";
@@ -918,5 +962,6 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
   });
 })();
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </body>
 </html>
