@@ -81,18 +81,10 @@ Relancer une extraction à la main : onglet **Actions** du dépôt → **Offres 
 ## Règle RGPD pour les contacts
 
 - Seules des **données d'entreprise** sont enregistrées (nom, SIREN, activité, commune, effectif, date de création). Les noms des dirigeants et les entrepreneurs individuels, dont le nom est celui d'une personne, sont exclus.
-- Les professionnels sont contactés **à la main** sur LinkedIn, en lien avec leur fonction et pour une finalité claire : ma candidature. Aucun e-mail ni téléphone personnel n'est collecté. Chacun peut refuser le contact.
+- Aucun contact nominatif n'est collecté : ni e-mail, ni téléphone, ni nom de personne.
 - Aucun fichier n'est constitué pour être revendu ou partagé.
 - Mes candidatures restent dans mon navigateur : elles ne sont pas publiées sur GitHub.
 - Les clés des API sont dans les **Secrets** de GitHub, jamais dans le code.
-
-## Professionnels repérés sur LinkedIn
-
-Repérés à la main, dans des entreprises qui recrutent cet intitulé (prénom, fonction et entreprise uniquement) :
-
-1. _à compléter_
-2. _à compléter_
-3. _à compléter_
 
 ## Ma position et mes 3 actions datées
 
