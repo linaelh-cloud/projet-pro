@@ -212,6 +212,14 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 .cle-box summary::-webkit-details-marker{display:none}
 .masque{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;color:var(--muted)}
 .masque input{margin-top:3px;accent-color:var(--accent)}
+details.src{margin-top:12px}
+details.src summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--muted);padding:4px 10px;border-radius:999px;border:1px solid var(--line)}
+details.src summary::-webkit-details-marker{display:none}
+details.src summary::after{content:"▾";font-size:11px}
+details.src[open] summary::after{content:"▴"}
+details.src summary:hover{color:var(--accent);border-color:var(--accent)}
+details.src .source{margin-top:8px}
+details.src .note{margin:8px 0 0 !important}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;z-index:20}
 @media (prefers-reduced-motion:no-preference){.btn,.site,nav.tabs a{transition:background .15s,border-color .15s}}
 </style>
@@ -1056,6 +1064,18 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
     source("#src-63", e, "le code d'activité (NAF) ne dit pas si l'entreprise a besoin d'un community manager : c'est une liste de cibles à vérifier une par une");
   });
 })();
+</script>
+<script>
+/* Sources repliées : chaque encadré « source » devient un petit menu à déplier */
+document.querySelectorAll(".source").forEach(el => {
+  const d = document.createElement("details");
+  d.className = "src";
+  d.innerHTML = "<summary>Source et limites</summary>";
+  el.before(d);
+  const avant = d.previousElementSibling;
+  if (avant && avant.id === "n-extractions") d.appendChild(avant);
+  d.appendChild(el);
+});
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </body>
