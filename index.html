@@ -208,6 +208,10 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
 .drop{display:block;border:2px dashed var(--accent);border-radius:14px;padding:22px;text-align:center;cursor:pointer;background:var(--accent-soft);font-size:14px;line-height:1.5;color:var(--muted)}
 .drop b{color:var(--accent);font-size:15px}
 .drop.over{background:var(--pink-soft)}
+.cle-box summary{cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.cle-box summary::-webkit-details-marker{display:none}
+.masque{display:flex;gap:8px;align-items:flex-start;font-size:13.5px;color:var(--muted)}
+.masque input{margin-top:3px;accent-color:var(--accent)}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(20px + env(safe-area-inset-bottom,0px));background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-size:14px;font-weight:600;z-index:20}
 @media (prefers-reduced-motion:no-preference){.btn,.site,nav.tabs a{transition:background .15s,border-color .15s}}
 </style>
@@ -462,7 +466,7 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   <div>
     <div class="eyebrow">Une lettre adaptée à chaque offre</div>
     <h2 style="font-size:32px;margin-top:4px">Lettre de motivation</h2>
-    <p class="lead" style="margin-top:6px">Mon CV est importé en PDF (et remplacé quand je veux). Pour chaque offre, je colle le lien de l'annonce et j'indique ce que je veux mettre en avant : Claude lit l'annonce et écrit une lettre adaptée à mon CV et à cette offre.</p>
+    <p class="lead" style="margin-top:6px">Mon CV est importé en PDF (et remplacé quand je veux). Pour chaque offre, je colle le lien de l'annonce et j'indique ce que je veux mettre en avant : la lettre s'écrit sur cette page, adaptée à mon CV et à cette offre.</p>
   </div>
 
   <div class="card cv-box" id="cv-box">
@@ -494,16 +498,29 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
     </label>
   </div>
 
+  <details class="card cle-box" id="cle-box">
+    <summary><b>Ma clé Gemini</b> <span class="cv-etat" id="cle-etat">Aucune clé enregistrée</span></summary>
+    <p class="note" style="margin:10px 0 8px">Clé gratuite à créer sur <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener">Google AI Studio</a>. Elle est enregistrée uniquement dans ce navigateur, jamais publiée. Offre gratuite : Google peut utiliser ce que tu envoies pour améliorer ses produits.</p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <input class="i" id="l-cle" type="password" autocomplete="off" placeholder="Colle ta clé Gemini ici" style="flex:1;min-width:220px">
+      <button class="btn ghost sm" id="l-save-cle" type="button">Enregistrer</button>
+      <button class="btn line sm" id="l-del-cle" type="button">Supprimer</button>
+    </div>
+  </details>
+
+  <label class="masque"><input type="checkbox" id="l-masque" checked> Masquer mon téléphone, mon e-mail et mon adresse avant l'envoi à Gemini (ils sont remis dans la lettre ensuite)</label>
+
   <div class="toolbar">
     <div style="display:flex;gap:8px;flex-wrap:wrap">
-      <a class="btn" id="l-gen" href="https://claude.ai/new" target="_blank" rel="noopener">Générer la lettre ↗</a>
-      <button class="btn ghost" id="l-copy-prompt" type="button">Copier la demande</button>
+      <button class="btn" id="l-ia" type="button">Générer la lettre</button>
+      <a class="btn ghost" id="l-gen" href="https://claude.ai/new" target="_blank" rel="noopener">Ou ouvrir dans Claude ↗</a>
     </div>
+    <button class="btn ghost sm" id="l-copy" type="button">Copier la lettre</button>
   </div>
-  <div class="status-line" id="l-status">Claude s'ouvre dans un nouvel onglet avec la demande prête. S'il s'ouvre vide, clique sur « Copier la demande » et colle-la dans Claude.</div>
+  <div class="status-line" id="l-status"></div>
 
-  <label class="f">Ma lettre finale (colle-la ici pour la garder)
-    <textarea class="i letter-out" id="l-out" placeholder="Colle ici la lettre écrite par Claude, puis modifie-la si besoin." style="min-height:300px"></textarea>
+  <label class="f">Ma lettre
+    <textarea class="i letter-out" id="l-out" placeholder="La lettre s'écrit ici. Tu peux ensuite la modifier directement." style="min-height:380px"></textarea>
   </label>
 </section>
 
@@ -793,8 +810,8 @@ table.mini td{padding:7px 8px;border-bottom:1px solid var(--line);vertical-align
   ["dragleave", "drop"].forEach(t => dz.addEventListener(t, e => { e.preventDefault(); dz.classList.remove("over"); }));
   dz.addEventListener("drop", e => lirePDF(e.dataTransfer.files[0]));
   if ($("#l-cv").value.trim()) $("#cv-drop-t").innerHTML = "<b>Remplacer mon CV (PDF)</b><br>Clique ici ou glisse un nouveau fichier.";
-  function buildPrompt(){
-    const cv = $("#l-cv").value.trim(), lien = $("#l-lien").value.trim(), texte = $("#l-annonce").value.trim(), avant = $("#l-avant").value.trim();
+  function buildPrompt(cvTexte){
+    const cv = (cvTexte ?? $("#l-cv").value).trim(), lien = $("#l-lien").value.trim(), texte = $("#l-annonce").value.trim(), avant = $("#l-avant").value.trim();
     return `Tu es expert·e en recrutement dans la communication digitale. Rédige ma lettre de motivation en français pour l'offre ci-dessous, personnalisée à partir de mon CV.
 
 ÉTAPES
@@ -831,11 +848,87 @@ ${cv || "(CV non renseigné : demande-moi mon CV avant d'écrire la lettre)"}`;
   $("#l-gen").addEventListener("click", (e) => {
     if (!$("#l-cv").value.trim()) { e.preventDefault(); $("#l-status").textContent = "Importe d'abord ton CV en PDF (étape 1)."; $("#cv-box").scrollIntoView({behavior: "smooth"}); return; }
     if (!$("#l-lien").value.trim() && !$("#l-annonce").value.trim()) { e.preventDefault(); $("#l-status").textContent = "Colle le lien de l'annonce (étape 2)."; return; }
-    if ($("#l-gen").dataset.long) { e.preventDefault(); $("#l-status").textContent = "La demande est trop longue pour s'ouvrir directement : clique sur « Copier la demande », puis colle-la dans Claude."; return; }
-    $("#l-status").textContent = "Claude s'ouvre dans un nouvel onglet. Relis la lettre, puis colle-la dans le cadre ci-dessous pour la garder.";
+    if ($("#l-gen").dataset.long) { e.preventDefault(); navigator.clipboard?.writeText(buildPrompt()).catch(() => {}); $("#l-status").textContent = "Demande trop longue pour un lien : elle est copiée, colle-la dans Claude."; window.open("https://claude.ai/new", "_blank"); return; }
+    $("#l-status").textContent = "Claude s'ouvre dans un nouvel onglet avec la demande prête.";
   });
-  $("#l-copy-prompt").addEventListener("click", async () => {
-    try { await navigator.clipboard.writeText(buildPrompt()); toast("Demande copiée : colle-la dans Claude"); window.open("https://claude.ai/new", "_blank"); } catch(e){ toast("Copie impossible dans ce navigateur"); }
+  /* Génération sur la page avec Gemini (offre gratuite) */
+  const cleEtat = () => { const k = store.get("pp-gemini", ""); $("#cle-etat").textContent = k ? "✓ Clé enregistrée" : "Aucune clé enregistrée"; $("#cle-etat").classList.toggle("ok", !!k); if (!k) $("#cle-box").open = true; };
+  cleEtat();
+  $("#l-save-cle").addEventListener("click", () => { const k = $("#l-cle").value.trim(); if (!k) return; store.set("pp-gemini", k); $("#l-cle").value = ""; cleEtat(); $("#cle-box").open = false; toast("Clé enregistrée dans ce navigateur"); });
+  $("#l-del-cle").addEventListener("click", () => { try { localStorage.removeItem("pp-gemini"); } catch (e) {} cleEtat(); toast("Clé supprimée"); });
+  $("#l-masque").checked = store.get("pp-masque", "1") === "1";
+  $("#l-masque").addEventListener("change", () => store.set("pp-masque", $("#l-masque").checked ? "1" : "0"));
+
+  function masquer(cv){
+    const table = {}; let n = 0;
+    const remplace = (re, nom) => { cv = cv.replace(re, (m) => { const t = `[${nom}${++n}]`; table[t] = m.trim(); return t; }); };
+    remplace(/[\w.+-]+@[\w-]+(\.[\w-]+)+/g, "EMAIL");
+    remplace(/(\+33\s?|0)[1-9](?:[\s.-]?\d{2}){4}/g, "TELEPHONE");
+    remplace(/\b\d{1,4}\s*(bis|ter)?,?\s*(rue|avenue|av\.|boulevard|bd|chemin|allée|allee|place|impasse|route|quai|cours|square|résidence)\b[^\n,]*/gi, "ADRESSE");
+    remplace(/\b\d{5}\s+[A-ZÀ-Ÿa-zà-ÿ][A-ZÀ-Ÿa-zà-ÿ' -]{1,40}/g, "VILLE");
+    return {cv, table};
+  }
+  function remettre(texte, table){ Object.entries(table).forEach(([t, v]) => { texte = texte.split(t).join(v); }); return texte; }
+
+  const MODELES = ["gemini-3.8-flash", "gemini-3.6-flash", "gemini-3.5-flash-lite"];
+  function lireTexte(d){
+    if (typeof d.output_text === "string" && d.output_text) return d.output_text;
+    const out = [];
+    (d.steps || d.outputs || []).forEach(st => (st.content || []).forEach(c => { if (c.type === "text" && c.text) out.push(c.text); }));
+    if (out.length) return out.join("\n");
+    const parts = d.candidates?.[0]?.content?.parts || [];
+    return parts.map(p => p.text || "").join("");
+  }
+  async function appel(url, corps, cle){
+    const r = await fetch(url, {method: "POST", headers: {"Content-Type": "application/json", "x-goog-api-key": cle}, body: JSON.stringify(corps)});
+    const txt = await r.text(); let d = {}; try { d = JSON.parse(txt); } catch (e) {}
+    if (Array.isArray(d)) d = d[0] || {};
+    if (!r.ok) { const err = new Error(d.error?.message || txt.slice(0, 200) || ("Erreur " + r.status)); err.status = r.status; throw err; }
+    return d;
+  }
+  async function genererGemini(prompt, cle){
+    let derniere;
+    for (const modele of MODELES) {
+      try {
+        const d = await appel("https://generativelanguage.googleapis.com/v1beta/interactions", {model: modele, input: prompt, tools: [{type: "url_context"}], store: false}, cle);
+        const t = lireTexte(d); if (t) return t;
+      } catch (e) {
+        derniere = e;
+        if (e.status === 404) {
+          try {
+            const d = await appel(`https://generativelanguage.googleapis.com/v1beta/models/${modele}:generateContent`, {contents: [{role: "user", parts: [{text: prompt}]}], tools: [{url_context: {}}]}, cle);
+            const t = lireTexte(d); if (t) return t;
+          } catch (e2) { derniere = e2; }
+        }
+        if ([401, 403, 429].includes(e.status) || !e.status) break;
+      }
+    }
+    throw derniere || new Error("Réponse vide");
+  }
+  $("#l-ia").addEventListener("click", async () => {
+    const cle = store.get("pp-gemini", "");
+    if (!$("#l-cv").value.trim()) { $("#l-status").textContent = "Importe d'abord ton CV en PDF (étape 1)."; $("#cv-box").scrollIntoView({behavior: "smooth"}); return; }
+    if (!$("#l-lien").value.trim() && !$("#l-annonce").value.trim()) { $("#l-status").textContent = "Colle le lien de l'annonce (étape 2)."; return; }
+    if (!cle) { $("#cle-box").open = true; $("#cle-box").scrollIntoView({behavior: "smooth"}); $("#l-status").textContent = "Enregistre d'abord ta clé Gemini gratuite."; return; }
+    const m = $("#l-masque").checked ? masquer($("#l-cv").value) : {cv: $("#l-cv").value, table: {}};
+    let prompt = buildPrompt(m.cv);
+    if (Object.keys(m.table).length) prompt += "\n\nIMPORTANT : dans les coordonnées, recopie tels quels les repères entre crochets (par exemple [EMAIL1], [TELEPHONE2], [ADRESSE3]).";
+    $("#l-ia").disabled = true; $("#l-status").textContent = "Gemini lit l'annonce et écrit ta lettre… (10 à 40 secondes)";
+    try {
+      const texte = remettre(await genererGemini(prompt, cle), m.table);
+      $("#l-out").value = texte.trim(); store.set("pp-lettre", $("#l-out").value);
+      $("#l-status").textContent = "Lettre prête ✓ Relis-la et corrige-la si besoin : vérifie surtout l'entreprise et le poste.";
+    } catch (e) {
+      $("#l-status").textContent = !e.status ? "Le navigateur n'a pas pu joindre Gemini (connexion ou blocage). Réessaie, ou utilise « Ou ouvrir dans Claude »."
+        : e.status === 400 && /api key|API_KEY/i.test(e.message) ? "Ta clé Gemini est refusée : vérifie-la dans « Ma clé Gemini »."
+        : [401, 403].includes(e.status) ? "Ta clé Gemini est refusée : vérifie-la dans « Ma clé Gemini »."
+        : e.status === 429 ? "Limite gratuite atteinte pour le moment : réessaie dans une minute (ou demain si la limite du jour est atteinte)."
+        : "Gemini a renvoyé une erreur (" + e.status + ") : " + e.message;
+    } finally { $("#l-ia").disabled = false; }
+  });
+  $("#l-copy").addEventListener("click", async () => {
+    const t = $("#l-out").value; if (!t) return;
+    try { await navigator.clipboard.writeText(t); toast("Lettre copiée"); } catch (e) { $("#l-out").select(); toast("Sélectionnée : fais Cmd+C"); }
   });
   $("#l-out").addEventListener("input", () => store.set("pp-lettre", $("#l-out").value));
 
