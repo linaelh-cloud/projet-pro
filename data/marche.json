@@ -1,63 +1,59 @@
 {
- "date": "2026-11-20",
- "heure_utc": "00:48",
+ "date": "2026-11-21",
+ "heure_utc": "00:52",
  "canal": "Adzuna (API officielle, agrégateur d'offres)",
  "requete": "title_only=\"community manager\" (mots dans le titre), pays = France, tri par date, 6 pages de 50 au plus ; puis titre vérifié (« community manag… » ou « CM »)",
- "total_annonce": 1208,
- "nb_analysees": 74,
+ "total_annonce": 1220,
+ "nb_analysees": 53,
  "variantes": [
   [
    "community manager",
-   1208
+   1220
   ],
   [
    "chargé de communication",
-   1202
+   1189
   ],
   [
    "chargé de communication digitale",
-   147
+   140
   ],
   [
    "content manager",
-   107
+   68
   ],
   [
    "social media manager",
-   71
+   62
   ],
   [
    "influence manager",
-   32
-  ],
-  [
-   "brand content manager",
-   12
+   23
   ],
   [
    "responsable communication digitale",
-   11
+   8
+  ],
+  [
+   "brand content manager",
+   7
   ]
  ],
  "regions": [
   [
    "Ile-de-France",
-   36
-  ],
-  [
-   "Occitanie",
-   9
+   24
   ],
   [
    "Non précisé",
-   9
-  ],
-  [
-   "DOM-TOM",
-   6
+   8
   ],
   [
    "Auvergne-Rhône-Alpes",
+   7
+  ],
+  [
+   "Occitanie",
    4
   ],
   [
@@ -77,41 +73,33 @@
    1
   ],
   [
-   "Centre",
+   "DOM-TOM",
    1
   ]
  ],
  "departements": [
   [
    "Paris",
-   16
-  ],
-  [
-   "Hauts-de-Seine",
-   10
-  ],
-  [
-   "La Réunion",
-   6
-  ],
-  [
-   "Yvelines",
-   4
-  ],
-  [
-   "Hérault",
-   4
-  ],
-  [
-   "Seine-Saint-Denis",
-   3
+   12
   ],
   [
    "Rhône",
-   3
+   6
+  ],
+  [
+   "Hauts-de-Seine",
+   5
+  ],
+  [
+   "Yvelines",
+   2
   ],
   [
    "Val-de-Marne",
+   2
+  ],
+  [
+   "Seine-Saint-Denis",
    2
   ],
   [
@@ -119,33 +107,41 @@
    2
   ],
   [
+   "Hérault",
+   2
+  ],
+  [
    "Ille-et-Vilaine",
    2
+  ],
+  [
+   "Essonne",
+   1
   ]
  ],
- "auvergne": 4,
+ "auvergne": 7,
  "puy_de_dome": 1,
  "teletravail": 0,
  "contrats": [
   [
    "Stage",
-   23
+   24
   ],
   [
    "Alternance",
-   21
-  ],
-  [
-   "Non précisé",
-   12
-  ],
-  [
-   "CDD / mission",
    11
   ],
   [
-   "CDI",
+   "Non précisé",
+   7
+  ],
+  [
+   "CDD / mission",
    6
+  ],
+  [
+   "CDI",
+   4
   ],
   [
    "Freelance",
@@ -154,54 +150,48 @@
  ],
  "salaires": {
   "Stage": {
-   "nb": 1,
-   "min": 16200,
+   "nb": 2,
+   "min": 6428,
    "mediane": 16200,
    "max": 16200
   },
-  "CDD / mission": {
-   "nb": 1,
-   "min": 71500,
-   "mediane": 71500,
-   "max": 71500
-  },
   "Non précisé": {
    "nb": 2,
-   "min": 20891,
+   "min": 26160,
    "mediane": 35000,
    "max": 35000
-  },
-  "CDI": {
-   "nb": 2,
-   "min": 26000,
-   "mediane": 110000,
-   "max": 110000
   },
   "Freelance": {
    "nb": 1,
    "min": 26000,
    "mediane": 26000,
    "max": 26000
+  },
+  "CDI": {
+   "nb": 1,
+   "min": 26000,
+   "mediane": 26000,
+   "max": 26000
   }
  },
- "nb_salaires_affiches": 7,
+ "nb_salaires_affiches": 6,
  "competences": {
   "Réseaux": [
    [
     "TikTok",
-    11
+    4
    ],
    [
     "Instagram",
-    9
+    2
    ],
    [
     "LinkedIn",
-    8
+    2
    ],
    [
     "Facebook",
-    5
+    1
    ],
    [
     "YouTube",
@@ -211,41 +201,33 @@
   "Outils": [
    [
     "ChatGPT / IA générative",
-    3
-   ],
-   [
-    "Excel",
-    1
+    2
    ]
   ],
   "Compétences": [
    [
     "Modération / animation",
-    25
+    16
    ],
    [
     "Création de contenu",
-    22
+    13
    ],
    [
     "Stratégie social media",
     12
    ],
    [
-    "Vidéo / Reels",
-    7
-   ],
-   [
     "Reporting / KPI",
-    7
+    6
    ],
    [
     "Influence",
-    3
+    4
    ],
    [
     "Veille",
-    3
+    4
    ],
    [
     "Événementiel",
@@ -256,15 +238,15 @@
     1
    ],
    [
+    "Vidéo / Reels",
+    1
+   ],
+   [
     "Publicité (Ads)",
     1
    ],
    [
     "Newsletter / emailing",
-    1
-   ],
-   [
-    "Anglais",
     1
    ]
   ]
@@ -276,23 +258,23 @@
   ],
   [
    "ISCOD",
-   7
-  ],
-  [
-   "Tetranergy Business School Réunion",
-   6
-  ],
-  [
-   "Fonction publique Territoriale",
-   4
-  ],
-  [
-   "Groupe OpenSourcing",
-   4
+   5
   ],
   [
    "Iscod Alternance",
+   4
+  ],
+  [
+   "BETAMORPHOSE",
    3
+  ],
+  [
+   "Fonction publique Territoriale",
+   3
+  ],
+  [
+   "THALES",
+   2
   ],
   [
    "Thales",
@@ -307,16 +289,12 @@
    2
   ],
   [
-   "Tetranergy Business School Rodez",
-   2
+   "FFR",
+   1
   ],
   [
-   "iSCOD",
-   2
-  ],
-  [
-   "Magnet Open Sourcing",
-   2
+   "IEF2I Education",
+   1
   ],
   [
    "sapiendo-retraite",
@@ -328,6 +306,10 @@
   ],
   [
    "Crit",
+   1
+  ],
+  [
+   "Fuga Family",
    1
   ]
  ]
