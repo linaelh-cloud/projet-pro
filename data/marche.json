@@ -1,63 +1,55 @@
 {
- "date": "2026-11-22",
- "heure_utc": "00:44",
+ "date": "2026-11-23",
+ "heure_utc": "00:49",
  "canal": "Adzuna (API officielle, agrégateur d'offres)",
  "requete": "title_only=\"community manager\" (mots dans le titre), pays = France, tri par date, 6 pages de 50 au plus ; puis titre vérifié (« community manag… » ou « CM »)",
- "total_annonce": 1265,
- "nb_analysees": 68,
+ "total_annonce": 1321,
+ "nb_analysees": 50,
  "variantes": [
   [
    "chargé de communication",
-   1363
+   1553
   ],
   [
    "community manager",
-   1265
+   1321
   ],
   [
    "chargé de communication digitale",
-   166
-  ],
-  [
-   "content manager",
-   93
+   205
   ],
   [
    "social media manager",
+   88
+  ],
+  [
+   "content manager",
    74
   ],
   [
    "influence manager",
-   31
+   26
   ],
   [
    "responsable communication digitale",
-   12
+   9
   ],
   [
    "brand content manager",
-   9
+   8
   ]
  ],
  "regions": [
   [
    "Ile-de-France",
-   27
-  ],
-  [
-   "Auvergne-Rhône-Alpes",
-   10
+   26
   ],
   [
    "Non précisé",
-   8
+   7
   ],
   [
-   "Bretagne",
-   5
-  ],
-  [
-   "Provence-Alpes-Côte d'Azur",
+   "Auvergne-Rhône-Alpes",
    4
   ],
   [
@@ -65,45 +57,45 @@
    4
   ],
   [
-   "Normandie",
+   "Provence-Alpes-Côte d'Azur",
    3
   ],
   [
-   "Hauts-De-France",
-   2
-  ],
-  [
-   "Nouvelle-Aquitaine",
-   2
-  ],
-  [
-   "DOM-TOM",
+   "Bretagne",
    2
   ],
   [
    "Bourgogne-Franche-Comté",
+   1
+  ],
+  [
+   "Hauts-De-France",
+   1
+  ],
+  [
+   "Nouvelle-Aquitaine",
+   1
+  ],
+  [
+   "DOM-TOM",
    1
   ]
  ],
  "departements": [
   [
    "Paris",
-   14
+   16
   ],
   [
    "Rhône",
-   8
+   4
   ],
   [
    "Hauts-de-Seine",
-   7
+   4
   ],
   [
-   "Ille-et-Vilaine",
-   3
-  ],
-  [
-   "Calvados",
+   "Yvelines",
    3
   ],
   [
@@ -111,33 +103,37 @@
    3
   ],
   [
-   "Yvelines",
-   2
+   "Côte-d'Or",
+   1
   ],
   [
-   "Nord",
-   2
+   "Vaucluse",
+   1
   ],
   [
-   "Bouches-du-Rhône",
-   2
+   "Essonne",
+   1
   ],
   [
-   "Morbihan",
-   2
+   "Hautes-Pyrénées",
+   1
+  ],
+  [
+   "Seine-Saint-Denis",
+   1
   ]
  ],
- "auvergne": 10,
+ "auvergne": 4,
  "puy_de_dome": 0,
  "teletravail": 0,
  "contrats": [
   [
    "Stage",
-   39
+   20
   ],
   [
    "Alternance",
-   13
+   17
   ],
   [
    "CDD / mission",
@@ -145,11 +141,11 @@
   ],
   [
    "Non précisé",
-   5
+   4
   ],
   [
    "CDI",
-   4
+   2
   ],
   [
    "Freelance",
@@ -157,23 +153,11 @@
   ]
  ],
  "salaires": {
-  "Stage": {
-   "nb": 2,
-   "min": 6428,
-   "mediane": 16200,
-   "max": 16200
-  },
   "Alternance": {
-   "nb": 1,
-   "min": 22404,
+   "nb": 5,
+   "min": 14226,
    "mediane": 22404,
-   "max": 22404
-  },
-  "CDI": {
-   "nb": 1,
-   "min": 26000,
-   "mediane": 26000,
-   "max": 26000
+   "max": 22800
   },
   "CDD / mission": {
    "nb": 1,
@@ -181,38 +165,42 @@
    "mediane": 27000,
    "max": 27000
   },
+  "Stage": {
+   "nb": 2,
+   "min": 6428,
+   "mediane": 16200,
+   "max": 16200
+  },
   "Freelance": {
+   "nb": 1,
+   "min": 26000,
+   "mediane": 26000,
+   "max": 26000
+  },
+  "CDI": {
    "nb": 1,
    "min": 26000,
    "mediane": 26000,
    "max": 26000
   }
  },
- "nb_salaires_affiches": 7,
+ "nb_salaires_affiches": 11,
  "competences": {
   "Réseaux": [
    [
-    "TikTok",
-    4
-   ],
-   [
     "Instagram",
-    3
+    1
    ],
    [
-    "Facebook",
-    2
+    "TikTok",
+    1
    ],
    [
     "LinkedIn",
     1
    ],
    [
-    "YouTube",
-    1
-   ],
-   [
-    "Pinterest",
+    "Facebook",
     1
    ]
   ],
@@ -225,39 +213,39 @@
   "Compétences": [
    [
     "Modération / animation",
-    21
+    16
    ],
    [
     "Création de contenu",
-    17
-   ],
-   [
-    "Stratégie social media",
     12
    ],
    [
-    "Reporting / KPI",
-    6
+    "Stratégie social media",
+    10
    ],
    [
-    "Influence",
+    "Reporting / KPI",
     5
    ],
    [
-    "Vidéo / Reels",
+    "Influence",
     4
+   ],
+   [
+    "Vidéo / Reels",
+    3
    ],
    [
     "Veille",
-    4
-   ],
-   [
-    "Événementiel",
-    4
+    3
    ],
    [
     "Rédaction",
-    3
+    2
+   ],
+   [
+    "Événementiel",
+    2
    ],
    [
     "Publicité (Ads)",
@@ -279,36 +267,44 @@
    6
   ],
   [
-   "BETAMORPHOSE",
-   4
-  ],
-  [
-   "European Camping Group",
-   4
-  ],
-  [
-   "Maison Ruello",
+   "Iscod Alternance",
    3
   ],
   [
-   "MyDigitalSchool Caen",
-   3
-  ],
-  [
-   "Fonction publique Territoriale",
-   3
-  ],
-  [
-   "SADAPS BARDAHL CORPORATION S.A.",
+   "IEF2I Education",
    2
   ],
   [
-   "Iscod Alternance",
+   "BETAMORPHOSE",
+   2
+  ],
+  [
+   "Fonction publique Territoriale",
    2
   ],
   [
    "Thales",
    2
+  ],
+  [
+   "Cour des Comptes",
+   1
+  ],
+  [
+   "L'École Française",
+   1
+  ],
+  [
+   "INFREP - Torcy",
+   1
+  ],
+  [
+   "Digital School of Paris",
+   1
+  ],
+  [
+   "Studi",
+   1
   ],
   [
    "THALES",
@@ -320,14 +316,6 @@
   ],
   [
    "INFREP Torcy",
-   1
-  ],
-  [
-   "E.LECLERC",
-   1
-  ],
-  [
-   "GEODIS",
    1
   ]
  ]
