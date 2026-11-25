@@ -1,9 +1,9 @@
 {
- "date": "2026-11-24",
+ "date": "2026-11-25",
  "canal": "Adzuna (API officielle)",
  "requete": "where=\"Puy-de-Dôme\", tous métiers, tri par date, 20 pages de 50 au plus",
- "total_annonce": 10208,
+ "total_annonce": 10514,
  "nb_analysees": 1000,
- "nb_employeurs": 251,
+ "nb_employeurs": 263,
  "recrutent": {}
 }

@@ -1,63 +1,63 @@
 {
- "date": "2026-11-24",
- "heure_utc": "00:53",
+ "date": "2026-11-25",
+ "heure_utc": "00:56",
  "canal": "Adzuna (API officielle, agrégateur d'offres)",
  "requete": "title_only=\"community manager\" (mots dans le titre), pays = France, tri par date, 6 pages de 50 au plus ; puis titre vérifié (« community manag… » ou « CM »)",
- "total_annonce": 1563,
- "nb_analysees": 44,
+ "total_annonce": 1399,
+ "nb_analysees": 61,
  "variantes": [
   [
    "chargé de communication",
-   1630
+   1511
   ],
   [
    "community manager",
-   1563
+   1399
   ],
   [
    "chargé de communication digitale",
-   209
-  ],
-  [
-   "social media manager",
-   93
+   190
   ],
   [
    "content manager",
-   70
+   107
+  ],
+  [
+   "social media manager",
+   89
   ],
   [
    "influence manager",
-   25
-  ],
-  [
-   "responsable communication digitale",
-   9
+   37
   ],
   [
    "brand content manager",
-   8
+   11
+  ],
+  [
+   "responsable communication digitale",
+   11
   ]
  ],
  "regions": [
   [
    "Ile-de-France",
-   25
+   33
   ],
   [
    "Auvergne-Rhône-Alpes",
-   5
+   10
   ],
   [
    "Occitanie",
-   4
+   5
   ],
   [
    "Non précisé",
-   3
+   4
   ],
   [
-   "Hauts-De-France",
+   "DOM-TOM",
    2
   ],
   [
@@ -65,7 +65,11 @@
    2
   ],
   [
-   "DOM-TOM",
+   "Pays de la Loire",
+   1
+  ],
+  [
+   "Nouvelle-Aquitaine",
    1
   ],
   [
@@ -75,31 +79,39 @@
   [
    "Bourgogne-Franche-Comté",
    1
+  ],
+  [
+   "Hauts-De-France",
+   1
   ]
  ],
  "departements": [
   [
    "Paris",
-   12
-  ],
-  [
-   "Yvelines",
-   5
+   16
   ],
   [
    "Hauts-de-Seine",
-   5
+   7
   ],
   [
    "Rhône",
    5
   ],
   [
-   "Hérault",
-   3
+   "Savoie",
+   5
   ],
   [
-   "Nord",
+   "Yvelines",
+   5
+  ],
+  [
+   "Haute-Garonne",
+   2
+  ],
+  [
+   "La Réunion",
    2
   ],
   [
@@ -107,74 +119,72 @@
    2
   ],
   [
-   "Bouches-du-Rhône",
+   "Hautes-Pyrénées",
    2
   ],
   [
-   "La Réunion",
-   1
-  ],
-  [
-   "Côte-d'Or",
-   1
+   "Bouches-du-Rhône",
+   2
   ]
  ],
- "auvergne": 5,
+ "auvergne": 10,
  "puy_de_dome": 0,
  "teletravail": 0,
  "contrats": [
   [
    "Alternance",
-   19
+   22
   ],
   [
    "Stage",
-   13
-  ],
-  [
-   "CDD / mission",
-   5
+   15
   ],
   [
    "Non précisé",
-   4
+   11
+  ],
+  [
+   "CDD / mission",
+   10
   ],
   [
    "CDI",
-   2
-  ],
-  [
-   "Freelance",
-   1
+   3
   ]
  ],
  "salaires": {
-  "Stage": {
-   "nb": 2,
-   "min": 6428,
-   "mediane": 16200,
-   "max": 16200
-  },
-  "CDD / mission": {
-   "nb": 1,
-   "min": 27000,
-   "mediane": 27000,
-   "max": 27000
-  },
   "Alternance": {
    "nb": 8,
    "min": 13890,
    "mediane": 22404,
    "max": 22800
   },
-  "Freelance": {
+  "CDD / mission": {
+   "nb": 3,
+   "min": 19284,
+   "mediane": 27000,
+   "max": 31500
+  },
+  "Non précisé": {
+   "nb": 6,
+   "min": 27000,
+   "mediane": 31200,
+   "max": 31500
+  },
+  "Stage": {
+   "nb": 2,
+   "min": 6428,
+   "mediane": 16200,
+   "max": 16200
+  },
+  "CDI": {
    "nb": 1,
-   "min": 26000,
-   "mediane": 26000,
-   "max": 26000
+   "min": 37500,
+   "mediane": 37500,
+   "max": 37500
   }
  },
- "nb_salaires_affiches": 13,
+ "nb_salaires_affiches": 22,
  "competences": {
   "Réseaux": [
    [
@@ -186,18 +196,26 @@
     5
    ],
    [
-    "LinkedIn",
+    "Facebook",
     4
    ],
    [
-    "Facebook",
+    "LinkedIn",
     3
+   ],
+   [
+    "YouTube",
+    1
+   ],
+   [
+    "Pinterest",
+    1
    ]
   ],
   "Outils": [
    [
     "ChatGPT / IA générative",
-    4
+    5
    ],
    [
     "Meta Business Suite",
@@ -206,43 +224,47 @@
   ],
   "Compétences": [
    [
-    "Modération / animation",
-    18
-   ],
-   [
     "Création de contenu",
-    12
+    23
    ],
    [
-    "Stratégie social media",
-    9
+    "Modération / animation",
+    20
    ],
    [
     "Vidéo / Reels",
-    5
+    16
+   ],
+   [
+    "Photo",
+    9
+   ],
+   [
+    "Stratégie social media",
+    7
    ],
    [
     "Événementiel",
-    4
+    6
    ],
    [
     "Rédaction",
-    3
-   ],
-   [
-    "Veille",
-    3
+    5
    ],
    [
     "Influence",
+    3
+   ],
+   [
+    "SEO",
+    2
+   ],
+   [
+    "Veille",
     2
    ],
    [
     "Reporting / KPI",
-    2
-   ],
-   [
-    "Photo",
     1
    ]
   ]
@@ -250,22 +272,38 @@
  "entreprises": [
   [
    "ISCOD",
-   5
-  ],
-  [
-   "BETAMORPHOSE",
-   4
+   6
   ],
   [
    "OKTOGONE",
+   5
+  ],
+  [
+   "Manpower",
+   5
+  ],
+  [
+   "Lin. K",
+   3
+  ],
+  [
+   "BETAMORPHOSE",
    3
   ],
   [
    "THALES",
+   3
+  ],
+  [
+   "Tetranergy Business School Réunion",
    2
   ],
   [
-   "E.LECLERC",
+   "Collective.work",
+   2
+  ],
+  [
+   "L'École Française",
    2
   ],
   [
@@ -277,35 +315,19 @@
    2
   ],
   [
-   "Tetranergy Business School Réunion",
+   "Etam",
    1
   ],
   [
-   "EMOVA GROUP",
+   "Institut Lyfe",
    1
   ],
   [
-   "iscod alternance",
+   "GEODIS",
    1
   ],
   [
-   "Cour des Comptes",
-   1
-  ],
-  [
-   "OLIVER Agency",
-   1
-  ],
-  [
-   "L'École Française",
-   1
-  ],
-  [
-   "INFREP - Torcy",
-   1
-  ],
-  [
-   "Digital School of Paris",
+   "UFF",
    1
   ]
  ]
