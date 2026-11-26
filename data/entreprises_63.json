@@ -1,8 +1,8 @@
 {
- "date": "2026-11-19",
+ "date": "2026-11-26",
  "canal": "API Recherche d'entreprises (recherche-entreprises.api.gouv.fr)",
  "requete": "siège dans le 63, entreprises actives, NAF 73.11Z, 70.21Z, 73.12Z, 74.10Z, 59.11B",
- "total": 330,
+ "total": 328,
  "avec_salaries": 108,
  "par_activite": [
   [
@@ -11,7 +11,7 @@
   ],
   [
    "Conseil en relations publiques et communication",
-   90
+   88
   ],
   [
    "Activités spécialisées de design",
@@ -29,7 +29,7 @@
  "communes": [
   [
    "CLERMONT-FERRAND",
-   125
+   124
   ],
   [
    "CHAMALIERES",
@@ -70,7 +70,7 @@
  ],
  "exemples": [
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "CENTRE FRANCE PUBLICITE (CFP)",
    "siren": "329337984",
@@ -84,7 +84,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/329337984"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "2G PUBLICITE (2 G PUBLICITE - LE REVE DU DOGON)",
    "siren": "421840877",
@@ -98,7 +98,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421840877"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "QUI PLUS EST",
    "siren": "451572176",
@@ -112,7 +112,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/451572176"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "LES COULEURS DU TEMPS",
    "siren": "487652000",
@@ -126,7 +126,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/487652000"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "RIOT HOUSE PRODUCTION (RIOT HOUSE / KLEEK / LA PACKSHOTERIE)",
    "siren": "538949272",
@@ -140,7 +140,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/538949272"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "THE BOSON PROJECT",
    "siren": "789508843",
@@ -154,7 +154,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/789508843"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "CLAP AGENCY (CLAP AGENCY)",
    "siren": "919753194",
@@ -168,7 +168,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/919753194"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "CONJONCTURE SA MARKETTING DEVELOPPEMENT (LAMARCK)",
    "siren": "318100773",
@@ -182,7 +182,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/318100773"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "DANSNOSCOEURS (DANSNOSCOEURS)",
    "siren": "517833448",
@@ -196,7 +196,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/517833448"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "DANYLAK ET PY PUBLICITE PEINTE",
    "siren": "338617244",
@@ -210,7 +210,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/338617244"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "DE VISU",
    "siren": "379785637",
@@ -224,7 +224,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/379785637"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "MOTO AXE",
    "siren": "394426795",
@@ -238,7 +238,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/394426795"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "NECA-MONTAGE ET AFFICHAGE EN PUBLICITE",
    "siren": "317962207",
@@ -252,7 +252,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/317962207"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "OCTOPUS COMMUNICATION",
    "siren": "539356154",
@@ -266,7 +266,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/539356154"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "OPPIDUM COMMUNICATION",
    "siren": "502181969",
@@ -280,7 +280,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/502181969"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "SESIOM (SES)",
    "siren": "914528005",
@@ -294,7 +294,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/914528005"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "SOCIETE DE PUBLICITE CASTELPONTINE ET ENSEIGNES (SPC ENSEIGNES)",
    "siren": "889213088",
@@ -308,7 +308,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/889213088"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "TEKATE PRODUCTION (EN VRAI)",
    "siren": "913079216",
@@ -322,7 +322,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/913079216"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "VICE VERSA (VICE VERSA)",
    "siren": "887981140",
@@ -336,7 +336,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/887981140"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "VINGT DEUX",
    "siren": "853249621",
@@ -350,7 +350,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/853249621"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "2 D (COMM 360)",
    "siren": "832175012",
@@ -364,7 +364,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/832175012"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "AGENCE CHARLIE (AGENCE CHARLIE)",
    "siren": "953195005",
@@ -378,7 +378,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953195005"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "AGM COMMUNICATION",
    "siren": "421699935",
@@ -392,7 +392,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/421699935"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "ATALANTE PRODUCTIONS",
    "siren": "384922837",
@@ -406,7 +406,7 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/384922837"
   },
   {
-   "date_extraction": "2026-11-19",
+   "date_extraction": "2026-11-26",
    "canal": "API Recherche d'entreprises (data.gouv)",
    "nom": "BISCUIT PRODUCTION (BISCUIT PRODUCTION)",
    "siren": "802483461",
@@ -1169,6 +1169,15 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/539732784"
   },
   {
+   "nom": "JULIE MONTBRIZON ARCHITECTURE D'INTERIEUR",
+   "siren": "984630574",
+   "activite": "Activités spécialisées de design",
+   "commune": "CULHAT",
+   "effectif": "1-2",
+   "date_creation": "2024-02-14",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/984630574"
+  },
+  {
    "nom": "KANTI",
    "siren": "799808100",
    "activite": "Conseil en relations publiques et communication",
@@ -1194,15 +1203,6 @@
    "effectif": "1-2",
    "date_creation": "2022-02-01",
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/910455807"
-  },
-  {
-   "nom": "LE PUY DE LA COM",
-   "siren": "841764913",
-   "activite": "Conseil en relations publiques et communication",
-   "commune": "CLERMONT-FERRAND",
-   "effectif": "1-2",
-   "date_creation": "2018-08-10",
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/841764913"
   },
   {
    "nom": "LES ASSOCIES DU MARKETING",
@@ -1916,15 +1916,6 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/794641894"
   },
   {
-   "nom": "DELRIEU CAPITAL (D.C)",
-   "siren": "953156411",
-   "activite": "Conseil en relations publiques et communication",
-   "commune": "SERVANT",
-   "effectif": "Non renseigné",
-   "date_creation": "2023-05-02",
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/953156411"
-  },
-  {
    "nom": "DESIGN COORDINATION (DESIGN COORDINATION)",
    "siren": "799643697",
    "activite": "Activités spécialisées de design",
@@ -2420,6 +2411,15 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/992347260"
   },
   {
+   "nom": "KD CONNECT",
+   "siren": "133126144",
+   "activite": "Conseil en relations publiques et communication",
+   "commune": "PERIGNAT-LES-SARLIEVE",
+   "effectif": "Non renseigné",
+   "date_creation": "2026-11-19",
+   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/133126144"
+  },
+  {
    "nom": "KIPLING (KIPLING)",
    "siren": "483398681",
    "activite": "Agences de publicité",
@@ -2726,15 +2726,6 @@
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/990956542"
   },
   {
-   "nom": "MHA DESIGN",
-   "siren": "890548746",
-   "activite": "Activités spécialisées de design",
-   "commune": "SAINT-OURS",
-   "effectif": "Non renseigné",
-   "date_creation": "2020-10-28",
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/890548746"
-  },
-  {
    "nom": "MHM ENGINEERING CONSTRUCTION",
    "siren": "980727275",
    "activite": "Conseil en relations publiques et communication",
@@ -2904,15 +2895,6 @@
    "effectif": "Non renseigné",
    "date_creation": "2024-11-05",
    "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/934784323"
-  },
-  {
-   "nom": "PIKEKOM",
-   "siren": "948371190",
-   "activite": "Conseil en relations publiques et communication",
-   "commune": "VIC-LE-COMTE",
-   "effectif": "Non renseigné",
-   "date_creation": "2023-01-24",
-   "fiche": "https://annuaire-entreprises.data.gouv.fr/entreprise/948371190"
   },
   {
    "nom": "PIXIXEL (PIXIXEL)",
