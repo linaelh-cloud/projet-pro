@@ -1,59 +1,59 @@
 {
- "date": "2026-11-26",
- "heure_utc": "00:56",
+ "date": "2026-11-27",
+ "heure_utc": "00:59",
  "canal": "Adzuna (API officielle, agrégateur d'offres)",
  "requete": "title_only=\"community manager\" (mots dans le titre), pays = France, tri par date, 6 pages de 50 au plus ; puis titre vérifié (« community manag… » ou « CM »)",
- "total_annonce": 1239,
- "nb_analysees": 46,
+ "total_annonce": 1162,
+ "nb_analysees": 57,
  "variantes": [
   [
    "community manager",
-   1239
+   1162
   ],
   [
    "chargé de communication",
-   1144
+   1161
   ],
   [
    "chargé de communication digitale",
-   133
+   132
   ],
   [
    "content manager",
-   69
+   68
   ],
   [
    "social media manager",
-   62
+   60
   ],
   [
    "influence manager",
-   26
+   25
   ],
   [
    "brand content manager",
-   7
+   8
   ],
   [
    "responsable communication digitale",
-   6
+   5
   ]
  ],
  "regions": [
   [
    "Ile-de-France",
-   27
+   32
   ],
   [
    "Auvergne-Rhône-Alpes",
-   6
-  ],
-  [
-   "Pays de la Loire",
-   3
+   9
   ],
   [
    "Occitanie",
+   4
+  ],
+  [
+   "Pays de la Loire",
    3
   ],
   [
@@ -61,8 +61,16 @@
    3
   ],
   [
-   "Provence-Alpes-Côte d'Azur",
+   "Non précisé",
    2
+  ],
+  [
+   "Bretagne",
+   1
+  ],
+  [
+   "Provence-Alpes-Côte d'Azur",
+   1
   ],
   [
    "Nouvelle-Aquitaine",
@@ -76,7 +84,11 @@
  "departements": [
   [
    "Paris",
-   12
+   17
+  ],
+  [
+   "Rhône",
+   5
   ],
   [
    "Hauts-de-Seine",
@@ -87,8 +99,12 @@
    4
   ],
   [
-   "Yvelines",
-   4
+   "Essonne",
+   3
+  ],
+  [
+   "Haute-Garonne",
+   3
   ],
   [
    "Loire-Atlantique",
@@ -103,44 +119,48 @@
    3
   ],
   [
-   "Haute-Garonne",
-   2
-  ],
-  [
-   "Seine-Saint-Denis",
-   2
-  ],
-  [
-   "Rhône",
-   2
+   "Yvelines",
+   3
   ]
  ],
- "auvergne": 6,
+ "auvergne": 9,
  "puy_de_dome": 0,
- "teletravail": 0,
+ "teletravail": 1,
  "contrats": [
   [
    "Alternance",
-   19
+   24
   ],
   [
    "Stage",
-   10
-  ],
-  [
-   "CDD / mission",
-   7
+   11
   ],
   [
    "Non précisé",
-   6
+   9
+  ],
+  [
+   "CDD / mission",
+   8
   ],
   [
    "CDI",
-   4
+   5
   ]
  ],
  "salaires": {
+  "Non précisé": {
+   "nb": 1,
+   "min": 31500,
+   "mediane": 31500,
+   "max": 31500
+  },
+  "CDD / mission": {
+   "nb": 3,
+   "min": 19284,
+   "mediane": 27000,
+   "max": 31500
+  },
   "Alternance": {
    "nb": 2,
    "min": 22404,
@@ -152,34 +172,22 @@
    "min": 37500,
    "mediane": 37500,
    "max": 37500
-  },
-  "Non précisé": {
-   "nb": 1,
-   "min": 31500,
-   "mediane": 31500,
-   "max": 31500
-  },
-  "CDD / mission": {
-   "nb": 2,
-   "min": 19284,
-   "mediane": 27000,
-   "max": 27000
   }
  },
- "nb_salaires_affiches": 7,
+ "nb_salaires_affiches": 8,
  "competences": {
   "Réseaux": [
    [
     "Instagram",
-    5
+    6
    ],
    [
     "TikTok",
-    4
+    5
    ],
    [
     "Facebook",
-    3
+    4
    ],
    [
     "LinkedIn",
@@ -193,29 +201,29 @@
   "Outils": [
    [
     "ChatGPT / IA générative",
-    2
+    3
    ]
   ],
   "Compétences": [
    [
     "Création de contenu",
-    16
+    22
    ],
    [
     "Vidéo / Reels",
-    11
+    15
    ],
    [
     "Modération / animation",
-    8
+    12
    ],
    [
     "Photo",
-    6
+    7
    ],
    [
     "SEO",
-    5
+    6
    ],
    [
     "Stratégie social media",
@@ -227,29 +235,25 @@
    ],
    [
     "Influence",
-    2
+    3
    ],
    [
     "Événementiel",
-    1
+    3
    ]
   ]
  },
  "entreprises": [
   [
    "ISCOD",
-   10
-  ],
-  [
-   "Manpower",
-   4
+   12
   ],
   [
    "iSCOD",
-   3
+   6
   ],
   [
-   "E.Leclerc",
+   "Manpower",
    3
   ],
   [
@@ -257,7 +261,19 @@
    3
   ],
   [
+   "implid",
+   2
+  ],
+  [
+   "Lin. K",
+   2
+  ],
+  [
    "Institut Lyfe",
+   2
+  ],
+  [
+   "E.Leclerc",
    2
   ],
   [
@@ -269,31 +285,23 @@
    2
   ],
   [
+   "La Playce",
+   1
+  ],
+  [
+   "Choisir le Service Public",
+   1
+  ],
+  [
+   "France Travail",
+   1
+  ],
+  [
+   "Comité National Olympique et Sportif Français - CNOSF",
+   1
+  ],
+  [
    "Ciela Village",
-   1
-  ],
-  [
-   "Etam",
-   1
-  ],
-  [
-   "Lin. K",
-   1
-  ],
-  [
-   "APP.RENDRE",
-   1
-  ],
-  [
-   "mateam",
-   1
-  ],
-  [
-   "INSTITUT DU CERVEAU ET DE LA MOELLE EPINIERE",
-   1
-  ],
-  [
-   "EMOVA GROUP",
    1
   ]
  ]
