@@ -1,52 +1,68 @@
 {
- "date": "2026-11-27",
- "heure_utc": "00:59",
+ "date": "2026-11-28",
+ "heure_utc": "00:55",
  "canal": "Adzuna (API officielle, agrégateur d'offres)",
  "requete": "title_only=\"community manager\" (mots dans le titre), pays = France, tri par date, 6 pages de 50 au plus ; puis titre vérifié (« community manag… » ou « CM »)",
- "total_annonce": 1162,
- "nb_analysees": 57,
+ "total_annonce": 1247,
+ "nb_analysees": 76,
  "variantes": [
   [
    "community manager",
-   1162
+   1247
   ],
   [
    "chargé de communication",
-   1161
+   1154
   ],
   [
    "chargé de communication digitale",
-   132
+   130
   ],
   [
    "content manager",
-   68
+   107
   ],
   [
    "social media manager",
-   60
+   72
   ],
   [
    "influence manager",
-   25
+   36
   ],
   [
    "brand content manager",
-   8
+   13
   ],
   [
    "responsable communication digitale",
-   5
+   9
   ]
  ],
  "regions": [
   [
    "Ile-de-France",
-   32
+   28
   ],
   [
    "Auvergne-Rhône-Alpes",
+   10
+  ],
+  [
+   "DOM-TOM",
    9
+  ],
+  [
+   "Nouvelle-Aquitaine",
+   6
+  ],
+  [
+   "Non précisé",
+   6
+  ],
+  [
+   "Provence-Alpes-Côte d'Azur",
+   4
   ],
   [
    "Occitanie",
@@ -54,144 +70,140 @@
   ],
   [
    "Pays de la Loire",
-   3
-  ],
-  [
-   "DOM-TOM",
-   3
-  ],
-  [
-   "Non précisé",
-   2
+   4
   ],
   [
    "Bretagne",
+   2
+  ],
+  [
+   "Hauts-De-France",
    1
   ],
   [
-   "Provence-Alpes-Côte d'Azur",
+   "Centre",
    1
   ],
   [
-   "Nouvelle-Aquitaine",
-   1
-  ],
-  [
-   "Bourgogne-Franche-Comté",
+   "Normandie",
    1
   ]
  ],
  "departements": [
   [
    "Paris",
-   17
+   10
+  ],
+  [
+   "La Réunion",
+   7
   ],
   [
    "Rhône",
-   5
+   6
+  ],
+  [
+   "Yvelines",
+   4
+  ],
+  [
+   "Val-d'Oise",
+   4
+  ],
+  [
+   "Haute-Vienne",
+   3
+  ],
+  [
+   "Seine-Saint-Denis",
+   3
   ],
   [
    "Hauts-de-Seine",
-   5
-  ],
-  [
-   "Savoie",
-   4
+   3
   ],
   [
    "Essonne",
    3
   ],
   [
-   "Haute-Garonne",
-   3
-  ],
-  [
    "Loire-Atlantique",
-   3
-  ],
-  [
-   "Val-d'Oise",
-   3
-  ],
-  [
-   "La Réunion",
-   3
-  ],
-  [
-   "Yvelines",
    3
   ]
  ],
- "auvergne": 9,
+ "auvergne": 10,
  "puy_de_dome": 0,
  "teletravail": 1,
  "contrats": [
   [
+   "Non précisé",
+   26
+  ],
+  [
    "Alternance",
-   24
+   22
   ],
   [
    "Stage",
-   11
-  ],
-  [
-   "Non précisé",
-   9
+   13
   ],
   [
    "CDD / mission",
-   8
+   7
   ],
   [
    "CDI",
-   5
+   7
+  ],
+  [
+   "Freelance",
+   1
   ]
  ],
  "salaires": {
-  "Non précisé": {
-   "nb": 1,
-   "min": 31500,
-   "mediane": 31500,
-   "max": 31500
-  },
-  "CDD / mission": {
-   "nb": 3,
-   "min": 19284,
-   "mediane": 27000,
-   "max": 31500
-  },
   "Alternance": {
-   "nb": 2,
-   "min": 22404,
+   "nb": 1,
+   "min": 113760,
    "mediane": 113760,
    "max": 113760
+  },
+  "CDD / mission": {
+   "nb": 2,
+   "min": 19284,
+   "mediane": 31500,
+   "max": 31500
   },
   "CDI": {
    "nb": 1,
    "min": 37500,
    "mediane": 37500,
    "max": 37500
+  },
+  "Non précisé": {
+   "nb": 17,
+   "min": 13890,
+   "mediane": 13890,
+   "max": 31500
   }
  },
- "nb_salaires_affiches": 8,
+ "nb_salaires_affiches": 21,
  "competences": {
   "Réseaux": [
    [
     "Instagram",
-    6
+    10
    ],
    [
     "TikTok",
-    5
+    10
    ],
    [
     "Facebook",
-    4
+    7
    ],
    [
     "LinkedIn",
-    2
+    5
    ],
    [
     "Pinterest",
@@ -200,65 +212,93 @@
   ],
   "Outils": [
    [
+    "Excel",
+    2
+   ],
+   [
     "ChatGPT / IA générative",
-    3
+    1
    ]
   ],
   "Compétences": [
    [
+    "Modération / animation",
+    26
+   ],
+   [
     "Création de contenu",
-    22
+    23
    ],
    [
     "Vidéo / Reels",
     15
    ],
    [
-    "Modération / animation",
-    12
-   ],
-   [
-    "Photo",
-    7
+    "Reporting / KPI",
+    13
    ],
    [
     "SEO",
+    7
+   ],
+   [
+    "Photo",
     6
    ],
    [
     "Stratégie social media",
-    4
+    6
    ],
    [
     "Rédaction",
     3
    ],
    [
-    "Influence",
+    "Événementiel",
     3
    ],
    [
-    "Événementiel",
-    3
+    "Veille",
+    2
+   ],
+   [
+    "Publicité (Ads)",
+    1
+   ],
+   [
+    "Influence",
+    1
    ]
   ]
  },
  "entreprises": [
+  [
+   "Emploi DomTom",
+   16
+  ],
   [
    "ISCOD",
    12
   ],
   [
    "iSCOD",
-   6
+   5
   ],
   [
-   "Manpower",
+   "France Travail",
    3
   ],
   [
    "Tetranergy Business School Réunion",
    3
+  ],
+  [
+   "Thales",
+   2
+  ],
+  [
+   "E.LECLERC",
+   2
   ],
   [
    "implid",
@@ -269,11 +309,11 @@
    2
   ],
   [
-   "Institut Lyfe",
+   "Manpower",
    2
   ],
   [
-   "E.Leclerc",
+   "Institut Lyfe",
    2
   ],
   [
@@ -281,27 +321,15 @@
    2
   ],
   [
-   "IEF2I Education",
-   2
-  ],
-  [
-   "La Playce",
+   "Fonction publique Hospitalière",
    1
   ],
   [
-   "Choisir le Service Public",
+   "Yumens",
    1
   ],
   [
-   "France Travail",
-   1
-  ],
-  [
-   "Comité National Olympique et Sportif Français - CNOSF",
-   1
-  ],
-  [
-   "Ciela Village",
+   "Ministere Interieur",
    1
   ]
  ]
